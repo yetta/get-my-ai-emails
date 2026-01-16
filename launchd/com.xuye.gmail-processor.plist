@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- 服务标识符 -->
+    <key>Label</key>
+    <string>com.xuye.gmail-processor</string>
+    
+    <!-- 执行的程序 -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/xuye/.nvm/versions/node/v20.19.6/bin/node</string>
+        <string>/Users/xuye/Documents/AI-CODE/get-my-ai-emails/index.js</string>
+    </array>
+    
+    <!-- 工作目录 -->
+    <key>WorkingDirectory</key>
+    <string>/Users/xuye/Documents/AI-CODE/get-my-ai-emails</string>
+    
+    <!-- 定时执行：每天早上 8:00 -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>8</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+    
+    <!-- 标准输出日志 -->
+    <key>StandardOutPath</key>
+    <string>/Users/xuye/Documents/AI-CODE/get-my-ai-emails/logs/launchd-stdout.log</string>
+    
+    <!-- 错误输出日志 -->
+    <key>StandardErrorPath</key>
+    <string>/Users/xuye/Documents/AI-CODE/get-my-ai-emails/logs/launchd-stderr.log</string>
+    
+    <!-- 失败后自动重启 -->
+    <key>KeepAlive</key>
+    <false/>
+    
+    <!-- 加载后立即运行一次(可选,用于测试) -->
+    <key>RunAtLoad</key>
+    <false/>
+    
+    <!-- 环境变量 -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/Users/xuye/.nvm/versions/node/v20.19.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    </dict>
+</dict>
+</plist>

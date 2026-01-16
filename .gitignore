@@ -1,0 +1,25 @@
+# 依赖
+node_modules/
+
+# 环境变量
+.env
+
+# 认证文件
+credentials.json
+gcp-oauth.keys.json
+token.json
+
+# 日志
+logs/
+*.log
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# 临时文件
+*.tmp
+*.temp

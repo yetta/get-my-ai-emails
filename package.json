@@ -1,0 +1,29 @@
+{
+    "name": "gmail-ai-processor",
+    "version": "1.0.0",
+    "description": "自动处理 Gmail 邮件，使用 AI 翻译整理并保存到 Obsidian",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "node index.js",
+        "scheduler": "node run-scheduler.js",
+        "test": "node index.js",
+        "pm2": "pm2 start run-scheduler.js --name gmail-processor"
+    },
+    "keywords": [
+        "gmail",
+        "ai",
+        "automation",
+        "obsidian"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "googleapis": "^140.0.0",
+        "axios": "^1.6.0",
+        "dotenv": "^16.3.1",
+        "node-cron": "^3.0.3",
+        "cheerio": "^1.0.0-rc.12",
+        "turndown": "^7.1.2"
+    }
+}
