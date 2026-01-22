@@ -10,8 +10,8 @@ gcp-oauth.keys.json
 token.json
 
 # 日志
-# logs/
-# *.log
+logs/
+*.log
 
 # macOS
 .DS_Store
