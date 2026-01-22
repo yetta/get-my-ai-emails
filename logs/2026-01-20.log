@@ -1,0 +1,154 @@
+[2026-01-20T02:41:49.124Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-20T02:41:49.129Z] [ERROR] Gmail API 认证失败
+Error: OAuth 凭据文件不存在: gcp-oauth.keys.json
+    at GmailService.authenticate (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/src/gmail.js:22:23)
+    at processEmails (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/index.js:78:28)
+    at file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/index.js:166:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+[2026-01-20T02:41:49.132Z] [ERROR] 处理邮件时发生错误
+Error: OAuth 凭据文件不存在: gcp-oauth.keys.json
+    at GmailService.authenticate (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/src/gmail.js:22:23)
+    at processEmails (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/index.js:78:28)
+    at file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/index.js:166:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+[2026-01-20T02:41:49.132Z] [ERROR] 任务失败
+Error: OAuth 凭据文件不存在: gcp-oauth.keys.json
+    at GmailService.authenticate (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/src/gmail.js:22:23)
+    at processEmails (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/index.js:78:28)
+    at file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/index.js:166:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+[2026-01-20T02:43:17.210Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-20T02:43:17.251Z] [INFO] Gmail API 认证成功
+[2026-01-20T02:43:17.252Z] [INFO] 搜索邮件: label:"AI subscription" is:unread after:2026/01/18
+[2026-01-20T02:43:20.493Z] [INFO] 找到 1 封带有标签 "AI subscription" 的未读邮件
+[2026-01-20T02:43:20.494Z] [INFO] 
+处理邮件 1/1
+[2026-01-20T02:43:21.563Z] [INFO] 获取邮件内容: 📢 Ads are officially coming to ChatGPT
+[2026-01-20T02:43:21.564Z] [INFO] 保存到缓存: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/emails/19bd5f858b448038.json
+[2026-01-20T02:43:21.655Z] [INFO] HTML 解析完成，提取 7 张有效图片
+[2026-01-20T02:43:21.678Z] [INFO] 提取到 59 个链接
+[2026-01-20T02:43:21.679Z] [INFO] 提取到 59 个链接, 7 张有效图片
+[2026-01-20T02:43:21.679Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-20T02:46:07.413Z] [SUCCESS] MiniMax 翻译完成
+[2026-01-20T02:46:07.424Z] [INFO] 保存到缓存: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/translated/19bd5f858b448038.md
+[2026-01-20T02:46:11.410Z] [INFO] 保存了 7 张图片到 /Users/xuye/Documents/NoteBook/ObsidianVault/News/AI-Updates/attachments/2026-01-19-📢-Ads-are-officially-coming-to-ChatGPT
+[2026-01-20T02:46:11.411Z] [SUCCESS] 文件已保存: 2026-01-19-📢-Ads-are-officially-coming-to-ChatGPT.md
+[2026-01-20T02:46:13.189Z] [INFO] 邮件已标记为已读: 19bd5f858b448038
+[2026-01-20T02:46:13.189Z] [SUCCESS] ✓ 邮件处理完成: 📢 Ads are officially coming to ChatGPT
+[2026-01-20T02:46:13.189Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-20T02:46:13.194Z] [INFO] 成功: 1 封
+[2026-01-20T02:46:13.194Z] [INFO] 失败: 0 封
+[2026-01-20T02:46:13.194Z] [SUCCESS] 
+任务完成！处理了 1 封邮件
+[2026-01-20T03:09:38.797Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-20T03:09:38.806Z] [INFO] Gmail API 认证成功
+[2026-01-20T03:09:38.806Z] [INFO] [DEBUG] 搜索邮件: label:"AI subscription" after:2026/01/18
+[2026-01-20T03:09:42.682Z] [INFO] [DEBUG] 找到 1 封带有标签 "AI subscription" 的邮件
+[2026-01-20T03:09:42.682Z] [INFO] [DEBUG] 调试模式已启用，处理已读邮件
+[2026-01-20T03:09:42.683Z] [INFO] 
+处理邮件 1/1
+[2026-01-20T03:09:42.687Z] [INFO] 从缓存加载: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/emails/19bd5f858b448038.json
+[2026-01-20T03:09:42.688Z] [INFO] 使用缓存的邮件内容
+[2026-01-20T03:09:42.778Z] [INFO] HTML 解析完成，提取 7 张有效图片
+[2026-01-20T03:09:42.803Z] [INFO] 提取到 59 个链接
+[2026-01-20T03:09:42.803Z] [INFO] 提取到 59 个链接, 7 张有效图片
+[2026-01-20T03:09:42.804Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-20T03:10:51.242Z] [SUCCESS] MiniMax 翻译完成
+[2026-01-20T03:10:51.244Z] [INFO] 保存到缓存: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/translated/19bd5f858b448038.md
+[2026-01-20T03:10:54.824Z] [INFO] 保存了 7 张图片到 /Users/xuye/Documents/NoteBook/ObsidianVault/News/AI-Updates/attachments/2026-01-19-📢-Ads-are-officially-coming-to-ChatGPT
+[2026-01-20T03:10:54.825Z] [SUCCESS] 文件已保存: 2026-01-19-📢-Ads-are-officially-coming-to-ChatGPT-1.md
+[2026-01-20T03:10:56.570Z] [INFO] 邮件已标记为已读: 19bd5f858b448038
+[2026-01-20T03:10:56.570Z] [SUCCESS] ✓ 邮件处理完成: 📢 Ads are officially coming to ChatGPT
+[2026-01-20T03:10:56.570Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-20T03:10:56.574Z] [INFO] 成功: 1 封
+[2026-01-20T03:10:56.575Z] [INFO] 失败: 0 封
+[2026-01-20T03:10:56.575Z] [SUCCESS] 
+任务完成！处理了 1 封邮件
+[2026-01-20T03:16:35.933Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-20T03:16:35.938Z] [INFO] Gmail API 认证成功
+[2026-01-20T03:16:35.938Z] [INFO] [DEBUG] 搜索邮件: label:"AI subscription" after:2026/01/18
+[2026-01-20T03:16:39.156Z] [INFO] [DEBUG] 找到 1 封带有标签 "AI subscription" 的邮件
+[2026-01-20T03:16:39.156Z] [INFO] [DEBUG] 调试模式已启用，处理已读邮件
+[2026-01-20T03:16:39.156Z] [INFO] 
+处理邮件 1/1
+[2026-01-20T03:16:39.161Z] [INFO] 从缓存加载: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/emails/19bd5f858b448038.json
+[2026-01-20T03:16:39.162Z] [INFO] 使用缓存的邮件内容
+[2026-01-20T03:16:39.248Z] [INFO] HTML 解析完成，提取 7 张有效图片
+[2026-01-20T03:16:39.275Z] [INFO] 提取到 59 个链接
+[2026-01-20T03:16:39.275Z] [INFO] 提取到 59 个链接, 7 张有效图片
+[2026-01-20T03:16:39.275Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-20T03:17:29.181Z] [INFO] Token 消耗: 输入 23777, 输出 1463, 总计 25240
+[2026-01-20T03:17:29.181Z] [SUCCESS] MiniMax 翻译完成
+[2026-01-20T03:17:29.182Z] [INFO] 保存到缓存: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/translated/19bd5f858b448038.md
+[2026-01-20T03:17:32.942Z] [INFO] 保存了 7 张图片到 /Users/xuye/Documents/NoteBook/ObsidianVault/News/AI-Updates/attachments/2026-01-19-📢-Ads-are-officially-coming-to-ChatGPT
+[2026-01-20T03:17:32.943Z] [SUCCESS] 文件已保存: 2026-01-19-📢-Ads-are-officially-coming-to-ChatGPT-2.md
+[2026-01-20T03:17:34.796Z] [INFO] 邮件已标记为已读: 19bd5f858b448038
+[2026-01-20T03:17:34.796Z] [SUCCESS] ✓ 邮件处理完成: 📢 Ads are officially coming to ChatGPT
+[2026-01-20T03:17:34.797Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-20T03:17:34.801Z] [INFO] 成功: 1 封
+[2026-01-20T03:17:34.801Z] [INFO] 失败: 0 封
+[2026-01-20T03:17:34.801Z] [SUCCESS] 
+任务完成！处理了 1 封邮件
+[2026-01-20T03:42:49.702Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-20T03:42:49.709Z] [INFO] Gmail API 认证成功
+[2026-01-20T03:42:49.709Z] [INFO] [DEBUG] 搜索邮件: label:"AI subscription" after:2026/01/18
+[2026-01-20T03:42:52.864Z] [INFO] [DEBUG] 找到 1 封带有标签 "AI subscription" 的邮件
+[2026-01-20T03:42:52.865Z] [INFO] [DEBUG] 调试模式已启用，处理已读邮件
+[2026-01-20T03:42:52.865Z] [INFO] 
+处理邮件 1/1
+[2026-01-20T03:42:52.866Z] [INFO] 从缓存加载: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/emails/19bd5f858b448038.json
+[2026-01-20T03:42:52.871Z] [INFO] 使用缓存的邮件内容
+[2026-01-20T03:42:52.871Z] [INFO] 内容范围提取: 从 23087 到 73380，节省 49201 字符
+[2026-01-20T03:42:52.936Z] [INFO] HTML 解析完成，提取 6 张有效图片
+[2026-01-20T03:42:52.965Z] [INFO] 提取到 59 个链接
+[2026-01-20T03:42:52.966Z] [INFO] 提取到 59 个链接, 6 张有效图片
+[2026-01-20T03:42:52.966Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-20T03:44:02.618Z] [INFO] Token 消耗: 输入 12754, 输出 1653, 总计 14407
+[2026-01-20T03:44:02.619Z] [SUCCESS] MiniMax 翻译完成
+[2026-01-20T03:44:02.620Z] [INFO] 保存到缓存: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/translated/19bd5f858b448038.md
+[2026-01-20T03:44:06.064Z] [INFO] 保存了 6 张图片到 /Users/xuye/Documents/NoteBook/ObsidianVault/News/AI-Updates/attachments/2026-01-19-📢-Ads-are-officially-coming-to-ChatGPT
+[2026-01-20T03:44:06.065Z] [SUCCESS] 文件已保存: 2026-01-19-📢-Ads-are-officially-coming-to-ChatGPT-3.md
+[2026-01-20T03:44:07.748Z] [INFO] 邮件已标记为已读: 19bd5f858b448038
+[2026-01-20T03:44:07.749Z] [SUCCESS] ✓ 邮件处理完成: 📢 Ads are officially coming to ChatGPT
+[2026-01-20T03:44:07.749Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-20T03:44:07.753Z] [INFO] 成功: 1 封
+[2026-01-20T03:44:07.753Z] [INFO] 失败: 0 封
+[2026-01-20T03:44:07.754Z] [SUCCESS] 
+任务完成！处理了 1 封邮件
+[2026-01-20T04:05:02.435Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-20T04:05:02.441Z] [INFO] Gmail API 认证成功
+[2026-01-20T04:05:02.442Z] [INFO] [DEBUG] 搜索邮件: label:"AI subscription" after:2026/01/18
+[2026-01-20T04:05:05.825Z] [INFO] [DEBUG] 找到 1 封带有标签 "AI subscription" 的邮件
+[2026-01-20T04:05:05.826Z] [INFO] [DEBUG] 调试模式已启用，处理已读邮件
+[2026-01-20T04:05:05.826Z] [INFO] 
+处理邮件 1/1
+[2026-01-20T04:05:05.830Z] [INFO] 从缓存加载: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/emails/19bd5f858b448038.json
+[2026-01-20T04:05:05.832Z] [INFO] 使用缓存的邮件内容
+[2026-01-20T04:05:05.833Z] [INFO] 内容范围提取: 从 23087 到 73380，节省 49201 字符
+[2026-01-20T04:05:05.898Z] [INFO] HTML 解析完成，提取 6 张有效图片
+[2026-01-20T04:05:05.935Z] [INFO] 提取到 59 个链接
+[2026-01-20T04:05:05.935Z] [INFO] 提取到 59 个链接, 6 张有效图片
+[2026-01-20T04:05:05.935Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-20T04:06:02.988Z] [INFO] Token 消耗: 输入 12830, 输出 1689, 总计 14519
+[2026-01-20T04:06:03.022Z] [SUCCESS] MiniMax 翻译完成
+[2026-01-20T04:06:03.026Z] [INFO] 保存到缓存: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/translated/19bd5f858b448038.md
+[2026-01-20T04:06:06.507Z] [INFO] 保存了 6 张图片到 /Users/xuye/Documents/NoteBook/ObsidianVault/News/AI-Updates/attachments/2026-01-19-📢-Ads-are-officially-coming-to-ChatGPT
+[2026-01-20T04:06:06.508Z] [SUCCESS] 文件已保存: 2026-01-19-📢-Ads-are-officially-coming-to-ChatGPT-4.md
+[2026-01-20T04:06:08.431Z] [INFO] 邮件已标记为已读: 19bd5f858b448038
+[2026-01-20T04:06:08.432Z] [SUCCESS] ✓ 邮件处理完成: 📢 Ads are officially coming to ChatGPT
+[2026-01-20T04:06:08.432Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-20T04:06:08.432Z] [INFO] 成功: 1 封
+[2026-01-20T04:06:08.436Z] [INFO] 失败: 0 封
+[2026-01-20T04:06:08.437Z] [SUCCESS] 
+任务完成！处理了 1 封邮件

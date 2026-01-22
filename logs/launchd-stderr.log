@@ -1,0 +1,1068 @@
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: Operation not permitted
+/bin/bash: /Users/xuye/Documents/AI-CODE/get-my-ai-emails/launchd/run-task.sh: Operation not permitted
+[2026-01-14T00:19:57.185Z] [ERROR] MiniMax 翻译失败
+AxiosError: read ECONNRESET
+    at AxiosError.from (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/core/AxiosError.js:96:14)
+    at RedirectableRequest.handleRequestError (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/adapters/http.js:817:25)
+    at RedirectableRequest.emit (node:events:524:28)
+    at eventHandlers.<computed> (/Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/follow-redirects/index.js:49:24)
+    at ClientRequest.emit (node:events:524:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at TLSSocket.socketErrorListener (node:_http_client:504:5)
+    at TLSSocket.emit (node:events:524:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at Axios.request (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AITranslator.translateWithMiniMax (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:27:30)
+    at async AITranslator.translate (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:13:20)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/index.js:68:43) {
+  syscall: 'read',
+  code: 'ECONNRESET',
+  errno: -54,
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJHcm91cE5hbWUiOiJ5ZXR0YSIsIlVzZXJOYW1lIjoieWV0dGEiLCJBY2NvdW50IjoiIiwiU3ViamVjdElEIjoiMTk5OTEzNzI4MjE3MDI5NDY2NyIsIlBob25lIjoiMTg1MTYwMzE3OTYiLCJHcm91cElEIjoiMTk5OTEzNzI4MjE2MTkwNjA1OSIsIlBhZ2VOYW1lIjoiIiwiTWFpbCI6IiIsIkNyZWF0ZVRpbWUiOiIyMDI1LTEyLTEyIDE0OjMwOjQxIiwiVG9rZW5UeXBlIjoxLCJpc3MiOiJtaW5pbWF4In0.Y2QHhKmE40pgKL6H3NHwf9-XHTMat7TzzSpccUszldpneSuUzbG20hiIYucXYq-vqAZ3EGRKs-K1rohgSkceOQbpnKL61V0RGakfVBHYpf4L9vBpY3w5n94UgQ6xjGRKsw3xGRtpdeOYGPWN8jqmSSBGaqr2QnkG4h0FfqbEMxl50cVcnpPFT7_kFanWLz939aRJ97-cR81vTFddC04-RTjBMc9SWmXQk-UpbuYeLlWxJYFhZ_jHJBxyp0iwH_QGVfx0EaSx1H5z8ENDpYbnlt_CywrL0bgREsQTg-fAHEfg6F8oylAynn-J0jVAsxXfq_wzWzE63dYnx11hE5X1sA',
+      'User-Agent': 'axios/1.13.2',
+      'Content-Length': '15524',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'post',
+    url: 'https://api.minimax.chat/v1/text/chatcompletion_v2',
+    data: `{"model":"abab6.5-chat","messages":[{"role":"user","content":"你是一位专业的 AI 资讯编辑，请将以下英文邮件内容翻译为中文，并按照指定格式整理成精美的 Markdown 笔记。\\n\\n**要求：**\\n1. 翻译要准确、流畅、专业\\n2. 摘要要详细，至少 3-5 句话，充分概括邮件的核心内容\\n3. 核心要点要全面，列出所有重要信息（至少 5-8 个要点）\\n4. 每个要点要有详细说明，不要只是简单列举\\n5. **必须使用下面提供的链接列表，将所有链接都包含在输出中**\\n6. 排版要美观，使用适当的 Markdown 格式（加粗、斜体、引用等）\\n7. **输出必须完整，不要截断内容**\\n8. **不要在输出中包含分隔线（---），直接输出内容即可**\\n\\n**输出格式示例：**\\n\\n# 📰 标题\\n\\n> 📅 发布日期：[从邮件中提取日期]\\n\\n## 📝 内容摘要\\n\\n[用 3-5 段详细概括邮件的主要内容，包括背景、重点和意义]\\n\\n## 🔑 核心要点\\n\\n### 1. [要点标题]\\n[详细说明这个要点的内容，包括相关数据、影响等]\\n\\n### 2. [要点标题]\\n[详细说明...]\\n\\n[继续列出所有重要要点，至少 5-8 个]\\n\\n## 🔗 相关链接\\n\\n### 📄 文章资源\\n- [文章标题](URL) - 简短描述\\n\\n### 🛠️ 工具产品\\n- [产品名称](URL) - 简短描述\\n\\n### 🌐 其他资源\\n- [资源名称](URL) - 简短描述\\n\\n**邮件原文：**\\n^**[Read Online](https://tech.therundown.ai/p/a-moon-hotel-is-taking-reservations?_bhlid=4eaa234680798ad3bdb45514b5705f029891f88c&jwt_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWJzY3JpYmVyX2lkIjoiMGMxZDI5ZWEtYjU1Mi00YTZiLWJmNzEtNDAwOTM0ZmI3YzVmIiwicHVibGljYXRpb25faWQiOiI1N2FjYTUwZi1hNWIyLTQ5ZjYtYWVlZi02NDk5NjkyNTdjMTciLCJhY2Nlc3NfdHlwZSI6InJlYWQtb25seSIsImV4cCI6MTc2ODQ5MTI5MiwiaXNzIjoiaHR0cHM6Ly9hcHAuYmVlaGlpdi5jb20iLCJpYXQiOjE3NjgzMTg0OTJ9.YMfOr6c5kPp2-H89HMg5Kx61OOFHo_ZwNQdqArY30s4)**^^ | ^^**[Sign Up](https://tech.therundown.ai/subscribe)**^^ | ^^**[Advertise](https://therundownai.typeform.com/to/kraZ1TSO)**^\\n\\n----------\\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/10c7889e-d18b-4c62-afd1-401ef35153ac/techheader.png?t=1736700528)\\nFollow image link: (https://rundown.ai/)\\nCaption: \\n\\n\\n----------\\n\\n----------\\n**Good morning, yetta.** A 22-year-old Berkeley-trained engineer says he wants to build a luxury hotel on the moon — and he’s taking six-figure deposits from anyone willing to book a room. \\n\\nHis startup, called GRU Space, has already raised money from Y Combinator. It’s audacious even by Silicon Valley standards, but for a certain class of techno-optimist, the moon is starting to look less like a celestial body and more like a lifestyle upgrade. \\n\\n———————————————————————————\\n\\n**In today’s tech rundown:**\\n\\n* This moon hotel is taking reservations\\n\\n* Google’s founders are leaving California\\n\\n* Trump wants Big Tech to eat AI’s power bills\\n\\n* How much Tim Cook made last year\\n\\n* Quick hits on other tech news\\n\\n\\n----------\\n\\n----------\\n**LATEST DEVELOPMENTS**\\n\\n\\n----------\\n\\n----------\\n###### SPACE TECH\\n\\n#### 🌝 [_**This moon hotel is taking reservations**_](https://www.ycombinator.com/companies/galactic-resource-utilization-space-inc-gru-space)\\n\\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/a5b003b0-dd25-4104-b098-6ff793aaddb5/NEWCapture_d_e%CC%81cran_2026-01-13_a%CC%80_10.29.44_cropped_processed_by_imagy__1_.jpg?t=1768296959)\\nCaption: Image source: GRU / YouTube\\n\\n**The Rundown: **A YC-backed startup called GRU Space [says](https://www.youtube.com/watch?v=GOwUlkNw8eg) it wants to build the first lunar hotel, taking deposits of $250K–$1M from wealthy true believers who are willing to reserve a bed on the moon years before the infrastructure exists.\\n\\n**The details:**\\n\\n* The tiny startup plans to launch its first hotel, an inflatable structure, in 2032, giving SpaceX travelers an option off the Starship, Ars Technica [reports](https://arstechnica.com/space/2026/01/you-can-now-reserve-a-hotel-room-on-the-moon-for-250000/).\\n\\n* The first tech demo is a 10kg payload slated for a commercial lunar lander in 2029, meant to prove out inflatable structures and on-site manufacturing.\\n\\n* Founder Skyler Chan, a 22-year-old UC Berkeley engineer, previously interned at Tesla and worked on a NASA-funded 3D printer flown to space.\\n\\n* GRU pitches itself as an infrastructure company that will mine outer space to support long-term human settlements.\\n\\n**Why it matters: **Chan says the first hotel would be launched in 2032 and capable of supporting up to four guests, with the next iterations, built from moon bricks, taking on the style of San Francisco’s Palace of the Fine Arts. It’s an audacious vision bordering on absurd, but it has already received Y Combinator’s validation.\\n\\n\\n----------\\n\\n----------\\n###### GOOGLE\\n\\n#### 🧳 [_**Google’s founders are leaving California**_](https://techcrunch.com/2026/01/11/google-co-founders-may-be-pulling-out-of-california/)\\n\\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b86b4fc3-222c-49da-8ddc-602ec9777777/640px-Schmidt-Brin-Page-20080520__cropped__cropped_processed_by_imagy.jpeg?t=1768303227)\\nCaption: Image source: Wikimedia Commons\\n\\n**The Rundown: **Google co-founders Larry Page and Sergey Brin are quickly [severing](https://techcrunch.com/2026/01/11/google-co-founders-may-be-pulling-out-of-california/) many of their remaining financial ties to California just as the state weighs a one-time 5% wealth tax on billionaires. \\n\\n**The details:**\\n\\n* In December, Brin-linked entities dissolved or shifted 15 California LLCs to Nevada, covering assets such as his superyacht and a private jet terminal.\\n\\n* Page has likewise moved or wound down dozens of entities and is positioning himself in lower-tax states.\\n\\n* The proposed wealth tax would apply retroactively to anyone living in California as of January 1 and could affect roughly 200 ultrawealthy residents.\\n\\n* The plan has split Silicon Valley: LinkedIn co-founder Reid Hoffman opposes the levy, while Nvidia CEO Jensen Huang says he is “perfectly fine” paying it.\\n\\n**Why it matters:** When two tech legends worth $300B each start shuffling superyachts out of state, California has reason to worry. The state pulls roughly 40% its income tax revenue from the top 1% of earners. But apparently, most of the ultrawealthy stayed put past the January 1 deadline, so the rumored mass exodus hasn’t happened yet.\\n\\n\\n----------\\n\\n----------\\n###### DATA CENTERS\\n\\n#### **⚡️ **_**[Trump wants Big Tech to eat AI’s power bills](https://www.newsweek.com/donald-trump-reveals-plan-tackle-energy-bills-millions-11349266)**_\\n\\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2a9ac46e-8143-4c59-b1c4-39022e234086/9m5lQ82-S5qorUR6JG5big.jpg?t=1768299710)\\nCaption: Image source: Ideogram / The Rundown\\n\\n**The Rundown: **President Donald Trump [says](https://www.newsweek.com/donald-trump-reveals-plan-tackle-energy-bills-millions-11349266) he'll force Microsoft and other tech giants to cover the soaring electricity costs of their AI data centers instead of letting those power bills hit voters’ wallets.\\n\\n**The details:**\\n\\n* Trump said Americans should never pay higher electricity bills “because of data centers” and vowed to announce new measures in the coming weeks.\\n\\n* He singled out Microsoft as the first company expected to implement “major changes” to ensure consumers don’t “pick up the tab” for its AI network.\\n\\n* Analysts estimate U.S. data centers could nearly triple their share of national electricity use to around 12% by 2028.\\n\\n* A recent PJM grid auction [attributed](https://finance.yahoo.com/news/data-centers-were-40-pjm-092810667.html) roughly $23B in capacity costs to data centers from 2025 to 2028 — about half the total.\\n\\n**Why it matters: **AI data centers are driving power demand so quickly that Washington now treats electricity prices as a political flashpoint, with Trump leaning on Big Tech not to pass rising costs to voters. Yet he previously fast‑tracked data‑center hookups, leaving him both hyping the AI buildout and scrambling to contain its backlash.​\\n\\n\\n----------\\n\\n----------\\n###### APPLE\\n\\n#### 🍎 _**[How much Tim Cook made last year](https://9to5mac.com/2026/01/08/heres-how-much-tim-cook-and-other-apple-execs-made-last-year/)**_ \\n\\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/c76c4f87-76b2-4046-90e7-30d9a65bb01c/rEgy0qn_SjuVclke0HxnXQ.jpeg?t=1768294321)\\nCaption: Image source: Ideogram / The Rundown\\n\\n**The Rundown: **Apple’s latest proxy filing shows that CEO Tim Cook was [paid](https://9to5mac.com/2026/01/08/heres-how-much-tim-cook-and-other-apple-execs-made-last-year/) about $74.3M in 2025, a hair below his 2024 package and still overwhelmingly tied to stock awards and performance bonuses rather than salary.\\n\\n**The details:**\\n\\n* Breakdown: $3M salary, about $57.5M in stock awards, $12M in performance-based cash, and roughly $1.76M in other compensation.\\n\\n* “Other” compensation includes 401(k) contributions, life insurance, vacation cash-out, security, and personal air travel costs.\\n\\n* Apple spent around $887,870 on Cook’s personal security and about $789,991 on private air travel in 2025 alone.\\n\\n* Senior execs like Sabih Khan, Deirdre O’Brien, and Kate Adams each made about $27M, while new CFO Kevan Parekh received roughly $22.5M.\\n\\n**Why it matters:** Cook’s pay package puts him near the top of the U.S. CEO ranks, alongside Microsoft’s Satya Nadella, whose compensation recently hit about $96.5M — but well below the most extreme outliers, which keeps Apple in the broader [debate](https://www.rundown.ai/articles/apples-next-ceo-is-already-waiting) over whether executive pay is tethered to performance or simply market power.\\n\\n\\n----------\\n\\n----------\\n**QUICK HITS**\\n\\n\\n----------\\n\\n----------\\n### 📰 **_[Everything else in tech today](https://tech.therundown.ai/)_**\\n\\n**Paramount Skydance** [sued](https://www.latimes.com/entertainment-arts/business/story/2026-01-12/paramount-sues-warner-bros-discovery-over-its-deal-with-netflix) Warner Bros. Discovery in Delaware court to force more disclosure about WBD’s planned sale of its studio and streaming assets to Netflix.\\n\\n**Meta** reportedly [plans](https://www.bloomberg.com/news/articles/2026-01`... 4280 more characters,
+    allowAbsoluteUrls: true
+  },
+  request: <ref *1> Writable {
+    _events: {
+      close: undefined,
+      error: [Function: handleRequestError],
+      prefinish: undefined,
+      finish: undefined,
+      drain: undefined,
+      response: [Function: handleResponse],
+      socket: [Array],
+      abort: undefined
+    },
+    _writableState: WritableState {
+      highWaterMark: 16384,
+      length: 0,
+      corked: 0,
+      onwrite: [Function: bound onwrite],
+      writelen: 0,
+      bufferedIndex: 0,
+      pendingcb: 0,
+      [Symbol(kState)]: 17580812,
+      [Symbol(kBufferedValue)]: null
+    },
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: Infinity,
+      protocol: 'https:',
+      path: '/v1/text/chatcompletion_v2',
+      method: 'POST',
+      headers: [Object: null prototype],
+      agents: [Object],
+      auth: undefined,
+      family: undefined,
+      beforeRedirect: [Function: dispatchBeforeRedirect],
+      beforeRedirects: [Object],
+      http2Options: undefined,
+      hostname: 'api.minimax.chat',
+      port: '',
+      agent: undefined,
+      nativeProtocols: [Object],
+      pathname: '/v1/text/chatcompletion_v2'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 15524,
+    _requestBodyBuffers: [ [Object] ],
+    _eventsCount: 3,
+    _onNativeResponse: [Function (anonymous)],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 15524,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      socket: [TLSSocket],
+      _header: 'POST /v1/text/chatcompletion_v2 HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/json\r\n' +
+        'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJHcm91cE5hbWUiOiJ5ZXR0YSIsIlVzZXJOYW1lIjoieWV0dGEiLCJBY2NvdW50IjoiIiwiU3ViamVjdElEIjoiMTk5OTEzNzI4MjE3MDI5NDY2NyIsIlBob25lIjoiMTg1MTYwMzE3OTYiLCJHcm91cElEIjoiMTk5OTEzNzI4MjE2MTkwNjA1OSIsIlBhZ2VOYW1lIjoiIiwiTWFpbCI6IiIsIkNyZWF0ZVRpbWUiOiIyMDI1LTEyLTEyIDE0OjMwOjQxIiwiVG9rZW5UeXBlIjoxLCJpc3MiOiJtaW5pbWF4In0.Y2QHhKmE40pgKL6H3NHwf9-XHTMat7TzzSpccUszldpneSuUzbG20hiIYucXYq-vqAZ3EGRKs-K1rohgSkceOQbpnKL61V0RGakfVBHYpf4L9vBpY3w5n94UgQ6xjGRKsw3xGRtpdeOYGPWN8jqmSSBGaqr2QnkG4h0FfqbEMxl50cVcnpPFT7_kFanWLz939aRJ97-cR81vTFddC04-RTjBMc9SWmXQk-UpbuYeLlWxJYFhZ_jHJBxyp0iwH_QGVfx0EaSx1H5z8ENDpYbnlt_CywrL0bgREsQTg-fAHEfg6F8oylAynn-J0jVAsxXfq_wzWzE63dYnx11hE5X1sA\r\n' +
+        'User-Agent: axios/1.13.2\r\n' +
+        'Content-Length: 15524\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: api.minimax.chat\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/v1/text/chatcompletion_v2',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: [Function: emitRequestTimeout],
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'api.minimax.chat',
+      protocol: 'https:',
+      _redirectable: [Circular *1],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: true,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    _currentUrl: 'https://api.minimax.chat/v1/text/chatcompletion_v2',
+    _timeout: null,
+    [Symbol(shapeMode)]: true,
+    [Symbol(kCapture)]: false
+  },
+  [cause]: Error: read ECONNRESET
+      at TLSWrap.onStreamRead (node:internal/stream_base_commons:218:20) {
+    errno: -54,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+[2026-01-14T00:19:57.214Z] [ERROR] ✗ 邮件处理失败
+AxiosError: read ECONNRESET
+    at AxiosError.from (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/core/AxiosError.js:96:14)
+    at RedirectableRequest.handleRequestError (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/adapters/http.js:817:25)
+    at RedirectableRequest.emit (node:events:524:28)
+    at eventHandlers.<computed> (/Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/follow-redirects/index.js:49:24)
+    at ClientRequest.emit (node:events:524:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at TLSSocket.socketErrorListener (node:_http_client:504:5)
+    at TLSSocket.emit (node:events:524:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at Axios.request (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AITranslator.translateWithMiniMax (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:27:30)
+    at async AITranslator.translate (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:13:20)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/index.js:68:43) {
+  syscall: 'read',
+  code: 'ECONNRESET',
+  errno: -54,
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJHcm91cE5hbWUiOiJ5ZXR0YSIsIlVzZXJOYW1lIjoieWV0dGEiLCJBY2NvdW50IjoiIiwiU3ViamVjdElEIjoiMTk5OTEzNzI4MjE3MDI5NDY2NyIsIlBob25lIjoiMTg1MTYwMzE3OTYiLCJHcm91cElEIjoiMTk5OTEzNzI4MjE2MTkwNjA1OSIsIlBhZ2VOYW1lIjoiIiwiTWFpbCI6IiIsIkNyZWF0ZVRpbWUiOiIyMDI1LTEyLTEyIDE0OjMwOjQxIiwiVG9rZW5UeXBlIjoxLCJpc3MiOiJtaW5pbWF4In0.Y2QHhKmE40pgKL6H3NHwf9-XHTMat7TzzSpccUszldpneSuUzbG20hiIYucXYq-vqAZ3EGRKs-K1rohgSkceOQbpnKL61V0RGakfVBHYpf4L9vBpY3w5n94UgQ6xjGRKsw3xGRtpdeOYGPWN8jqmSSBGaqr2QnkG4h0FfqbEMxl50cVcnpPFT7_kFanWLz939aRJ97-cR81vTFddC04-RTjBMc9SWmXQk-UpbuYeLlWxJYFhZ_jHJBxyp0iwH_QGVfx0EaSx1H5z8ENDpYbnlt_CywrL0bgREsQTg-fAHEfg6F8oylAynn-J0jVAsxXfq_wzWzE63dYnx11hE5X1sA',
+      'User-Agent': 'axios/1.13.2',
+      'Content-Length': '15524',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'post',
+    url: 'https://api.minimax.chat/v1/text/chatcompletion_v2',
+    data: `{"model":"abab6.5-chat","messages":[{"role":"user","content":"你是一位专业的 AI 资讯编辑，请将以下英文邮件内容翻译为中文，并按照指定格式整理成精美的 Markdown 笔记。\\n\\n**要求：**\\n1. 翻译要准确、流畅、专业\\n2. 摘要要详细，至少 3-5 句话，充分概括邮件的核心内容\\n3. 核心要点要全面，列出所有重要信息（至少 5-8 个要点）\\n4. 每个要点要有详细说明，不要只是简单列举\\n5. **必须使用下面提供的链接列表，将所有链接都包含在输出中**\\n6. 排版要美观，使用适当的 Markdown 格式（加粗、斜体、引用等）\\n7. **输出必须完整，不要截断内容**\\n8. **不要在输出中包含分隔线（---），直接输出内容即可**\\n\\n**输出格式示例：**\\n\\n# 📰 标题\\n\\n> 📅 发布日期：[从邮件中提取日期]\\n\\n## 📝 内容摘要\\n\\n[用 3-5 段详细概括邮件的主要内容，包括背景、重点和意义]\\n\\n## 🔑 核心要点\\n\\n### 1. [要点标题]\\n[详细说明这个要点的内容，包括相关数据、影响等]\\n\\n### 2. [要点标题]\\n[详细说明...]\\n\\n[继续列出所有重要要点，至少 5-8 个]\\n\\n## 🔗 相关链接\\n\\n### 📄 文章资源\\n- [文章标题](URL) - 简短描述\\n\\n### 🛠️ 工具产品\\n- [产品名称](URL) - 简短描述\\n\\n### 🌐 其他资源\\n- [资源名称](URL) - 简短描述\\n\\n**邮件原文：**\\n^**[Read Online](https://tech.therundown.ai/p/a-moon-hotel-is-taking-reservations?_bhlid=4eaa234680798ad3bdb45514b5705f029891f88c&jwt_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWJzY3JpYmVyX2lkIjoiMGMxZDI5ZWEtYjU1Mi00YTZiLWJmNzEtNDAwOTM0ZmI3YzVmIiwicHVibGljYXRpb25faWQiOiI1N2FjYTUwZi1hNWIyLTQ5ZjYtYWVlZi02NDk5NjkyNTdjMTciLCJhY2Nlc3NfdHlwZSI6InJlYWQtb25seSIsImV4cCI6MTc2ODQ5MTI5MiwiaXNzIjoiaHR0cHM6Ly9hcHAuYmVlaGlpdi5jb20iLCJpYXQiOjE3NjgzMTg0OTJ9.YMfOr6c5kPp2-H89HMg5Kx61OOFHo_ZwNQdqArY30s4)**^^ | ^^**[Sign Up](https://tech.therundown.ai/subscribe)**^^ | ^^**[Advertise](https://therundownai.typeform.com/to/kraZ1TSO)**^\\n\\n----------\\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/10c7889e-d18b-4c62-afd1-401ef35153ac/techheader.png?t=1736700528)\\nFollow image link: (https://rundown.ai/)\\nCaption: \\n\\n\\n----------\\n\\n----------\\n**Good morning, yetta.** A 22-year-old Berkeley-trained engineer says he wants to build a luxury hotel on the moon — and he’s taking six-figure deposits from anyone willing to book a room. \\n\\nHis startup, called GRU Space, has already raised money from Y Combinator. It’s audacious even by Silicon Valley standards, but for a certain class of techno-optimist, the moon is starting to look less like a celestial body and more like a lifestyle upgrade. \\n\\n———————————————————————————\\n\\n**In today’s tech rundown:**\\n\\n* This moon hotel is taking reservations\\n\\n* Google’s founders are leaving California\\n\\n* Trump wants Big Tech to eat AI’s power bills\\n\\n* How much Tim Cook made last year\\n\\n* Quick hits on other tech news\\n\\n\\n----------\\n\\n----------\\n**LATEST DEVELOPMENTS**\\n\\n\\n----------\\n\\n----------\\n###### SPACE TECH\\n\\n#### 🌝 [_**This moon hotel is taking reservations**_](https://www.ycombinator.com/companies/galactic-resource-utilization-space-inc-gru-space)\\n\\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/a5b003b0-dd25-4104-b098-6ff793aaddb5/NEWCapture_d_e%CC%81cran_2026-01-13_a%CC%80_10.29.44_cropped_processed_by_imagy__1_.jpg?t=1768296959)\\nCaption: Image source: GRU / YouTube\\n\\n**The Rundown: **A YC-backed startup called GRU Space [says](https://www.youtube.com/watch?v=GOwUlkNw8eg) it wants to build the first lunar hotel, taking deposits of $250K–$1M from wealthy true believers who are willing to reserve a bed on the moon years before the infrastructure exists.\\n\\n**The details:**\\n\\n* The tiny startup plans to launch its first hotel, an inflatable structure, in 2032, giving SpaceX travelers an option off the Starship, Ars Technica [reports](https://arstechnica.com/space/2026/01/you-can-now-reserve-a-hotel-room-on-the-moon-for-250000/).\\n\\n* The first tech demo is a 10kg payload slated for a commercial lunar lander in 2029, meant to prove out inflatable structures and on-site manufacturing.\\n\\n* Founder Skyler Chan, a 22-year-old UC Berkeley engineer, previously interned at Tesla and worked on a NASA-funded 3D printer flown to space.\\n\\n* GRU pitches itself as an infrastructure company that will mine outer space to support long-term human settlements.\\n\\n**Why it matters: **Chan says the first hotel would be launched in 2032 and capable of supporting up to four guests, with the next iterations, built from moon bricks, taking on the style of San Francisco’s Palace of the Fine Arts. It’s an audacious vision bordering on absurd, but it has already received Y Combinator’s validation.\\n\\n\\n----------\\n\\n----------\\n###### GOOGLE\\n\\n#### 🧳 [_**Google’s founders are leaving California**_](https://techcrunch.com/2026/01/11/google-co-founders-may-be-pulling-out-of-california/)\\n\\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b86b4fc3-222c-49da-8ddc-602ec9777777/640px-Schmidt-Brin-Page-20080520__cropped__cropped_processed_by_imagy.jpeg?t=1768303227)\\nCaption: Image source: Wikimedia Commons\\n\\n**The Rundown: **Google co-founders Larry Page and Sergey Brin are quickly [severing](https://techcrunch.com/2026/01/11/google-co-founders-may-be-pulling-out-of-california/) many of their remaining financial ties to California just as the state weighs a one-time 5% wealth tax on billionaires. \\n\\n**The details:**\\n\\n* In December, Brin-linked entities dissolved or shifted 15 California LLCs to Nevada, covering assets such as his superyacht and a private jet terminal.\\n\\n* Page has likewise moved or wound down dozens of entities and is positioning himself in lower-tax states.\\n\\n* The proposed wealth tax would apply retroactively to anyone living in California as of January 1 and could affect roughly 200 ultrawealthy residents.\\n\\n* The plan has split Silicon Valley: LinkedIn co-founder Reid Hoffman opposes the levy, while Nvidia CEO Jensen Huang says he is “perfectly fine” paying it.\\n\\n**Why it matters:** When two tech legends worth $300B each start shuffling superyachts out of state, California has reason to worry. The state pulls roughly 40% its income tax revenue from the top 1% of earners. But apparently, most of the ultrawealthy stayed put past the January 1 deadline, so the rumored mass exodus hasn’t happened yet.\\n\\n\\n----------\\n\\n----------\\n###### DATA CENTERS\\n\\n#### **⚡️ **_**[Trump wants Big Tech to eat AI’s power bills](https://www.newsweek.com/donald-trump-reveals-plan-tackle-energy-bills-millions-11349266)**_\\n\\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2a9ac46e-8143-4c59-b1c4-39022e234086/9m5lQ82-S5qorUR6JG5big.jpg?t=1768299710)\\nCaption: Image source: Ideogram / The Rundown\\n\\n**The Rundown: **President Donald Trump [says](https://www.newsweek.com/donald-trump-reveals-plan-tackle-energy-bills-millions-11349266) he'll force Microsoft and other tech giants to cover the soaring electricity costs of their AI data centers instead of letting those power bills hit voters’ wallets.\\n\\n**The details:**\\n\\n* Trump said Americans should never pay higher electricity bills “because of data centers” and vowed to announce new measures in the coming weeks.\\n\\n* He singled out Microsoft as the first company expected to implement “major changes” to ensure consumers don’t “pick up the tab” for its AI network.\\n\\n* Analysts estimate U.S. data centers could nearly triple their share of national electricity use to around 12% by 2028.\\n\\n* A recent PJM grid auction [attributed](https://finance.yahoo.com/news/data-centers-were-40-pjm-092810667.html) roughly $23B in capacity costs to data centers from 2025 to 2028 — about half the total.\\n\\n**Why it matters: **AI data centers are driving power demand so quickly that Washington now treats electricity prices as a political flashpoint, with Trump leaning on Big Tech not to pass rising costs to voters. Yet he previously fast‑tracked data‑center hookups, leaving him both hyping the AI buildout and scrambling to contain its backlash.​\\n\\n\\n----------\\n\\n----------\\n###### APPLE\\n\\n#### 🍎 _**[How much Tim Cook made last year](https://9to5mac.com/2026/01/08/heres-how-much-tim-cook-and-other-apple-execs-made-last-year/)**_ \\n\\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/c76c4f87-76b2-4046-90e7-30d9a65bb01c/rEgy0qn_SjuVclke0HxnXQ.jpeg?t=1768294321)\\nCaption: Image source: Ideogram / The Rundown\\n\\n**The Rundown: **Apple’s latest proxy filing shows that CEO Tim Cook was [paid](https://9to5mac.com/2026/01/08/heres-how-much-tim-cook-and-other-apple-execs-made-last-year/) about $74.3M in 2025, a hair below his 2024 package and still overwhelmingly tied to stock awards and performance bonuses rather than salary.\\n\\n**The details:**\\n\\n* Breakdown: $3M salary, about $57.5M in stock awards, $12M in performance-based cash, and roughly $1.76M in other compensation.\\n\\n* “Other” compensation includes 401(k) contributions, life insurance, vacation cash-out, security, and personal air travel costs.\\n\\n* Apple spent around $887,870 on Cook’s personal security and about $789,991 on private air travel in 2025 alone.\\n\\n* Senior execs like Sabih Khan, Deirdre O’Brien, and Kate Adams each made about $27M, while new CFO Kevan Parekh received roughly $22.5M.\\n\\n**Why it matters:** Cook’s pay package puts him near the top of the U.S. CEO ranks, alongside Microsoft’s Satya Nadella, whose compensation recently hit about $96.5M — but well below the most extreme outliers, which keeps Apple in the broader [debate](https://www.rundown.ai/articles/apples-next-ceo-is-already-waiting) over whether executive pay is tethered to performance or simply market power.\\n\\n\\n----------\\n\\n----------\\n**QUICK HITS**\\n\\n\\n----------\\n\\n----------\\n### 📰 **_[Everything else in tech today](https://tech.therundown.ai/)_**\\n\\n**Paramount Skydance** [sued](https://www.latimes.com/entertainment-arts/business/story/2026-01-12/paramount-sues-warner-bros-discovery-over-its-deal-with-netflix) Warner Bros. Discovery in Delaware court to force more disclosure about WBD’s planned sale of its studio and streaming assets to Netflix.\\n\\n**Meta** reportedly [plans](https://www.bloomberg.com/news/articles/2026-01`... 4280 more characters,
+    allowAbsoluteUrls: true
+  },
+  request: <ref *1> Writable {
+    _events: {
+      close: undefined,
+      error: [Function: handleRequestError],
+      prefinish: undefined,
+      finish: undefined,
+      drain: undefined,
+      response: [Function: handleResponse],
+      socket: [Array],
+      abort: undefined
+    },
+    _writableState: WritableState {
+      highWaterMark: 16384,
+      length: 0,
+      corked: 0,
+      onwrite: [Function: bound onwrite],
+      writelen: 0,
+      bufferedIndex: 0,
+      pendingcb: 0,
+      [Symbol(kState)]: 17580812,
+      [Symbol(kBufferedValue)]: null
+    },
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: Infinity,
+      protocol: 'https:',
+      path: '/v1/text/chatcompletion_v2',
+      method: 'POST',
+      headers: [Object: null prototype],
+      agents: [Object],
+      auth: undefined,
+      family: undefined,
+      beforeRedirect: [Function: dispatchBeforeRedirect],
+      beforeRedirects: [Object],
+      http2Options: undefined,
+      hostname: 'api.minimax.chat',
+      port: '',
+      agent: undefined,
+      nativeProtocols: [Object],
+      pathname: '/v1/text/chatcompletion_v2'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 15524,
+    _requestBodyBuffers: [ [Object] ],
+    _eventsCount: 3,
+    _onNativeResponse: [Function (anonymous)],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 15524,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      socket: [TLSSocket],
+      _header: 'POST /v1/text/chatcompletion_v2 HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/json\r\n' +
+        'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJHcm91cE5hbWUiOiJ5ZXR0YSIsIlVzZXJOYW1lIjoieWV0dGEiLCJBY2NvdW50IjoiIiwiU3ViamVjdElEIjoiMTk5OTEzNzI4MjE3MDI5NDY2NyIsIlBob25lIjoiMTg1MTYwMzE3OTYiLCJHcm91cElEIjoiMTk5OTEzNzI4MjE2MTkwNjA1OSIsIlBhZ2VOYW1lIjoiIiwiTWFpbCI6IiIsIkNyZWF0ZVRpbWUiOiIyMDI1LTEyLTEyIDE0OjMwOjQxIiwiVG9rZW5UeXBlIjoxLCJpc3MiOiJtaW5pbWF4In0.Y2QHhKmE40pgKL6H3NHwf9-XHTMat7TzzSpccUszldpneSuUzbG20hiIYucXYq-vqAZ3EGRKs-K1rohgSkceOQbpnKL61V0RGakfVBHYpf4L9vBpY3w5n94UgQ6xjGRKsw3xGRtpdeOYGPWN8jqmSSBGaqr2QnkG4h0FfqbEMxl50cVcnpPFT7_kFanWLz939aRJ97-cR81vTFddC04-RTjBMc9SWmXQk-UpbuYeLlWxJYFhZ_jHJBxyp0iwH_QGVfx0EaSx1H5z8ENDpYbnlt_CywrL0bgREsQTg-fAHEfg6F8oylAynn-J0jVAsxXfq_wzWzE63dYnx11hE5X1sA\r\n' +
+        'User-Agent: axios/1.13.2\r\n' +
+        'Content-Length: 15524\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: api.minimax.chat\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/v1/text/chatcompletion_v2',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: [Function: emitRequestTimeout],
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'api.minimax.chat',
+      protocol: 'https:',
+      _redirectable: [Circular *1],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: true,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    _currentUrl: 'https://api.minimax.chat/v1/text/chatcompletion_v2',
+    _timeout: null,
+    [Symbol(shapeMode)]: true,
+    [Symbol(kCapture)]: false
+  },
+  [cause]: Error: read ECONNRESET
+      at TLSWrap.onStreamRead (node:internal/stream_base_commons:218:20) {
+    errno: -54,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+[2026-01-16T00:22:16.401Z] [ERROR] MiniMax 翻译失败
+AxiosError: read ECONNRESET
+    at AxiosError.from (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/core/AxiosError.js:96:14)
+    at RedirectableRequest.handleRequestError (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/adapters/http.js:817:25)
+    at RedirectableRequest.emit (node:events:524:28)
+    at eventHandlers.<computed> (/Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/follow-redirects/index.js:49:24)
+    at ClientRequest.emit (node:events:524:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at TLSSocket.socketErrorListener (node:_http_client:504:5)
+    at TLSSocket.emit (node:events:524:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at Axios.request (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AITranslator.translateWithMiniMax (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:27:30)
+    at async AITranslator.translate (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:13:20)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/index.js:68:43) {
+  syscall: 'read',
+  code: 'ECONNRESET',
+  errno: -54,
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJHcm91cE5hbWUiOiJ5ZXR0YSIsIlVzZXJOYW1lIjoieWV0dGEiLCJBY2NvdW50IjoiIiwiU3ViamVjdElEIjoiMTk5OTEzNzI4MjE3MDI5NDY2NyIsIlBob25lIjoiMTg1MTYwMzE3OTYiLCJHcm91cElEIjoiMTk5OTEzNzI4MjE2MTkwNjA1OSIsIlBhZ2VOYW1lIjoiIiwiTWFpbCI6IiIsIkNyZWF0ZVRpbWUiOiIyMDI1LTEyLTEyIDE0OjMwOjQxIiwiVG9rZW5UeXBlIjoxLCJpc3MiOiJtaW5pbWF4In0.Y2QHhKmE40pgKL6H3NHwf9-XHTMat7TzzSpccUszldpneSuUzbG20hiIYucXYq-vqAZ3EGRKs-K1rohgSkceOQbpnKL61V0RGakfVBHYpf4L9vBpY3w5n94UgQ6xjGRKsw3xGRtpdeOYGPWN8jqmSSBGaqr2QnkG4h0FfqbEMxl50cVcnpPFT7_kFanWLz939aRJ97-cR81vTFddC04-RTjBMc9SWmXQk-UpbuYeLlWxJYFhZ_jHJBxyp0iwH_QGVfx0EaSx1H5z8ENDpYbnlt_CywrL0bgREsQTg-fAHEfg6F8oylAynn-J0jVAsxXfq_wzWzE63dYnx11hE5X1sA',
+      'User-Agent': 'axios/1.13.2',
+      'Content-Length': '18456',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'post',
+    url: 'https://api.minimax.chat/v1/text/chatcompletion_v2',
+    data: '{"model":"abab6.5-chat","messages":[{"role":"user","content":"你是一位专业的 AI 资讯编辑，请将以下英文邮件内容翻译为中文，并按照指定格式整理成精美的 Markdown 笔记。\\n\\n**要求：**\\n1. 翻译要准确、流畅、专业\\n2. 摘要要详细，至少 3-5 句话，充分概括邮件的核心内容\\n3. 核心要点要全面，列出所有重要信息（至少 5-8 个要点）\\n4. 每个要点要有详细说明，不要只是简单列举\\n5. **必须使用下面提供的链接列表，将所有链接都包含在输出中**\\n6. 排版要美观，使用适当的 Markdown 格式（加粗、斜体、引用等）\\n7. **输出必须完整，不要截断内容**\\n8. **不要在输出中包含分隔线（---），直接输出内容即可**\\n\\n**输出格式示例：**\\n\\n# 📰 标题\\n\\n> 📅 发布日期：[从邮件中提取日期]\\n\\n## 📝 内容摘要\\n\\n[用 3-5 段详细概括邮件的主要内容，包括背景、重点和意义]\\n\\n## 🔑 核心要点\\n\\n### 1. [要点标题]\\n[详细说明这个要点的内容，包括相关数据、影响等]\\n\\n### 2. [要点标题]\\n[详细说明...]\\n\\n[继续列出所有重要要点，至少 5-8 个]\\n\\n## 🔗 相关链接\\n\\n### 📄 文章资源\\n- [文章标题](URL) - 简短描述\\n\\n### 🛠️ 工具产品\\n- [产品名称](URL) - 简短描述\\n\\n### 🌐 其他资源\\n- [资源名称](URL) - 简短描述\\n\\n**邮件原文：**\\n^**[Read Online](https://www.therundown.ai/p/geminis-personal-intelligence-upgrade?_bhlid=4eaa234680798ad3bdb45514b5705f029891f88c&jwt_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWJzY3JpYmVyX2lkIjoiMGMxZDI5ZWEtYjU1Mi00YTZiLWJmNzEtNDAwOTM0ZmI3YzVmIiwicHVibGljYXRpb25faWQiOiI0ZDAzMzkwZC0yNDgxLTQyOTktYjk0OS1mZmQ4YjM4YjRjMzgiLCJhY2Nlc3NfdHlwZSI6InJlYWQtb25seSIsImV4cCI6MTc2ODY0ODc2NSwiaXNzIjoiaHR0cHM6Ly9hcHAuYmVlaGlpdi5jb20iLCJpYXQiOjE3Njg0NzU5NjV9.eAnXxDaPBkv7m-jxbToJqcvYEIOFEEAr0AMRoFOnwKA)**^^ | ^^**[Sign Up](https://www.therundown.ai/subscribe)**^^ | ^^**[Advertise](https://therundownai.typeform.com/to/kraZ1TSO)**^\\n\\n----------\\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b02cbfde-fbff-4b00-a39d-543bba07839e/box-header.png?t=1768413502)\\nFollow image link: (https://www.box.com/extract?utm_source=newsletter&utm_medium=paidinfluencer&utm_theme=icm&utm_campaign=FY26RundownAI_Jan15Extract)\\nCaption: \\n\\n\\n----------\\n\\n----------\\n**Good morning, yetta.** As frontier models converge on capability, the differentiator is becoming personal context — and no one has more of it across the internet than Google. \\n\\nThe company\'s latest ‘Personal Intelligence’ upgrade lets Gemini pull from Gmail, Photos, and YouTube automatically, turning the apps billions already use into an AI moat rivals will struggle to cross.\\n\\n———————————————————————————\\n\\n**In today’s AI rundown:**\\n\\n* Gemini’s new ‘Personal Intelligence’ upgrade\\n\\n* McConaughey trademarks himself to fight deepfakes\\n\\n* Get the most out of Google’s Gemini in Gmail\\n\\n* Z AI’s open image model trained on Huawei chips\\n\\n* 4 new AI tools, community workflows, and more\\n\\n\\n----------\\n\\n----------\\n**LATEST DEVELOPMENTS**\\n\\n\\n----------\\n\\n----------\\n###### GOOGLE\\n\\n#### 🧠 _**[Gemini’s new ‘Personal Intelligence’ upgrade](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence/)**_\\n\\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e5bbdc4e-41df-4181-9a7b-6b69c53930a3/geminipersonalized.jpg?t=1768415300)\\nCaption: Image source: Google\\n\\n**The Rundown: **Google just [launched](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence/) Personal Intelligence, a new beta feature that lets Gemini reason across apps like Gmail, Photos, YouTube, and Search data to deliver more personalized responses without users needing to specify which app to pull from.\\n\\n**The details:**\\n\\n* Personal Intelligence connects Google’s app suite to Gemini, letting the assistant understand, locate, and proactively use personalized details.\\n\\n* The tool can reason across text, images, and videos, with VP Josh Woodward [detailing](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence/) the AI referencing his photos and emails to help at a tire shop.\\n\\n* Personal Intelligence is off by default, with Google saying it won’t train its AI models directly on connected info like inboxes or photo libraries. \\n\\n* The feature is rolling out to Gemini AI Pro and Ultra subscribers in the U.S. first, with plans to expand to free tiers and AI Mode in the future. \\n\\n**Why it matters: **This feels like Google is finally playing the card its AI rivals will always struggle to match: billions of users already living inside Gmail, Photos, and YouTube. As the frontier models all become extremely capable for the average user, deep integrations with personal context from widely used apps will be the big differentiator. \\n\\n\\n----------\\n\\n----------\\n###### TOGETHER WITH BOX\\n\\n#### 📦 **[_Turn enterprise content into actionable data_](https://www.box.com/extract?utm_source=newsletter&utm_medium=paidinfluencer&utm_theme=icm&utm_campaign=FY26RundownAI_Jan15Extract)**\\n\\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/62b30f6f-d1a7-473c-9ca4-ae1adb9af024/Box_Extract__2_.jpg?t=1768413586)\\nFollow image link: (https://www.box.com/extract?utm_source=newsletter&utm_medium=paidinfluencer&utm_theme=icm&utm_campaign=FY26RundownAI_Jan15Extract)\\nCaption: \\n\\n**The Rundown**: Enterprises sit on gold mines of data locked in content. Box Extract changes that, securely extracting structured data at scale to power faster decisions and automated workflows.\\n\\n**Box is a game-changer for regulated industries, with use cases like:**\\n\\n* Financial services: extract loan terms and payment dates automatically\\n\\n* Government: pull permit details and inspection dates to streamline compliance\\n\\n* Insurance: distill claims info from reports and images to accelerate processing\\n\\n_[Learn more from Box](https://www.box.com/extract?utm_source=newsletter&utm_medium=paidinfluencer&utm_theme=icm&utm_campaign=FY26RundownAI_Jan15Extract)_.\\n\\n\\n----------\\n\\n----------\\n###### AI & COPYRIGHT\\n\\n#### ⭐️ _[McConaughey trademarks himself to fight deepfakes](https://www.wsj.com/tech/ai/matthew-mcconaughey-trademarks-himself-to-fight-ai-misuse-8ffe76a9)_\\n\\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2bf36e31-ec2d-4698-9d4c-f5e88b409aa6/McConaughey_AI_Defense_Clean_2.png?t=1768426123)\\nCaption: Image source: Lovart / The Rundown\\n\\n**The Rundown: **Oscar-winning actor Matthew McConaughey [secured](https://www.wsj.com/tech/ai/matthew-mcconaughey-trademarks-himself-to-fight-ai-misuse-8ffe76a9) eight trademark approvals from the U.S. Patent and Trademark Office covering his voice, likeness, and video clips, according to the WSJ, citing the need to combat AI deepfakes and misuse. \\n\\n**The details: **\\n\\n* The approved trademarks include audio of his famous \\"Alright, alright, alright\\" catchphrase and short clips of him speaking and staring into a camera. \\n\\n* McConaughey told the WSJ that they “want to create a clear perimeter around ownership with consent and attribution the norm in an AI world.”\\n\\n* McConaughey\'s lawyers say the filings give them a federal court avenue to pursue AI misuse, rather than relying on state-by-state publicity laws.\\n\\n* The actor is an investor in AI voice startup ElevenLabs, as well as the face of Salesforce’s Agentforce TV campaigns. \\n\\n**Why it matters:** The capabilities of AI image and video models are blurring reality more than ever, and newer, powerful releases have been far more lax on creating real likenesses and IP. McConaughey is right to push against the unclear ownership rules in the AI era, but thus far, it’s been a tough legal game to play without strong results. \\n\\n\\n----------\\n\\n----------\\n###### AI TRAINING\\n\\n#### 📧 **[_Get the most out of Google’s Gemini in Gmail_](https://app.therundown.ai/guides/the-best-and-worst-of-googles-new-gemini-in-gmail-features)**\\n\\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/522a8f33-5c6d-4ce5-9c0f-865d69455679/gmailgemini.jpg?t=1768420194)\\nCaption: \\n\\n**The Rundown:** In this tutorial, you will learn how to use Google’s new Gemini features in Gmail, what is available right now, and the most beneficial and disappointing parts about this initial rollout.\\n\\n**Step-by-step:**\\n\\n1. With a Google Workspace or “AI Pro” personal account, go to gmail.com and click on settings in the top right. Make sure all the \\"smart features\\" are enabled\\n\\n2. In your inbox, click the “Ask Gemini” button next to settings and ask anything about your inbox, like: “What emails do I have about [subject]?”\\n\\n3. In any draft, you can press `Option + H` (Mac) or  `Alt + H` (Windows), or click \\"Help me write\\" to take Gemini’s help to write based on the email’s context\\n\\n4. After a reply is written, you can click “Recreate” to regenerate it or click “Refine” to change the tone or length of the reply.\\n\\n**Pro tip: **Use “help me schedule” in the draft pane to have Gemini read the email thread, check the calendars, and suggest meeting times to whomever you’re emailing.\\n\\n\\n----------\\n\\n----------\\n###### PRESENTED BY SLACK FROM SALESFORCE\\n\\n#### 📈 **[_The real ROI of AI agents in collaboration_](https://slack.com/resources/why-use-slack/how-ai-agents-will-drive-collaboration-roi?d=701ed00000D87kFAAR&nc=701ed00000D8aHYAAZ&utm_source=therundownai&utm_medium=tp_email&utm_campaign=amer_us_slack-invoice_&utm_content=allsegments_all-strategic-therundown-secondary-how-ai-agents-will-drive_701ed00000D87kFAAR_english_how-ai-agents-will-drive-collaboration-roi)**\\n\\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/368aeaec-5160-4f12-ac35-e451efaf0658/image4__11_.png?t=1768420677)\\nFollow image link: (https://slack.com/resources/why-use-slack/how-ai-agents-will-drive-collaboration-roi?d=701ed00000D87kFAAR&nc=701ed00000D8aHYAAZ&utm_source=therundownai&utm_medium=tp_email&utm_campaign=amer_us_slack-invoice_&utm_content=allsegments_all-strategic-therundown-secondary-how-ai-agents-will-drive_701ed00000D87kFAAR_english_how-ai-agents-will-drive-collaboration-roi)\\nCaption: \\n\\n**The Rundown:** For all the talk of AI\'s transformative po'... 7192 more characters,
+    allowAbsoluteUrls: true
+  },
+  request: <ref *1> Writable {
+    _events: {
+      close: undefined,
+      error: [Function: handleRequestError],
+      prefinish: undefined,
+      finish: undefined,
+      drain: undefined,
+      response: [Function: handleResponse],
+      socket: [Array],
+      abort: undefined
+    },
+    _writableState: WritableState {
+      highWaterMark: 16384,
+      length: 0,
+      corked: 0,
+      onwrite: [Function: bound onwrite],
+      writelen: 0,
+      bufferedIndex: 0,
+      pendingcb: 0,
+      [Symbol(kState)]: 17580812,
+      [Symbol(kBufferedValue)]: null
+    },
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: Infinity,
+      protocol: 'https:',
+      path: '/v1/text/chatcompletion_v2',
+      method: 'POST',
+      headers: [Object: null prototype],
+      agents: [Object],
+      auth: undefined,
+      family: undefined,
+      beforeRedirect: [Function: dispatchBeforeRedirect],
+      beforeRedirects: [Object],
+      http2Options: undefined,
+      hostname: 'api.minimax.chat',
+      port: '',
+      agent: undefined,
+      nativeProtocols: [Object],
+      pathname: '/v1/text/chatcompletion_v2'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 18456,
+    _requestBodyBuffers: [ [Object] ],
+    _eventsCount: 3,
+    _onNativeResponse: [Function (anonymous)],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 18456,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      socket: [TLSSocket],
+      _header: 'POST /v1/text/chatcompletion_v2 HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/json\r\n' +
+        'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJHcm91cE5hbWUiOiJ5ZXR0YSIsIlVzZXJOYW1lIjoieWV0dGEiLCJBY2NvdW50IjoiIiwiU3ViamVjdElEIjoiMTk5OTEzNzI4MjE3MDI5NDY2NyIsIlBob25lIjoiMTg1MTYwMzE3OTYiLCJHcm91cElEIjoiMTk5OTEzNzI4MjE2MTkwNjA1OSIsIlBhZ2VOYW1lIjoiIiwiTWFpbCI6IiIsIkNyZWF0ZVRpbWUiOiIyMDI1LTEyLTEyIDE0OjMwOjQxIiwiVG9rZW5UeXBlIjoxLCJpc3MiOiJtaW5pbWF4In0.Y2QHhKmE40pgKL6H3NHwf9-XHTMat7TzzSpccUszldpneSuUzbG20hiIYucXYq-vqAZ3EGRKs-K1rohgSkceOQbpnKL61V0RGakfVBHYpf4L9vBpY3w5n94UgQ6xjGRKsw3xGRtpdeOYGPWN8jqmSSBGaqr2QnkG4h0FfqbEMxl50cVcnpPFT7_kFanWLz939aRJ97-cR81vTFddC04-RTjBMc9SWmXQk-UpbuYeLlWxJYFhZ_jHJBxyp0iwH_QGVfx0EaSx1H5z8ENDpYbnlt_CywrL0bgREsQTg-fAHEfg6F8oylAynn-J0jVAsxXfq_wzWzE63dYnx11hE5X1sA\r\n' +
+        'User-Agent: axios/1.13.2\r\n' +
+        'Content-Length: 18456\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: api.minimax.chat\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/v1/text/chatcompletion_v2',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: [Function: emitRequestTimeout],
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: true,
+      host: 'api.minimax.chat',
+      protocol: 'https:',
+      _redirectable: [Circular *1],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: true,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    _currentUrl: 'https://api.minimax.chat/v1/text/chatcompletion_v2',
+    _timeout: null,
+    [Symbol(shapeMode)]: true,
+    [Symbol(kCapture)]: false
+  },
+  [cause]: Error: read ECONNRESET
+      at TLSWrap.onStreamRead (node:internal/stream_base_commons:218:20) {
+    errno: -54,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+[2026-01-16T00:22:16.437Z] [ERROR] ✗ 邮件处理失败
+AxiosError: read ECONNRESET
+    at AxiosError.from (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/core/AxiosError.js:96:14)
+    at RedirectableRequest.handleRequestError (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/adapters/http.js:817:25)
+    at RedirectableRequest.emit (node:events:524:28)
+    at eventHandlers.<computed> (/Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/follow-redirects/index.js:49:24)
+    at ClientRequest.emit (node:events:524:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at TLSSocket.socketErrorListener (node:_http_client:504:5)
+    at TLSSocket.emit (node:events:524:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at Axios.request (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AITranslator.translateWithMiniMax (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:27:30)
+    at async AITranslator.translate (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:13:20)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/index.js:68:43) {
+  syscall: 'read',
+  code: 'ECONNRESET',
+  errno: -54,
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJHcm91cE5hbWUiOiJ5ZXR0YSIsIlVzZXJOYW1lIjoieWV0dGEiLCJBY2NvdW50IjoiIiwiU3ViamVjdElEIjoiMTk5OTEzNzI4MjE3MDI5NDY2NyIsIlBob25lIjoiMTg1MTYwMzE3OTYiLCJHcm91cElEIjoiMTk5OTEzNzI4MjE2MTkwNjA1OSIsIlBhZ2VOYW1lIjoiIiwiTWFpbCI6IiIsIkNyZWF0ZVRpbWUiOiIyMDI1LTEyLTEyIDE0OjMwOjQxIiwiVG9rZW5UeXBlIjoxLCJpc3MiOiJtaW5pbWF4In0.Y2QHhKmE40pgKL6H3NHwf9-XHTMat7TzzSpccUszldpneSuUzbG20hiIYucXYq-vqAZ3EGRKs-K1rohgSkceOQbpnKL61V0RGakfVBHYpf4L9vBpY3w5n94UgQ6xjGRKsw3xGRtpdeOYGPWN8jqmSSBGaqr2QnkG4h0FfqbEMxl50cVcnpPFT7_kFanWLz939aRJ97-cR81vTFddC04-RTjBMc9SWmXQk-UpbuYeLlWxJYFhZ_jHJBxyp0iwH_QGVfx0EaSx1H5z8ENDpYbnlt_CywrL0bgREsQTg-fAHEfg6F8oylAynn-J0jVAsxXfq_wzWzE63dYnx11hE5X1sA',
+      'User-Agent': 'axios/1.13.2',
+      'Content-Length': '18456',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'post',
+    url: 'https://api.minimax.chat/v1/text/chatcompletion_v2',
+    data: '{"model":"abab6.5-chat","messages":[{"role":"user","content":"你是一位专业的 AI 资讯编辑，请将以下英文邮件内容翻译为中文，并按照指定格式整理成精美的 Markdown 笔记。\\n\\n**要求：**\\n1. 翻译要准确、流畅、专业\\n2. 摘要要详细，至少 3-5 句话，充分概括邮件的核心内容\\n3. 核心要点要全面，列出所有重要信息（至少 5-8 个要点）\\n4. 每个要点要有详细说明，不要只是简单列举\\n5. **必须使用下面提供的链接列表，将所有链接都包含在输出中**\\n6. 排版要美观，使用适当的 Markdown 格式（加粗、斜体、引用等）\\n7. **输出必须完整，不要截断内容**\\n8. **不要在输出中包含分隔线（---），直接输出内容即可**\\n\\n**输出格式示例：**\\n\\n# 📰 标题\\n\\n> 📅 发布日期：[从邮件中提取日期]\\n\\n## 📝 内容摘要\\n\\n[用 3-5 段详细概括邮件的主要内容，包括背景、重点和意义]\\n\\n## 🔑 核心要点\\n\\n### 1. [要点标题]\\n[详细说明这个要点的内容，包括相关数据、影响等]\\n\\n### 2. [要点标题]\\n[详细说明...]\\n\\n[继续列出所有重要要点，至少 5-8 个]\\n\\n## 🔗 相关链接\\n\\n### 📄 文章资源\\n- [文章标题](URL) - 简短描述\\n\\n### 🛠️ 工具产品\\n- [产品名称](URL) - 简短描述\\n\\n### 🌐 其他资源\\n- [资源名称](URL) - 简短描述\\n\\n**邮件原文：**\\n^**[Read Online](https://www.therundown.ai/p/geminis-personal-intelligence-upgrade?_bhlid=4eaa234680798ad3bdb45514b5705f029891f88c&jwt_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWJzY3JpYmVyX2lkIjoiMGMxZDI5ZWEtYjU1Mi00YTZiLWJmNzEtNDAwOTM0ZmI3YzVmIiwicHVibGljYXRpb25faWQiOiI0ZDAzMzkwZC0yNDgxLTQyOTktYjk0OS1mZmQ4YjM4YjRjMzgiLCJhY2Nlc3NfdHlwZSI6InJlYWQtb25seSIsImV4cCI6MTc2ODY0ODc2NSwiaXNzIjoiaHR0cHM6Ly9hcHAuYmVlaGlpdi5jb20iLCJpYXQiOjE3Njg0NzU5NjV9.eAnXxDaPBkv7m-jxbToJqcvYEIOFEEAr0AMRoFOnwKA)**^^ | ^^**[Sign Up](https://www.therundown.ai/subscribe)**^^ | ^^**[Advertise](https://therundownai.typeform.com/to/kraZ1TSO)**^\\n\\n----------\\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b02cbfde-fbff-4b00-a39d-543bba07839e/box-header.png?t=1768413502)\\nFollow image link: (https://www.box.com/extract?utm_source=newsletter&utm_medium=paidinfluencer&utm_theme=icm&utm_campaign=FY26RundownAI_Jan15Extract)\\nCaption: \\n\\n\\n----------\\n\\n----------\\n**Good morning, yetta.** As frontier models converge on capability, the differentiator is becoming personal context — and no one has more of it across the internet than Google. \\n\\nThe company\'s latest ‘Personal Intelligence’ upgrade lets Gemini pull from Gmail, Photos, and YouTube automatically, turning the apps billions already use into an AI moat rivals will struggle to cross.\\n\\n———————————————————————————\\n\\n**In today’s AI rundown:**\\n\\n* Gemini’s new ‘Personal Intelligence’ upgrade\\n\\n* McConaughey trademarks himself to fight deepfakes\\n\\n* Get the most out of Google’s Gemini in Gmail\\n\\n* Z AI’s open image model trained on Huawei chips\\n\\n* 4 new AI tools, community workflows, and more\\n\\n\\n----------\\n\\n----------\\n**LATEST DEVELOPMENTS**\\n\\n\\n----------\\n\\n----------\\n###### GOOGLE\\n\\n#### 🧠 _**[Gemini’s new ‘Personal Intelligence’ upgrade](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence/)**_\\n\\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e5bbdc4e-41df-4181-9a7b-6b69c53930a3/geminipersonalized.jpg?t=1768415300)\\nCaption: Image source: Google\\n\\n**The Rundown: **Google just [launched](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence/) Personal Intelligence, a new beta feature that lets Gemini reason across apps like Gmail, Photos, YouTube, and Search data to deliver more personalized responses without users needing to specify which app to pull from.\\n\\n**The details:**\\n\\n* Personal Intelligence connects Google’s app suite to Gemini, letting the assistant understand, locate, and proactively use personalized details.\\n\\n* The tool can reason across text, images, and videos, with VP Josh Woodward [detailing](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence/) the AI referencing his photos and emails to help at a tire shop.\\n\\n* Personal Intelligence is off by default, with Google saying it won’t train its AI models directly on connected info like inboxes or photo libraries. \\n\\n* The feature is rolling out to Gemini AI Pro and Ultra subscribers in the U.S. first, with plans to expand to free tiers and AI Mode in the future. \\n\\n**Why it matters: **This feels like Google is finally playing the card its AI rivals will always struggle to match: billions of users already living inside Gmail, Photos, and YouTube. As the frontier models all become extremely capable for the average user, deep integrations with personal context from widely used apps will be the big differentiator. \\n\\n\\n----------\\n\\n----------\\n###### TOGETHER WITH BOX\\n\\n#### 📦 **[_Turn enterprise content into actionable data_](https://www.box.com/extract?utm_source=newsletter&utm_medium=paidinfluencer&utm_theme=icm&utm_campaign=FY26RundownAI_Jan15Extract)**\\n\\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/62b30f6f-d1a7-473c-9ca4-ae1adb9af024/Box_Extract__2_.jpg?t=1768413586)\\nFollow image link: (https://www.box.com/extract?utm_source=newsletter&utm_medium=paidinfluencer&utm_theme=icm&utm_campaign=FY26RundownAI_Jan15Extract)\\nCaption: \\n\\n**The Rundown**: Enterprises sit on gold mines of data locked in content. Box Extract changes that, securely extracting structured data at scale to power faster decisions and automated workflows.\\n\\n**Box is a game-changer for regulated industries, with use cases like:**\\n\\n* Financial services: extract loan terms and payment dates automatically\\n\\n* Government: pull permit details and inspection dates to streamline compliance\\n\\n* Insurance: distill claims info from reports and images to accelerate processing\\n\\n_[Learn more from Box](https://www.box.com/extract?utm_source=newsletter&utm_medium=paidinfluencer&utm_theme=icm&utm_campaign=FY26RundownAI_Jan15Extract)_.\\n\\n\\n----------\\n\\n----------\\n###### AI & COPYRIGHT\\n\\n#### ⭐️ _[McConaughey trademarks himself to fight deepfakes](https://www.wsj.com/tech/ai/matthew-mcconaughey-trademarks-himself-to-fight-ai-misuse-8ffe76a9)_\\n\\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2bf36e31-ec2d-4698-9d4c-f5e88b409aa6/McConaughey_AI_Defense_Clean_2.png?t=1768426123)\\nCaption: Image source: Lovart / The Rundown\\n\\n**The Rundown: **Oscar-winning actor Matthew McConaughey [secured](https://www.wsj.com/tech/ai/matthew-mcconaughey-trademarks-himself-to-fight-ai-misuse-8ffe76a9) eight trademark approvals from the U.S. Patent and Trademark Office covering his voice, likeness, and video clips, according to the WSJ, citing the need to combat AI deepfakes and misuse. \\n\\n**The details: **\\n\\n* The approved trademarks include audio of his famous \\"Alright, alright, alright\\" catchphrase and short clips of him speaking and staring into a camera. \\n\\n* McConaughey told the WSJ that they “want to create a clear perimeter around ownership with consent and attribution the norm in an AI world.”\\n\\n* McConaughey\'s lawyers say the filings give them a federal court avenue to pursue AI misuse, rather than relying on state-by-state publicity laws.\\n\\n* The actor is an investor in AI voice startup ElevenLabs, as well as the face of Salesforce’s Agentforce TV campaigns. \\n\\n**Why it matters:** The capabilities of AI image and video models are blurring reality more than ever, and newer, powerful releases have been far more lax on creating real likenesses and IP. McConaughey is right to push against the unclear ownership rules in the AI era, but thus far, it’s been a tough legal game to play without strong results. \\n\\n\\n----------\\n\\n----------\\n###### AI TRAINING\\n\\n#### 📧 **[_Get the most out of Google’s Gemini in Gmail_](https://app.therundown.ai/guides/the-best-and-worst-of-googles-new-gemini-in-gmail-features)**\\n\\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/522a8f33-5c6d-4ce5-9c0f-865d69455679/gmailgemini.jpg?t=1768420194)\\nCaption: \\n\\n**The Rundown:** In this tutorial, you will learn how to use Google’s new Gemini features in Gmail, what is available right now, and the most beneficial and disappointing parts about this initial rollout.\\n\\n**Step-by-step:**\\n\\n1. With a Google Workspace or “AI Pro” personal account, go to gmail.com and click on settings in the top right. Make sure all the \\"smart features\\" are enabled\\n\\n2. In your inbox, click the “Ask Gemini” button next to settings and ask anything about your inbox, like: “What emails do I have about [subject]?”\\n\\n3. In any draft, you can press `Option + H` (Mac) or  `Alt + H` (Windows), or click \\"Help me write\\" to take Gemini’s help to write based on the email’s context\\n\\n4. After a reply is written, you can click “Recreate” to regenerate it or click “Refine” to change the tone or length of the reply.\\n\\n**Pro tip: **Use “help me schedule” in the draft pane to have Gemini read the email thread, check the calendars, and suggest meeting times to whomever you’re emailing.\\n\\n\\n----------\\n\\n----------\\n###### PRESENTED BY SLACK FROM SALESFORCE\\n\\n#### 📈 **[_The real ROI of AI agents in collaboration_](https://slack.com/resources/why-use-slack/how-ai-agents-will-drive-collaboration-roi?d=701ed00000D87kFAAR&nc=701ed00000D8aHYAAZ&utm_source=therundownai&utm_medium=tp_email&utm_campaign=amer_us_slack-invoice_&utm_content=allsegments_all-strategic-therundown-secondary-how-ai-agents-will-drive_701ed00000D87kFAAR_english_how-ai-agents-will-drive-collaboration-roi)**\\n\\nView image: (https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/368aeaec-5160-4f12-ac35-e451efaf0658/image4__11_.png?t=1768420677)\\nFollow image link: (https://slack.com/resources/why-use-slack/how-ai-agents-will-drive-collaboration-roi?d=701ed00000D87kFAAR&nc=701ed00000D8aHYAAZ&utm_source=therundownai&utm_medium=tp_email&utm_campaign=amer_us_slack-invoice_&utm_content=allsegments_all-strategic-therundown-secondary-how-ai-agents-will-drive_701ed00000D87kFAAR_english_how-ai-agents-will-drive-collaboration-roi)\\nCaption: \\n\\n**The Rundown:** For all the talk of AI\'s transformative po'... 7192 more characters,
+    allowAbsoluteUrls: true
+  },
+  request: <ref *1> Writable {
+    _events: {
+      close: undefined,
+      error: [Function: handleRequestError],
+      prefinish: undefined,
+      finish: undefined,
+      drain: undefined,
+      response: [Function: handleResponse],
+      socket: [Array],
+      abort: undefined
+    },
+    _writableState: WritableState {
+      highWaterMark: 16384,
+      length: 0,
+      corked: 0,
+      onwrite: [Function: bound onwrite],
+      writelen: 0,
+      bufferedIndex: 0,
+      pendingcb: 0,
+      [Symbol(kState)]: 17580812,
+      [Symbol(kBufferedValue)]: null
+    },
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: Infinity,
+      protocol: 'https:',
+      path: '/v1/text/chatcompletion_v2',
+      method: 'POST',
+      headers: [Object: null prototype],
+      agents: [Object],
+      auth: undefined,
+      family: undefined,
+      beforeRedirect: [Function: dispatchBeforeRedirect],
+      beforeRedirects: [Object],
+      http2Options: undefined,
+      hostname: 'api.minimax.chat',
+      port: '',
+      agent: undefined,
+      nativeProtocols: [Object],
+      pathname: '/v1/text/chatcompletion_v2'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 18456,
+    _requestBodyBuffers: [ [Object] ],
+    _eventsCount: 3,
+    _onNativeResponse: [Function (anonymous)],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 18456,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      socket: [TLSSocket],
+      _header: 'POST /v1/text/chatcompletion_v2 HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/json\r\n' +
+        'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJHcm91cE5hbWUiOiJ5ZXR0YSIsIlVzZXJOYW1lIjoieWV0dGEiLCJBY2NvdW50IjoiIiwiU3ViamVjdElEIjoiMTk5OTEzNzI4MjE3MDI5NDY2NyIsIlBob25lIjoiMTg1MTYwMzE3OTYiLCJHcm91cElEIjoiMTk5OTEzNzI4MjE2MTkwNjA1OSIsIlBhZ2VOYW1lIjoiIiwiTWFpbCI6IiIsIkNyZWF0ZVRpbWUiOiIyMDI1LTEyLTEyIDE0OjMwOjQxIiwiVG9rZW5UeXBlIjoxLCJpc3MiOiJtaW5pbWF4In0.Y2QHhKmE40pgKL6H3NHwf9-XHTMat7TzzSpccUszldpneSuUzbG20hiIYucXYq-vqAZ3EGRKs-K1rohgSkceOQbpnKL61V0RGakfVBHYpf4L9vBpY3w5n94UgQ6xjGRKsw3xGRtpdeOYGPWN8jqmSSBGaqr2QnkG4h0FfqbEMxl50cVcnpPFT7_kFanWLz939aRJ97-cR81vTFddC04-RTjBMc9SWmXQk-UpbuYeLlWxJYFhZ_jHJBxyp0iwH_QGVfx0EaSx1H5z8ENDpYbnlt_CywrL0bgREsQTg-fAHEfg6F8oylAynn-J0jVAsxXfq_wzWzE63dYnx11hE5X1sA\r\n' +
+        'User-Agent: axios/1.13.2\r\n' +
+        'Content-Length: 18456\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: api.minimax.chat\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/v1/text/chatcompletion_v2',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: [Function: emitRequestTimeout],
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: true,
+      host: 'api.minimax.chat',
+      protocol: 'https:',
+      _redirectable: [Circular *1],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: true,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    _currentUrl: 'https://api.minimax.chat/v1/text/chatcompletion_v2',
+    _timeout: null,
+    [Symbol(shapeMode)]: true,
+    [Symbol(kCapture)]: false
+  },
+  [cause]: Error: read ECONNRESET
+      at TLSWrap.onStreamRead (node:internal/stream_base_commons:218:20) {
+    errno: -54,
+    code: 'ECONNRESET',
+    syscall: 'read'
+  }
+}
+[2026-01-22T00:02:39.027Z] [ERROR] MiniMax 翻译失败
+AxiosError: socket hang up
+    at AxiosError.from (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/axios/lib/core/AxiosError.js:96:14)
+    at RedirectableRequest.handleRequestError (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/axios/lib/adapters/http.js:817:25)
+    at RedirectableRequest.emit (node:events:524:28)
+    at eventHandlers.<computed> (/Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/follow-redirects/index.js:49:24)
+    at ClientRequest.emit (node:events:524:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at TLSSocket.socketOnEnd (node:_http_client:528:5)
+    at TLSSocket.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AITranslator.translateWithMiniMax (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/src/ai-translator.js:27:30)
+    at async AITranslator.translate (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/src/ai-translator.js:13:20)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/index.js:132:41) {
+  code: 'ECONNRESET',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJHcm91cE5hbWUiOiJ5ZXR0YSIsIlVzZXJOYW1lIjoieWV0dGEiLCJBY2NvdW50IjoiIiwiU3ViamVjdElEIjoiMTk5OTEzNzI4MjE3MDI5NDY2NyIsIlBob25lIjoiMTg1MTYwMzE3OTYiLCJHcm91cElEIjoiMTk5OTEzNzI4MjE2MTkwNjA1OSIsIlBhZ2VOYW1lIjoiIiwiTWFpbCI6IiIsIkNyZWF0ZVRpbWUiOiIyMDI1LTEyLTEyIDE0OjMwOjQxIiwiVG9rZW5UeXBlIjoxLCJpc3MiOiJtaW5pbWF4In0.Y2QHhKmE40pgKL6H3NHwf9-XHTMat7TzzSpccUszldpneSuUzbG20hiIYucXYq-vqAZ3EGRKs-K1rohgSkceOQbpnKL61V0RGakfVBHYpf4L9vBpY3w5n94UgQ6xjGRKsw3xGRtpdeOYGPWN8jqmSSBGaqr2QnkG4h0FfqbEMxl50cVcnpPFT7_kFanWLz939aRJ97-cR81vTFddC04-RTjBMc9SWmXQk-UpbuYeLlWxJYFhZ_jHJBxyp0iwH_QGVfx0EaSx1H5z8ENDpYbnlt_CywrL0bgREsQTg-fAHEfg6F8oylAynn-J0jVAsxXfq_wzWzE63dYnx11hE5X1sA',
+      'User-Agent': 'axios/1.13.2',
+      'Content-Length': '27932',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'post',
+    url: 'https://api.minimax.chat/v1/text/chatcompletion_v2',
+    data: `{"model":"abab6.5-chat","messages":[{"role":"user","content":"你是一位专业的 AI 资讯编辑，请将以下英文资讯内容翻译为中文，并按照指定格式整理成精美的 Markdown 笔记。\\n\\n**要求：**\\n1. 翻译要准确、流畅、专业\\n2. 摘要要详细，至少 3-5 句话，充分概括资讯的核心内容\\n3. 核心要点要全面，列出所有重要信息（至少 5-8 个要点）。**注意：一条新闻严格对应一个核心要点，不要把第一条新闻的内容重复生成到其他要点中。**\\n4. 每个要点要有详细说明，不要只是简单列举\\n5. **必须使用下面提供的链接列表，将所有链接都包含在输出中**\\n6. 排版要美观，使用适当的 Markdown 格式（加粗、斜体、引用等）\\n7. **输出必须完整，不要截断内容**\\n8. **不要在输出中包含分隔线（---），直接输出内容即可**\\n9. **严禁包含任何广告、推广、订阅邀请或联系方式等无关内容**\\n10. **【重要】内容中的 {{IMG:数字}} 是图片占位符，严格按以下规则处理：**\\n   - 这些占位符代表原文中的配图，数字表示图片在原文中的顺序\\n   - **绝对不要混淆图片归属！确保图片紧随其所属的那条新闻内容之后**\\n   - **参考原文中图片与内容的对应关系**，将占位符放在对应的核心要点之后\\n   - **不要调换占位符的顺序**，必须按照原文中占位符出现的顺序放置\\n   - 每个占位符应该紧跟在其对应的内容段落之后，单独占一行\\n   - 不要删除或修改这些占位符\\n\\n**输出格式示例：**\\n\\n# 📰 标题\\n\\n## 📝 内容摘要\\n\\n[用 3-5 段详细概括资讯的主要内容，包括背景、重点和意义]\\n\\n## 🔑 核心要点\\n\\n### 1. [要点标题]\\n[详细说明这个要点的内容，包括相关数据、影响等]\\n\\n{{IMG:1}}\\n\\n### 2. [要点标题]\\n[详细说明...]\\n\\n{{IMG:2}}\\n\\n[继续列出所有重要要点，至少 5-8 个，每个要点后面如果原文有配图就保留对应的占位符]\\n\\n## 🔗 相关链接\\n\\n### 📄 文章资源\\n- [文章标题](URL) - 简短描述\\n\\n### 🛠️ 工具产品\\n- [产品名称](URL) - 简短描述\\n\\n### 🌐 其他资源\\n- [资源名称](URL) - 简短描述\\n\\n**原文内容：**\\nGood morning, yetta. The world's elite converged on Davos this week for the World Economic Forum, and there was one topic on everyone's minds — AI.\\n\\nThe takeaway from the industry's top leaders? Disruption is coming faster than expected, and the window for both individuals and companies to adapt is closing fast.\\n\\n**_P.S.:_** _We are sitting down for a Q&A with Jeetu Patel, President and Chief Product Officer at Cisco, and want our community to participate in the action! Submit any AI questions on the industry, security, future predictions, company workflows, etc.,_ [_here_](https://link.mail.beehiiv.com/ss/c/u001.qfYj2NCVNYWxQpHjnkNP6RgEsWbiq1UnPSMK2wKg1-YxlofY6OMcz3bEz17cRo4xgvIlpNLcfx-gypQ2YG5c4UYtXbEV9nMkAO9tXZRhw1uMrG1yKe45cJ6WDFXUC5ZgRsuAtN976B3xP5rr6t_JfDP7I43x0uA3DnTG-02KB8yLjql7YqK96EI67PKTOY1IRhlfCYR4Owx7DuFgUYbg8Jz2HlC1jtEqsIvk7syUliPukVuUXFxCtQZDxXWuuU-R/4nh/aaCuitHrRPaxynY4awpqZA/h5/h001.zrREuTBDoVcojidZj7sFxfAiKzie9an-68a0AZmxfi0)_._\\n\\n \\n\\n**In today’s AI rundown:**\\n\\n*   AI takes center stage at WEF in Davos\\n    \\n*   'Human-centric' AI startup raises $480M\\n    \\n*   Get better AI outputs using multiple choice\\n    \\n*   LTX launches audio-to-video generation\\n    \\n*   4 new AI tools, community workflows, and more\\n    \\n\\n**LATEST DEVELOPMENTS**\\n\\n###### AI & THE WORLD ECONOMIC FORUM\\n\\n#### 🌎 **[AI takes center stage at WEF in Davos](https://link.mail.beehiiv.com/ss/c/u001.dSnm3kaGd0BkNqLYPjeMf343hK6GkQg_fwFgz3IwS2ntrg4pB9JX3mImXwIOjT29uqZ8TGopeyNlcx4OhQ9g9o2zOA-fZMuGdOAlEMCaIE1JIByZv3nvqZUjTYw_Zn8Kkd5LD5HSUg0nhO96j10KWSU4CNDu5RNIazdFW50WNyu6zPgUMPw_juitCuENmM9m-KCfx_oSEOtnkYtaoduSg98xKI3nsx9FTGrumv5uLHA/4nh/aaCuitHrRPaxynY4awpqZA/h6/h001.90JCba3GR-v4tCLnKEo2stKkXo3C2m4Xl5w8nZjYYn0)**\\n\\n{{IMG:1}}\\n\\nImage source: WEF / The Rundown\\n\\n**The Rundown:** The World Economic Forum [kicked off](https://link.mail.beehiiv.com/ss/c/u001.dSnm3kaGd0BkNqLYPjeMf343hK6GkQg_fwFgz3IwS2ntrg4pB9JX3mImXwIOjT29uqZ8TGopeyNlcx4OhQ9g9o2zOA-fZMuGdOAlEMCaIE1JIByZv3nvqZUjTYw_Zn8Kkd5LD5HSUg0nhO96j10KWSU4CNDu5RNIazdFW50WNyvEDhJm5QfTcx7Wg8Ab5jt4muFyTDCQoXR6b3P6I89cwMfOCG-F5bzYE7aSgAGpfGI/4nh/aaCuitHrRPaxynY4awpqZA/h7/h001.kO8z-AdsSpWYaHlE2xafGjp7wJ2R5RyrOSIgbxdRKw0) this week in Davos, featuring an intense focus on AI that included discussions with the industry’s top minds, including Anthropic’s Dario Amodei, Google’s Demis Hassabis, and Microsoft’s Satya Nadella.\\n\\n**The details:**\\n\\n*   Amodei took a [shot](https://link.mail.beehiiv.com/ss/c/u001.dSnm3kaGd0BkNqLYPjeMf0BF31NlHL63eZOU-sfiPZ0qH4l4fRt1iBgV3isHNb-Fqdhn3u4NZC0qEjapcfPSp4Bjk9I4TN1KTuX3WbzDJR3NnIb_rIX0JiqutX1vXIir0Rm3CTbkVlWVN1l6gpawdNPQ31s0jNy5mABusXNFX8Vo8e-HGUZV1mi9MTCkxtvjaA-FEKsl_AeZdShGy72D4IB1wmFOosEBkFoXJXEIfDLMbrGsvSntZLq8YoysklgroCmGOk4NYWQ5r_ZBmKNEzA/4nh/aaCuitHrRPaxynY4awpqZA/h8/h001.C867eWUHotwJucFwG6_0HYBzUCOc640l_3DIPivtlno) at U.S. President Donald Trump’s recent policy allowing AI chip sales to China, likening it to “selling nuclear weapons to North Korea”.\\n    \\n*   Hassabis [believes](https://link.mail.beehiiv.com/ss/c/u001.dSnm3kaGd0BkNqLYPjeMf0BF31NlHL63eZOU-sfiPZ0AxlDz_wz68pio7BCKmZB9wrgP6fSrezsV5LonSDTMrlpfuTSN4i3Mj8WDrDOb8mKXTeyrnNPuPcEYVseYEAUDBpCH1NCCj149Cs-0xZnd8vzZT8E0mVE5JdPzZ4bARUgq-YNRBpp7UVlZ72Ce0G6W09fgmNsT3DxfY4Oo_uC4ziXb-KYDIAtpBEDP9k9b861B0eNEtvzgZlx7mzBUZosRNmX8jXNTqmLQnPF7-29WxA/4nh/aaCuitHrRPaxynY4awpqZA/h9/h001.FCINvhTYG5npw471tqwjfcQawh4Pc1AV7gCINVjoIys) this year could see AI-driven slowdowns in junior hiring, but that AI tools could ultimately enable more skill creation than traditional paths.\\n    \\n*   Nadella [said](https://link.mail.beehiiv.com/ss/c/u001.dSnm3kaGd0BkNqLYPjeMf0BF31NlHL63eZOU-sfiPZ1dWYDMlKAweXxnGl3C6mgRz4QmsugkSEy2EznrzbPNBvsHBmbl__XczlJLvKxtYBcXTmeYmxGbGekLlUj3VAFUVeo_J_bEzAXJFPtdYt-LFit7IeukhN_dOVMt4_sMgKeTI8M0TFlDv-F7xoXHimNfdrAdzh8d23ClzSpaFaX_m_J8DCcPlKQYe-tVI-V6lFUmP89VWloZEps6dgUNqimPJdFfM24w-Ich0fdSC3bpnA/4nh/aaCuitHrRPaxynY4awpqZA/h10/h001.0lTf9-RcCeATzfsFfzL-eA520nTOvz0L3xktDYwX-SE) no company can “just coast” in the AI era, stating that big companies that don’t keep up will “get schooled by someone small.”\\n    \\n*   Amodei also said we may be just 6-12 months away from models that do “most, maybe all” of what software engineers do end-to-end.\\n    \\n\\n**Why it matters:** Davos talks often stay abstract, but Amodei's timeline for full AI-powered coding puts a tight deadline on the disruption we're already seeing with tools like Claude Code. Between geopolitical warnings, labor shifts, and software upheaval, the message from AI's leaders is clear: the window to adapt is shrinking rapidly.\\n\\n###### TOGETHER WITH MONGODB\\n\\n#### 📈 [**Startup support that delivers results**](https://link.mail.beehiiv.com/ss/c/u001.dSnm3kaGd0BkNqLYPjeMfxhJyRTtTMfL2iA8AC29bKDABqMhxQBWIOuTM5lUIJmueWAsaDKYX0YbnJPaopgDLwYWQR6EwSQdg9TI3IBX3gYrSRVOKNkZtjaMos2B2MjfpT786G27mLTq-0IMQf5-1HQmPk--oIFrljhS3Ilk0IG_C0e06RXJ9WWh1KWA2yGVGOjrmce4ezc4276GArkWf272pjUBIF8Zop0MiDFLmNvXTUnjBE4acpU-nVd8_2HDGqahcdleoxIgsFpdL_cdhrWleXvlr4sHWIIWhbrr8aQ/4nh/aaCuitHrRPaxynY4awpqZA/h11/h001.WWY9bSSFTHaKS1GkBG4JTzfLfVQIVxTJZ2GA9BCUqQI)\\n\\n[{{IMG:2}}](https://link.mail.beehiiv.com/ss/c/u001.dSnm3kaGd0BkNqLYPjeMfxhJyRTtTMfL2iA8AC29bKDABqMhxQBWIOuTM5lUIJmueWAsaDKYX0YbnJPaopgDLwYWQR6EwSQdg9TI3IBX3gYrSRVOKNkZtjaMos2B2MjfpT786G27mLTq-0IMQf5-1HQmPk--oIFrljhS3Ilk0IG_C0e06RXJ9WWh1KWA2yGVGOjrmce4ezc4276GArkWf272pjUBIF8Zop0MiDFLmNujosy5qV7PiIv7YQbPmsX_bx3OsVfxF70Xo1N0HQ8PpHE2LVnJNz5dWWXT0tGdL8c/4nh/aaCuitHrRPaxynY4awpqZA/h12/h001.tmkHVr2Jg-2DWdMOOfcw5lD37ASThCQg8DC4XsY2q5g)\\n\\n**The Rundown:** Let MongoDB for Startups partner with you as you build the next big thing with the tools, support, and go-to-market opportunities you need to accelerate from idea to IPO.\\n\\n**MongoDB for Startups includes:**\\n\\n*   Built-in vector search using VoyageAI\\n    \\n*   Real-time data streaming\\n    \\n*   Baseline credits and technical expertise\\n    \\n\\n[Get started today for free](https://link.mail.beehiiv.com/ss/c/u001.dSnm3kaGd0BkNqLYPjeMfxhJyRTtTMfL2iA8AC29bKDABqMhxQBWIOuTM5lUIJmueWAsaDKYX0YbnJPaopgDLwYWQR6EwSQdg9TI3IBX3gYrSRVOKNkZtjaMos2B2MjfpT786G27mLTq-0IMQf5-1HQmPk--oIFrljhS3Ilk0IG_C0e06RXJ9WWh1KWA2yGVGOjrmce4ezc4276GArkWf272pjUBIF8Zop0MiDFLmNteU9zgNnxIjLHTAQhVcpxxlTFbgUp1q3RkO86gxQVe4iYclkpP0qXXIYXUR_7OpnU/4nh/aaCuitHrRPaxynY4awpqZA/h13/h001.ZduAi45jqeilbjIGlkmCvXBWYuqyfDMFUfTgY_qWVoU).\\n\\n###### HUMANS&\\n\\n#### 🤝 **['Human-centric' AI startup raises $480M](https://link.mail.beehiiv.com/ss/c/u001.ZY5Y0CT8KZaZ1y9TVLsmf8GGHfJWbc1OKwlBqAnvInKT-XF4tB0hQKPL377FsjJ1ZGVNayKRKLAx0oRxw8CU3U6Rf695pF2GbUUNjd0UVzdHGa--OaJXrPlS7UkZGqTkQSzawH_mCdzQ5qMgTUvzHGNFMtQfXaINQUzAilzzyNqXnE6xRTxr_1dSG_e_mVZnCIW5pzWGi-rT4XwNFT5Zjb8rNUUUCOTLmZWqVVsSYdg/4nh/aaCuitHrRPaxynY4awpqZA/h14/h001.cAWnnOcYIKiAxgvCOO21GhVAmTZ6ezvkKL1ZwjczG2I)**\\n\\n{{IMG:3}}\\n\\nImage source: Humans&\\n\\n**The Rundown:** A new AI startup founded by researchers from Anthropic, xAI, and Google, just [raised](https://link.mail.beehiiv.com/ss/c/u001.ZY5Y0CT8KZaZ1y9TVLsmf8GGHfJWbc1OKwlBqAnvInKT-XF4tB0hQKPL377FsjJ1ZGVNayKRKLAx0oRxw8CU3U6Rf695pF2GbUUNjd0UVzdHGa--OaJXrPlS7UkZGqTkQSzawH_mCdzQ5qMgTUvzHGNFMtQfXaINQUzAilzzyNpoOltu5lDfOFGrRwWUQGv9fLyUyO4v9GRsNAEqkZY8QWFduUoAjVjgkPjVaeDMZzs/4nh/aaCuitHrRPaxynY4awpqZA/h15/h001.6rKE2uGSIPJnePb51kI3q98-A4kOTJAjOLMUwLkNAPE) $480M in seed funding at a $4.48B valuation, pushing to build AI that helps people collaborate better over automation and full replacement.\\n\\n**The details:**\\n\\n*   Humans& aims to build AI that functions like an intelligent group chat, requesting context, storing memory, and coordinating teams.\\n    \\n*   Co-founder Andi Peng left Anthropic over its autonomy focus, saying they “loved to highlight how its models churned for 8, 24, 50 hours by themselves.\\"\\n    \\n*   The team includes Google's seventh employee, Georges Harik, two former xAI researchers who worked on Grok, and Stanford professor Noah Goodman.\\n    \\n*   The $480M seed round was led by SV Angel and its co-founder Harik, alongside Nvidia, Jeff Bezos, and Google Ventures.\\n    \\n\\n**Why it matters:** A $4.48B value for a 3-month old startup is wild, but shows the investor appetite for any team with a frontier lab pedigree. The \\"human-centric\\" angle is a shot at the autonomy-driven gains most labs are chasing, though we’ve seen similar framing from the likes of Microsoft AI (and even Anthropic in its own ads).\\n\\n###### AI TRAINING\\n\\n#### 📝 **[Get better AI outputs using multiple choice](https://link.mail.beehiiv.com/ss/c/u001.Q334NVcZU4O6L6VKRz8ijB1TBWraWSjSa1EgItxTfJEnhF06n_GfDnH1sbLporjvMHbYoe2OIuVMNrjXP6HWVc8zZlykxbrlE8FxKrWZdMdP6GoGuzr5nuUdkJ7rufm4uSVcPLo2kKHgx0jhXDYiD8lTQtUeznvcwWHL0NSquHU4Q9b9IBCbQEasAO3LIj6_e232h9D-4S4yxp690mzmpy9h135yr-ztOGG9VKKI94bfqbPoKkGYW6pw_I0vJoCllGZCitL5neWmaskAVTI-hKY_9wZ3b5hOslOCUgqn0inczymrQwo2syMYZK68xDtXUEJj1nvy0lrCQyedve7yOw/4nh/aaCuitHrRPaxynY4awpqZA/h16/h001.VhXtogc5elvwJEwxC5T3j1Ji`... 15987 more characters,
+    allowAbsoluteUrls: true
+  },
+  request: <ref *1> Writable {
+    _events: {
+      close: undefined,
+      error: [Function: handleRequestError],
+      prefinish: undefined,
+      finish: undefined,
+      drain: undefined,
+      response: [Function: handleResponse],
+      socket: [Array],
+      abort: undefined
+    },
+    _writableState: WritableState {
+      highWaterMark: 16384,
+      length: 0,
+      corked: 0,
+      onwrite: [Function: bound onwrite],
+      writelen: 0,
+      bufferedIndex: 0,
+      pendingcb: 0,
+      [Symbol(kState)]: 17580812,
+      [Symbol(kBufferedValue)]: null
+    },
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: Infinity,
+      protocol: 'https:',
+      path: '/v1/text/chatcompletion_v2',
+      method: 'POST',
+      headers: [Object: null prototype],
+      agents: [Object],
+      auth: undefined,
+      family: undefined,
+      beforeRedirect: [Function: dispatchBeforeRedirect],
+      beforeRedirects: [Object],
+      http2Options: undefined,
+      hostname: 'api.minimax.chat',
+      port: '',
+      agent: undefined,
+      nativeProtocols: [Object],
+      pathname: '/v1/text/chatcompletion_v2'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 27932,
+    _requestBodyBuffers: [ [Object] ],
+    _eventsCount: 3,
+    _onNativeResponse: [Function (anonymous)],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 27932,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      socket: [TLSSocket],
+      _header: 'POST /v1/text/chatcompletion_v2 HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/json\r\n' +
+        'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJHcm91cE5hbWUiOiJ5ZXR0YSIsIlVzZXJOYW1lIjoieWV0dGEiLCJBY2NvdW50IjoiIiwiU3ViamVjdElEIjoiMTk5OTEzNzI4MjE3MDI5NDY2NyIsIlBob25lIjoiMTg1MTYwMzE3OTYiLCJHcm91cElEIjoiMTk5OTEzNzI4MjE2MTkwNjA1OSIsIlBhZ2VOYW1lIjoiIiwiTWFpbCI6IiIsIkNyZWF0ZVRpbWUiOiIyMDI1LTEyLTEyIDE0OjMwOjQxIiwiVG9rZW5UeXBlIjoxLCJpc3MiOiJtaW5pbWF4In0.Y2QHhKmE40pgKL6H3NHwf9-XHTMat7TzzSpccUszldpneSuUzbG20hiIYucXYq-vqAZ3EGRKs-K1rohgSkceOQbpnKL61V0RGakfVBHYpf4L9vBpY3w5n94UgQ6xjGRKsw3xGRtpdeOYGPWN8jqmSSBGaqr2QnkG4h0FfqbEMxl50cVcnpPFT7_kFanWLz939aRJ97-cR81vTFddC04-RTjBMc9SWmXQk-UpbuYeLlWxJYFhZ_jHJBxyp0iwH_QGVfx0EaSx1H5z8ENDpYbnlt_CywrL0bgREsQTg-fAHEfg6F8oylAynn-J0jVAsxXfq_wzWzE63dYnx11hE5X1sA\r\n' +
+        'User-Agent: axios/1.13.2\r\n' +
+        'Content-Length: 27932\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: api.minimax.chat\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/v1/text/chatcompletion_v2',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: [Function: emitRequestTimeout],
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'api.minimax.chat',
+      protocol: 'https:',
+      _redirectable: [Circular *1],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: true,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    _currentUrl: 'https://api.minimax.chat/v1/text/chatcompletion_v2',
+    _timeout: null,
+    [Symbol(shapeMode)]: true,
+    [Symbol(kCapture)]: false
+  },
+  [cause]: Error: socket hang up
+      at TLSSocket.socketOnEnd (node:_http_client:528:25)
+      at TLSSocket.emit (node:events:536:35)
+      at endReadableNT (node:internal/streams/readable:1698:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    code: 'ECONNRESET'
+  }
+}
+[2026-01-22T00:02:39.120Z] [ERROR] ✗ 邮件处理失败
+AxiosError: socket hang up
+    at AxiosError.from (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/axios/lib/core/AxiosError.js:96:14)
+    at RedirectableRequest.handleRequestError (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/axios/lib/adapters/http.js:817:25)
+    at RedirectableRequest.emit (node:events:524:28)
+    at eventHandlers.<computed> (/Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/follow-redirects/index.js:49:24)
+    at ClientRequest.emit (node:events:524:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at TLSSocket.socketOnEnd (node:_http_client:528:5)
+    at TLSSocket.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AITranslator.translateWithMiniMax (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/src/ai-translator.js:27:30)
+    at async AITranslator.translate (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/src/ai-translator.js:13:20)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/index.js:132:41) {
+  code: 'ECONNRESET',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJHcm91cE5hbWUiOiJ5ZXR0YSIsIlVzZXJOYW1lIjoieWV0dGEiLCJBY2NvdW50IjoiIiwiU3ViamVjdElEIjoiMTk5OTEzNzI4MjE3MDI5NDY2NyIsIlBob25lIjoiMTg1MTYwMzE3OTYiLCJHcm91cElEIjoiMTk5OTEzNzI4MjE2MTkwNjA1OSIsIlBhZ2VOYW1lIjoiIiwiTWFpbCI6IiIsIkNyZWF0ZVRpbWUiOiIyMDI1LTEyLTEyIDE0OjMwOjQxIiwiVG9rZW5UeXBlIjoxLCJpc3MiOiJtaW5pbWF4In0.Y2QHhKmE40pgKL6H3NHwf9-XHTMat7TzzSpccUszldpneSuUzbG20hiIYucXYq-vqAZ3EGRKs-K1rohgSkceOQbpnKL61V0RGakfVBHYpf4L9vBpY3w5n94UgQ6xjGRKsw3xGRtpdeOYGPWN8jqmSSBGaqr2QnkG4h0FfqbEMxl50cVcnpPFT7_kFanWLz939aRJ97-cR81vTFddC04-RTjBMc9SWmXQk-UpbuYeLlWxJYFhZ_jHJBxyp0iwH_QGVfx0EaSx1H5z8ENDpYbnlt_CywrL0bgREsQTg-fAHEfg6F8oylAynn-J0jVAsxXfq_wzWzE63dYnx11hE5X1sA',
+      'User-Agent': 'axios/1.13.2',
+      'Content-Length': '27932',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'post',
+    url: 'https://api.minimax.chat/v1/text/chatcompletion_v2',
+    data: `{"model":"abab6.5-chat","messages":[{"role":"user","content":"你是一位专业的 AI 资讯编辑，请将以下英文资讯内容翻译为中文，并按照指定格式整理成精美的 Markdown 笔记。\\n\\n**要求：**\\n1. 翻译要准确、流畅、专业\\n2. 摘要要详细，至少 3-5 句话，充分概括资讯的核心内容\\n3. 核心要点要全面，列出所有重要信息（至少 5-8 个要点）。**注意：一条新闻严格对应一个核心要点，不要把第一条新闻的内容重复生成到其他要点中。**\\n4. 每个要点要有详细说明，不要只是简单列举\\n5. **必须使用下面提供的链接列表，将所有链接都包含在输出中**\\n6. 排版要美观，使用适当的 Markdown 格式（加粗、斜体、引用等）\\n7. **输出必须完整，不要截断内容**\\n8. **不要在输出中包含分隔线（---），直接输出内容即可**\\n9. **严禁包含任何广告、推广、订阅邀请或联系方式等无关内容**\\n10. **【重要】内容中的 {{IMG:数字}} 是图片占位符，严格按以下规则处理：**\\n   - 这些占位符代表原文中的配图，数字表示图片在原文中的顺序\\n   - **绝对不要混淆图片归属！确保图片紧随其所属的那条新闻内容之后**\\n   - **参考原文中图片与内容的对应关系**，将占位符放在对应的核心要点之后\\n   - **不要调换占位符的顺序**，必须按照原文中占位符出现的顺序放置\\n   - 每个占位符应该紧跟在其对应的内容段落之后，单独占一行\\n   - 不要删除或修改这些占位符\\n\\n**输出格式示例：**\\n\\n# 📰 标题\\n\\n## 📝 内容摘要\\n\\n[用 3-5 段详细概括资讯的主要内容，包括背景、重点和意义]\\n\\n## 🔑 核心要点\\n\\n### 1. [要点标题]\\n[详细说明这个要点的内容，包括相关数据、影响等]\\n\\n{{IMG:1}}\\n\\n### 2. [要点标题]\\n[详细说明...]\\n\\n{{IMG:2}}\\n\\n[继续列出所有重要要点，至少 5-8 个，每个要点后面如果原文有配图就保留对应的占位符]\\n\\n## 🔗 相关链接\\n\\n### 📄 文章资源\\n- [文章标题](URL) - 简短描述\\n\\n### 🛠️ 工具产品\\n- [产品名称](URL) - 简短描述\\n\\n### 🌐 其他资源\\n- [资源名称](URL) - 简短描述\\n\\n**原文内容：**\\nGood morning, yetta. The world's elite converged on Davos this week for the World Economic Forum, and there was one topic on everyone's minds — AI.\\n\\nThe takeaway from the industry's top leaders? Disruption is coming faster than expected, and the window for both individuals and companies to adapt is closing fast.\\n\\n**_P.S.:_** _We are sitting down for a Q&A with Jeetu Patel, President and Chief Product Officer at Cisco, and want our community to participate in the action! Submit any AI questions on the industry, security, future predictions, company workflows, etc.,_ [_here_](https://link.mail.beehiiv.com/ss/c/u001.qfYj2NCVNYWxQpHjnkNP6RgEsWbiq1UnPSMK2wKg1-YxlofY6OMcz3bEz17cRo4xgvIlpNLcfx-gypQ2YG5c4UYtXbEV9nMkAO9tXZRhw1uMrG1yKe45cJ6WDFXUC5ZgRsuAtN976B3xP5rr6t_JfDP7I43x0uA3DnTG-02KB8yLjql7YqK96EI67PKTOY1IRhlfCYR4Owx7DuFgUYbg8Jz2HlC1jtEqsIvk7syUliPukVuUXFxCtQZDxXWuuU-R/4nh/aaCuitHrRPaxynY4awpqZA/h5/h001.zrREuTBDoVcojidZj7sFxfAiKzie9an-68a0AZmxfi0)_._\\n\\n \\n\\n**In today’s AI rundown:**\\n\\n*   AI takes center stage at WEF in Davos\\n    \\n*   'Human-centric' AI startup raises $480M\\n    \\n*   Get better AI outputs using multiple choice\\n    \\n*   LTX launches audio-to-video generation\\n    \\n*   4 new AI tools, community workflows, and more\\n    \\n\\n**LATEST DEVELOPMENTS**\\n\\n###### AI & THE WORLD ECONOMIC FORUM\\n\\n#### 🌎 **[AI takes center stage at WEF in Davos](https://link.mail.beehiiv.com/ss/c/u001.dSnm3kaGd0BkNqLYPjeMf343hK6GkQg_fwFgz3IwS2ntrg4pB9JX3mImXwIOjT29uqZ8TGopeyNlcx4OhQ9g9o2zOA-fZMuGdOAlEMCaIE1JIByZv3nvqZUjTYw_Zn8Kkd5LD5HSUg0nhO96j10KWSU4CNDu5RNIazdFW50WNyu6zPgUMPw_juitCuENmM9m-KCfx_oSEOtnkYtaoduSg98xKI3nsx9FTGrumv5uLHA/4nh/aaCuitHrRPaxynY4awpqZA/h6/h001.90JCba3GR-v4tCLnKEo2stKkXo3C2m4Xl5w8nZjYYn0)**\\n\\n{{IMG:1}}\\n\\nImage source: WEF / The Rundown\\n\\n**The Rundown:** The World Economic Forum [kicked off](https://link.mail.beehiiv.com/ss/c/u001.dSnm3kaGd0BkNqLYPjeMf343hK6GkQg_fwFgz3IwS2ntrg4pB9JX3mImXwIOjT29uqZ8TGopeyNlcx4OhQ9g9o2zOA-fZMuGdOAlEMCaIE1JIByZv3nvqZUjTYw_Zn8Kkd5LD5HSUg0nhO96j10KWSU4CNDu5RNIazdFW50WNyvEDhJm5QfTcx7Wg8Ab5jt4muFyTDCQoXR6b3P6I89cwMfOCG-F5bzYE7aSgAGpfGI/4nh/aaCuitHrRPaxynY4awpqZA/h7/h001.kO8z-AdsSpWYaHlE2xafGjp7wJ2R5RyrOSIgbxdRKw0) this week in Davos, featuring an intense focus on AI that included discussions with the industry’s top minds, including Anthropic’s Dario Amodei, Google’s Demis Hassabis, and Microsoft’s Satya Nadella.\\n\\n**The details:**\\n\\n*   Amodei took a [shot](https://link.mail.beehiiv.com/ss/c/u001.dSnm3kaGd0BkNqLYPjeMf0BF31NlHL63eZOU-sfiPZ0qH4l4fRt1iBgV3isHNb-Fqdhn3u4NZC0qEjapcfPSp4Bjk9I4TN1KTuX3WbzDJR3NnIb_rIX0JiqutX1vXIir0Rm3CTbkVlWVN1l6gpawdNPQ31s0jNy5mABusXNFX8Vo8e-HGUZV1mi9MTCkxtvjaA-FEKsl_AeZdShGy72D4IB1wmFOosEBkFoXJXEIfDLMbrGsvSntZLq8YoysklgroCmGOk4NYWQ5r_ZBmKNEzA/4nh/aaCuitHrRPaxynY4awpqZA/h8/h001.C867eWUHotwJucFwG6_0HYBzUCOc640l_3DIPivtlno) at U.S. President Donald Trump’s recent policy allowing AI chip sales to China, likening it to “selling nuclear weapons to North Korea”.\\n    \\n*   Hassabis [believes](https://link.mail.beehiiv.com/ss/c/u001.dSnm3kaGd0BkNqLYPjeMf0BF31NlHL63eZOU-sfiPZ0AxlDz_wz68pio7BCKmZB9wrgP6fSrezsV5LonSDTMrlpfuTSN4i3Mj8WDrDOb8mKXTeyrnNPuPcEYVseYEAUDBpCH1NCCj149Cs-0xZnd8vzZT8E0mVE5JdPzZ4bARUgq-YNRBpp7UVlZ72Ce0G6W09fgmNsT3DxfY4Oo_uC4ziXb-KYDIAtpBEDP9k9b861B0eNEtvzgZlx7mzBUZosRNmX8jXNTqmLQnPF7-29WxA/4nh/aaCuitHrRPaxynY4awpqZA/h9/h001.FCINvhTYG5npw471tqwjfcQawh4Pc1AV7gCINVjoIys) this year could see AI-driven slowdowns in junior hiring, but that AI tools could ultimately enable more skill creation than traditional paths.\\n    \\n*   Nadella [said](https://link.mail.beehiiv.com/ss/c/u001.dSnm3kaGd0BkNqLYPjeMf0BF31NlHL63eZOU-sfiPZ1dWYDMlKAweXxnGl3C6mgRz4QmsugkSEy2EznrzbPNBvsHBmbl__XczlJLvKxtYBcXTmeYmxGbGekLlUj3VAFUVeo_J_bEzAXJFPtdYt-LFit7IeukhN_dOVMt4_sMgKeTI8M0TFlDv-F7xoXHimNfdrAdzh8d23ClzSpaFaX_m_J8DCcPlKQYe-tVI-V6lFUmP89VWloZEps6dgUNqimPJdFfM24w-Ich0fdSC3bpnA/4nh/aaCuitHrRPaxynY4awpqZA/h10/h001.0lTf9-RcCeATzfsFfzL-eA520nTOvz0L3xktDYwX-SE) no company can “just coast” in the AI era, stating that big companies that don’t keep up will “get schooled by someone small.”\\n    \\n*   Amodei also said we may be just 6-12 months away from models that do “most, maybe all” of what software engineers do end-to-end.\\n    \\n\\n**Why it matters:** Davos talks often stay abstract, but Amodei's timeline for full AI-powered coding puts a tight deadline on the disruption we're already seeing with tools like Claude Code. Between geopolitical warnings, labor shifts, and software upheaval, the message from AI's leaders is clear: the window to adapt is shrinking rapidly.\\n\\n###### TOGETHER WITH MONGODB\\n\\n#### 📈 [**Startup support that delivers results**](https://link.mail.beehiiv.com/ss/c/u001.dSnm3kaGd0BkNqLYPjeMfxhJyRTtTMfL2iA8AC29bKDABqMhxQBWIOuTM5lUIJmueWAsaDKYX0YbnJPaopgDLwYWQR6EwSQdg9TI3IBX3gYrSRVOKNkZtjaMos2B2MjfpT786G27mLTq-0IMQf5-1HQmPk--oIFrljhS3Ilk0IG_C0e06RXJ9WWh1KWA2yGVGOjrmce4ezc4276GArkWf272pjUBIF8Zop0MiDFLmNvXTUnjBE4acpU-nVd8_2HDGqahcdleoxIgsFpdL_cdhrWleXvlr4sHWIIWhbrr8aQ/4nh/aaCuitHrRPaxynY4awpqZA/h11/h001.WWY9bSSFTHaKS1GkBG4JTzfLfVQIVxTJZ2GA9BCUqQI)\\n\\n[{{IMG:2}}](https://link.mail.beehiiv.com/ss/c/u001.dSnm3kaGd0BkNqLYPjeMfxhJyRTtTMfL2iA8AC29bKDABqMhxQBWIOuTM5lUIJmueWAsaDKYX0YbnJPaopgDLwYWQR6EwSQdg9TI3IBX3gYrSRVOKNkZtjaMos2B2MjfpT786G27mLTq-0IMQf5-1HQmPk--oIFrljhS3Ilk0IG_C0e06RXJ9WWh1KWA2yGVGOjrmce4ezc4276GArkWf272pjUBIF8Zop0MiDFLmNujosy5qV7PiIv7YQbPmsX_bx3OsVfxF70Xo1N0HQ8PpHE2LVnJNz5dWWXT0tGdL8c/4nh/aaCuitHrRPaxynY4awpqZA/h12/h001.tmkHVr2Jg-2DWdMOOfcw5lD37ASThCQg8DC4XsY2q5g)\\n\\n**The Rundown:** Let MongoDB for Startups partner with you as you build the next big thing with the tools, support, and go-to-market opportunities you need to accelerate from idea to IPO.\\n\\n**MongoDB for Startups includes:**\\n\\n*   Built-in vector search using VoyageAI\\n    \\n*   Real-time data streaming\\n    \\n*   Baseline credits and technical expertise\\n    \\n\\n[Get started today for free](https://link.mail.beehiiv.com/ss/c/u001.dSnm3kaGd0BkNqLYPjeMfxhJyRTtTMfL2iA8AC29bKDABqMhxQBWIOuTM5lUIJmueWAsaDKYX0YbnJPaopgDLwYWQR6EwSQdg9TI3IBX3gYrSRVOKNkZtjaMos2B2MjfpT786G27mLTq-0IMQf5-1HQmPk--oIFrljhS3Ilk0IG_C0e06RXJ9WWh1KWA2yGVGOjrmce4ezc4276GArkWf272pjUBIF8Zop0MiDFLmNteU9zgNnxIjLHTAQhVcpxxlTFbgUp1q3RkO86gxQVe4iYclkpP0qXXIYXUR_7OpnU/4nh/aaCuitHrRPaxynY4awpqZA/h13/h001.ZduAi45jqeilbjIGlkmCvXBWYuqyfDMFUfTgY_qWVoU).\\n\\n###### HUMANS&\\n\\n#### 🤝 **['Human-centric' AI startup raises $480M](https://link.mail.beehiiv.com/ss/c/u001.ZY5Y0CT8KZaZ1y9TVLsmf8GGHfJWbc1OKwlBqAnvInKT-XF4tB0hQKPL377FsjJ1ZGVNayKRKLAx0oRxw8CU3U6Rf695pF2GbUUNjd0UVzdHGa--OaJXrPlS7UkZGqTkQSzawH_mCdzQ5qMgTUvzHGNFMtQfXaINQUzAilzzyNqXnE6xRTxr_1dSG_e_mVZnCIW5pzWGi-rT4XwNFT5Zjb8rNUUUCOTLmZWqVVsSYdg/4nh/aaCuitHrRPaxynY4awpqZA/h14/h001.cAWnnOcYIKiAxgvCOO21GhVAmTZ6ezvkKL1ZwjczG2I)**\\n\\n{{IMG:3}}\\n\\nImage source: Humans&\\n\\n**The Rundown:** A new AI startup founded by researchers from Anthropic, xAI, and Google, just [raised](https://link.mail.beehiiv.com/ss/c/u001.ZY5Y0CT8KZaZ1y9TVLsmf8GGHfJWbc1OKwlBqAnvInKT-XF4tB0hQKPL377FsjJ1ZGVNayKRKLAx0oRxw8CU3U6Rf695pF2GbUUNjd0UVzdHGa--OaJXrPlS7UkZGqTkQSzawH_mCdzQ5qMgTUvzHGNFMtQfXaINQUzAilzzyNpoOltu5lDfOFGrRwWUQGv9fLyUyO4v9GRsNAEqkZY8QWFduUoAjVjgkPjVaeDMZzs/4nh/aaCuitHrRPaxynY4awpqZA/h15/h001.6rKE2uGSIPJnePb51kI3q98-A4kOTJAjOLMUwLkNAPE) $480M in seed funding at a $4.48B valuation, pushing to build AI that helps people collaborate better over automation and full replacement.\\n\\n**The details:**\\n\\n*   Humans& aims to build AI that functions like an intelligent group chat, requesting context, storing memory, and coordinating teams.\\n    \\n*   Co-founder Andi Peng left Anthropic over its autonomy focus, saying they “loved to highlight how its models churned for 8, 24, 50 hours by themselves.\\"\\n    \\n*   The team includes Google's seventh employee, Georges Harik, two former xAI researchers who worked on Grok, and Stanford professor Noah Goodman.\\n    \\n*   The $480M seed round was led by SV Angel and its co-founder Harik, alongside Nvidia, Jeff Bezos, and Google Ventures.\\n    \\n\\n**Why it matters:** A $4.48B value for a 3-month old startup is wild, but shows the investor appetite for any team with a frontier lab pedigree. The \\"human-centric\\" angle is a shot at the autonomy-driven gains most labs are chasing, though we’ve seen similar framing from the likes of Microsoft AI (and even Anthropic in its own ads).\\n\\n###### AI TRAINING\\n\\n#### 📝 **[Get better AI outputs using multiple choice](https://link.mail.beehiiv.com/ss/c/u001.Q334NVcZU4O6L6VKRz8ijB1TBWraWSjSa1EgItxTfJEnhF06n_GfDnH1sbLporjvMHbYoe2OIuVMNrjXP6HWVc8zZlykxbrlE8FxKrWZdMdP6GoGuzr5nuUdkJ7rufm4uSVcPLo2kKHgx0jhXDYiD8lTQtUeznvcwWHL0NSquHU4Q9b9IBCbQEasAO3LIj6_e232h9D-4S4yxp690mzmpy9h135yr-ztOGG9VKKI94bfqbPoKkGYW6pw_I0vJoCllGZCitL5neWmaskAVTI-hKY_9wZ3b5hOslOCUgqn0inczymrQwo2syMYZK68xDtXUEJj1nvy0lrCQyedve7yOw/4nh/aaCuitHrRPaxynY4awpqZA/h16/h001.VhXtogc5elvwJEwxC5T3j1Ji`... 15987 more characters,
+    allowAbsoluteUrls: true
+  },
+  request: <ref *1> Writable {
+    _events: {
+      close: undefined,
+      error: [Function: handleRequestError],
+      prefinish: undefined,
+      finish: undefined,
+      drain: undefined,
+      response: [Function: handleResponse],
+      socket: [Array],
+      abort: undefined
+    },
+    _writableState: WritableState {
+      highWaterMark: 16384,
+      length: 0,
+      corked: 0,
+      onwrite: [Function: bound onwrite],
+      writelen: 0,
+      bufferedIndex: 0,
+      pendingcb: 0,
+      [Symbol(kState)]: 17580812,
+      [Symbol(kBufferedValue)]: null
+    },
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: Infinity,
+      protocol: 'https:',
+      path: '/v1/text/chatcompletion_v2',
+      method: 'POST',
+      headers: [Object: null prototype],
+      agents: [Object],
+      auth: undefined,
+      family: undefined,
+      beforeRedirect: [Function: dispatchBeforeRedirect],
+      beforeRedirects: [Object],
+      http2Options: undefined,
+      hostname: 'api.minimax.chat',
+      port: '',
+      agent: undefined,
+      nativeProtocols: [Object],
+      pathname: '/v1/text/chatcompletion_v2'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 27932,
+    _requestBodyBuffers: [ [Object] ],
+    _eventsCount: 3,
+    _onNativeResponse: [Function (anonymous)],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 27932,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      socket: [TLSSocket],
+      _header: 'POST /v1/text/chatcompletion_v2 HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/json\r\n' +
+        'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJHcm91cE5hbWUiOiJ5ZXR0YSIsIlVzZXJOYW1lIjoieWV0dGEiLCJBY2NvdW50IjoiIiwiU3ViamVjdElEIjoiMTk5OTEzNzI4MjE3MDI5NDY2NyIsIlBob25lIjoiMTg1MTYwMzE3OTYiLCJHcm91cElEIjoiMTk5OTEzNzI4MjE2MTkwNjA1OSIsIlBhZ2VOYW1lIjoiIiwiTWFpbCI6IiIsIkNyZWF0ZVRpbWUiOiIyMDI1LTEyLTEyIDE0OjMwOjQxIiwiVG9rZW5UeXBlIjoxLCJpc3MiOiJtaW5pbWF4In0.Y2QHhKmE40pgKL6H3NHwf9-XHTMat7TzzSpccUszldpneSuUzbG20hiIYucXYq-vqAZ3EGRKs-K1rohgSkceOQbpnKL61V0RGakfVBHYpf4L9vBpY3w5n94UgQ6xjGRKsw3xGRtpdeOYGPWN8jqmSSBGaqr2QnkG4h0FfqbEMxl50cVcnpPFT7_kFanWLz939aRJ97-cR81vTFddC04-RTjBMc9SWmXQk-UpbuYeLlWxJYFhZ_jHJBxyp0iwH_QGVfx0EaSx1H5z8ENDpYbnlt_CywrL0bgREsQTg-fAHEfg6F8oylAynn-J0jVAsxXfq_wzWzE63dYnx11hE5X1sA\r\n' +
+        'User-Agent: axios/1.13.2\r\n' +
+        'Content-Length: 27932\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: api.minimax.chat\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/v1/text/chatcompletion_v2',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: [Function: emitRequestTimeout],
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'api.minimax.chat',
+      protocol: 'https:',
+      _redirectable: [Circular *1],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: true,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    _currentUrl: 'https://api.minimax.chat/v1/text/chatcompletion_v2',
+    _timeout: null,
+    [Symbol(shapeMode)]: true,
+    [Symbol(kCapture)]: false
+  },
+  [cause]: Error: socket hang up
+      at TLSSocket.socketOnEnd (node:_http_client:528:25)
+      at TLSSocket.emit (node:events:536:35)
+      at endReadableNT (node:internal/streams/readable:1698:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    code: 'ECONNRESET'
+  }
+}

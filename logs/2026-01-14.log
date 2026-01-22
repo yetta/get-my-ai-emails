@@ -1,0 +1,127 @@
+[2026-01-14T00:00:01.141Z] [INFO] 
+========== 定时任务触发 ==========
+[2026-01-14T00:00:02.464Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-14T00:00:02.894Z] [INFO] Gmail API 认证成功
+[2026-01-14T00:00:02.931Z] [INFO] 搜索邮件: label:"AI subscription" is:unread after:2026/01/12
+[2026-01-14T00:00:07.502Z] [INFO] 找到 2 封带有标签 "AI subscription" 的未读邮件
+[2026-01-14T00:00:07.503Z] [INFO] 
+处理邮件 1/2
+[2026-01-14T00:00:08.508Z] [INFO] 获取邮件内容: 🌝 A moon hotel is taking reservations
+[2026-01-14T00:00:08.970Z] [INFO] HTML 解析完成
+[2026-01-14T00:00:08.978Z] [INFO] 提取到 0 个链接
+[2026-01-14T00:00:08.979Z] [INFO] 提取到 0 个链接
+[2026-01-14T00:00:09.011Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-14T00:00:24.253Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-14T00:00:24.267Z] [INFO] Gmail API 认证成功
+[2026-01-14T00:00:24.268Z] [INFO] 搜索邮件: label:"AI subscription" is:unread after:2026/01/12
+[2026-01-14T00:00:27.483Z] [INFO] 找到 2 封带有标签 "AI subscription" 的未读邮件
+[2026-01-14T00:00:27.484Z] [INFO] 
+处理邮件 1/2
+[2026-01-14T00:00:28.478Z] [INFO] 获取邮件内容: 🌝 A moon hotel is taking reservations
+[2026-01-14T00:00:28.497Z] [INFO] HTML 解析完成
+[2026-01-14T00:00:28.501Z] [INFO] 提取到 0 个链接
+[2026-01-14T00:00:28.502Z] [INFO] 提取到 0 个链接
+[2026-01-14T00:00:28.502Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-14T00:01:16.321Z] [SUCCESS] MiniMax 翻译完成
+[2026-01-14T00:01:16.322Z] [SUCCESS] 文件已保存: 2026-01-13-🌝-A-moon-hotel-is-taking-reservations.md
+[2026-01-14T00:01:18.732Z] [INFO] 邮件已标记为已读: 19bb7fef644bac74
+[2026-01-14T00:01:18.733Z] [SUCCESS] ✓ 邮件处理完成: 🌝 A moon hotel is taking reservations
+[2026-01-14T00:01:18.733Z] [INFO] 
+处理邮件 2/2
+[2026-01-14T00:01:20.486Z] [INFO] 获取邮件内容: 🤝 Apple, Google go official for Siri revamp
+[2026-01-14T00:01:20.501Z] [INFO] HTML 解析完成
+[2026-01-14T00:01:20.503Z] [INFO] 提取到 0 个链接
+[2026-01-14T00:01:20.503Z] [INFO] 提取到 0 个链接
+[2026-01-14T00:01:20.504Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-14T00:19:49.406Z] [ERROR] MiniMax 翻译失败
+Error: socket hang up
+    at AxiosError.from (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/core/AxiosError.js:96:14)
+    at RedirectableRequest.handleRequestError (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/adapters/http.js:817:25)
+    at RedirectableRequest.emit (node:events:524:28)
+    at eventHandlers.<computed> (/Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/follow-redirects/index.js:49:24)
+    at ClientRequest.emit (node:events:524:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at TLSSocket.socketOnEnd (node:_http_client:528:5)
+    at TLSSocket.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AITranslator.translateWithMiniMax (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:27:30)
+    at async AITranslator.translate (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:13:20)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/index.js:68:43)
+    at async cron.schedule.timezone [as _execution] (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/run-scheduler.js:15:24)
+[2026-01-14T00:19:49.429Z] [ERROR] ✗ 邮件处理失败
+Error: socket hang up
+    at AxiosError.from (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/core/AxiosError.js:96:14)
+    at RedirectableRequest.handleRequestError (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/adapters/http.js:817:25)
+    at RedirectableRequest.emit (node:events:524:28)
+    at eventHandlers.<computed> (/Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/follow-redirects/index.js:49:24)
+    at ClientRequest.emit (node:events:524:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at TLSSocket.socketOnEnd (node:_http_client:528:5)
+    at TLSSocket.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AITranslator.translateWithMiniMax (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:27:30)
+    at async AITranslator.translate (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:13:20)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/index.js:68:43)
+    at async cron.schedule.timezone [as _execution] (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/run-scheduler.js:15:24)
+[2026-01-14T00:19:49.435Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-14T00:19:49.435Z] [INFO] 成功: 1 封
+[2026-01-14T00:19:49.435Z] [INFO] 失败: 1 封
+[2026-01-14T00:19:49.435Z] [SUCCESS] 定时任务完成！处理了 1 封邮件
+[2026-01-14T00:19:57.185Z] [ERROR] MiniMax 翻译失败
+Error: read ECONNRESET
+    at AxiosError.from (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/core/AxiosError.js:96:14)
+    at RedirectableRequest.handleRequestError (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/adapters/http.js:817:25)
+    at RedirectableRequest.emit (node:events:524:28)
+    at eventHandlers.<computed> (/Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/follow-redirects/index.js:49:24)
+    at ClientRequest.emit (node:events:524:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at TLSSocket.socketErrorListener (node:_http_client:504:5)
+    at TLSSocket.emit (node:events:524:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at Axios.request (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AITranslator.translateWithMiniMax (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:27:30)
+    at async AITranslator.translate (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:13:20)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/index.js:68:43)
+[2026-01-14T00:19:57.214Z] [ERROR] ✗ 邮件处理失败
+Error: read ECONNRESET
+    at AxiosError.from (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/core/AxiosError.js:96:14)
+    at RedirectableRequest.handleRequestError (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/adapters/http.js:817:25)
+    at RedirectableRequest.emit (node:events:524:28)
+    at eventHandlers.<computed> (/Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/follow-redirects/index.js:49:24)
+    at ClientRequest.emit (node:events:524:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at TLSSocket.socketErrorListener (node:_http_client:504:5)
+    at TLSSocket.emit (node:events:524:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at Axios.request (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AITranslator.translateWithMiniMax (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:27:30)
+    at async AITranslator.translate (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:13:20)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/index.js:68:43)
+[2026-01-14T00:19:57.215Z] [INFO] 
+处理邮件 1/2
+[2026-01-14T00:19:59.075Z] [INFO] 获取邮件内容: 🤝 Apple, Google go official for Siri revamp
+[2026-01-14T00:19:59.086Z] [INFO] HTML 解析完成
+[2026-01-14T00:19:59.091Z] [INFO] 提取到 0 个链接
+[2026-01-14T00:19:59.091Z] [INFO] 提取到 0 个链接
+[2026-01-14T00:19:59.091Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-14T00:20:52.292Z] [SUCCESS] MiniMax 翻译完成
+[2026-01-14T00:20:52.293Z] [SUCCESS] 文件已保存: 2026-01-13-🤝-Apple,-Google-go-official-for-Siri-revamp.md
+[2026-01-14T00:20:54.016Z] [INFO] 邮件已标记为已读: 19bb7142db0a482f
+[2026-01-14T00:20:54.017Z] [SUCCESS] ✓ 邮件处理完成: 🤝 Apple, Google go official for Siri revamp
+[2026-01-14T00:20:54.017Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-14T00:20:54.017Z] [INFO] 成功: 1 封
+[2026-01-14T00:20:54.018Z] [INFO] 失败: 1 封
+[2026-01-14T00:20:54.018Z] [SUCCESS] 
+任务完成！处理了 1 封邮件

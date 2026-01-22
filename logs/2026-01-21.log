@@ -1,0 +1,42 @@
+[2026-01-21T03:22:17.217Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-21T03:22:17.236Z] [INFO] Gmail API 认证成功
+[2026-01-21T03:22:17.237Z] [INFO] 搜索邮件: label:"AI subscription" is:unread after:2026/01/19
+[2026-01-21T03:22:19.497Z] [INFO] 找到 2 封带有标签 "AI subscription" 的未读邮件
+[2026-01-21T03:22:19.503Z] [INFO] 
+处理邮件 1/2
+[2026-01-21T03:22:20.227Z] [INFO] 获取邮件内容: 🧬 Biotech's big 3 (and they're wild)
+[2026-01-21T03:22:20.245Z] [INFO] 保存到缓存: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/emails/19bdc0adb8447ba4.json
+[2026-01-21T03:22:20.252Z] [INFO] 内容范围提取: 从 23186 到 66098，节省 44828 字符
+[2026-01-21T03:22:20.312Z] [INFO] HTML 解析完成，提取 4 张有效图片
+[2026-01-21T03:22:20.342Z] [INFO] 提取到 47 个链接
+[2026-01-21T03:22:20.348Z] [INFO] 提取到 47 个链接, 4 张有效图片
+[2026-01-21T03:22:20.360Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-21T03:23:19.988Z] [INFO] Token 消耗: 输入 12063, 输出 1601, 总计 13664
+[2026-01-21T03:23:19.989Z] [SUCCESS] MiniMax 翻译完成
+[2026-01-21T03:23:19.990Z] [INFO] 保存到缓存: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/translated/19bdc0adb8447ba4.md
+[2026-01-21T03:23:22.973Z] [INFO] 保存了 4 张图片到 /Users/xuye/Documents/NoteBook/ObsidianVault/News/AI-Updates/attachments/2026-01-20-🧬-Biotech's-big-3-(and-they're-wild)
+[2026-01-21T03:23:22.974Z] [SUCCESS] 文件已保存: 2026-01-20-🧬-Biotech's-big-3-(and-they're-wild).md
+[2026-01-21T03:23:24.937Z] [INFO] 邮件已标记为已读: 19bdc0adb8447ba4
+[2026-01-21T03:23:24.938Z] [SUCCESS] ✓ 邮件处理完成: 🧬 Biotech's big 3 (and they're wild)
+[2026-01-21T03:23:24.938Z] [INFO] 
+处理邮件 2/2
+[2026-01-21T03:23:26.579Z] [INFO] 获取邮件内容: 🧑‍💻 Claude Code sparks 'selfware' era
+[2026-01-21T03:23:26.580Z] [INFO] 保存到缓存: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/emails/19bdb1dccd8d1ad9.json
+[2026-01-21T03:23:26.580Z] [INFO] 内容范围提取: 从 23149 到 77068，节省 49361 字符
+[2026-01-21T03:23:26.654Z] [INFO] HTML 解析完成，提取 6 张有效图片
+[2026-01-21T03:23:26.686Z] [INFO] 提取到 62 个链接
+[2026-01-21T03:23:26.692Z] [INFO] 提取到 62 个链接, 6 张有效图片
+[2026-01-21T03:23:26.699Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-21T03:24:27.617Z] [INFO] Token 消耗: 输入 14459, 输出 1511, 总计 15970
+[2026-01-21T03:24:27.618Z] [SUCCESS] MiniMax 翻译完成
+[2026-01-21T03:24:27.619Z] [INFO] 保存到缓存: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/translated/19bdb1dccd8d1ad9.md
+[2026-01-21T03:24:30.291Z] [INFO] 保存了 6 张图片到 /Users/xuye/Documents/NoteBook/ObsidianVault/News/AI-Updates/attachments/2026-01-20-🧑‍💻-Claude-Code-sparks-'selfware'-era
+[2026-01-21T03:24:30.292Z] [SUCCESS] 文件已保存: 2026-01-20-🧑‍💻-Claude-Code-sparks-'selfware'-era.md
+[2026-01-21T03:24:31.526Z] [INFO] 邮件已标记为已读: 19bdb1dccd8d1ad9
+[2026-01-21T03:24:31.526Z] [SUCCESS] ✓ 邮件处理完成: 🧑‍💻 Claude Code sparks 'selfware' era
+[2026-01-21T03:24:31.527Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-21T03:24:31.527Z] [INFO] 成功: 2 封
+[2026-01-21T03:24:31.531Z] [INFO] 失败: 0 封
+[2026-01-21T03:24:31.531Z] [SUCCESS] 
+任务完成！处理了 2 封邮件

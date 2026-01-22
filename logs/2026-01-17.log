@@ -1,0 +1,328 @@
+[2026-01-17T00:00:28.020Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-17T00:00:28.058Z] [INFO] Gmail API 认证成功
+[2026-01-17T00:00:28.059Z] [INFO] 搜索邮件: label:"AI subscription" is:unread after:2026/01/15
+[2026-01-17T00:00:32.013Z] [INFO] 找到 1 封带有标签 "AI subscription" 的未读邮件
+[2026-01-17T00:00:32.014Z] [INFO] 
+处理邮件 1/1
+[2026-01-17T00:00:33.094Z] [INFO] 获取邮件内容: 🤝 Wikipedia inks deals with Amazon, Meta
+[2026-01-17T00:00:33.170Z] [INFO] HTML 解析完成，提取 5 张有效图片
+[2026-01-17T00:00:33.479Z] [INFO] 提取到 46 个链接
+[2026-01-17T00:00:33.479Z] [INFO] 提取到 46 个链接, 5 张有效图片
+[2026-01-17T00:00:33.481Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-17T00:03:24.226Z] [SUCCESS] MiniMax 翻译完成
+[2026-01-17T00:03:27.322Z] [INFO] 保存了 5 张图片到 /Users/xuye/Documents/NoteBook/ObsidianVault/News/AI-Updates/attachments/2026-01-16-🤝-Wikipedia-inks-deals-with-Amazon,-Meta
+[2026-01-17T00:03:27.323Z] [SUCCESS] 文件已保存: 2026-01-16-🤝-Wikipedia-inks-deals-with-Amazon,-Meta.md
+[2026-01-17T00:03:29.788Z] [INFO] 邮件已标记为已读: 19bc770e5f92e4f1
+[2026-01-17T00:03:29.789Z] [SUCCESS] ✓ 邮件处理完成: 🤝 Wikipedia inks deals with Amazon, Meta
+[2026-01-17T00:03:29.789Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-17T00:03:29.790Z] [INFO] 成功: 1 封
+[2026-01-17T00:03:29.790Z] [INFO] 失败: 0 封
+[2026-01-17T00:03:29.790Z] [SUCCESS] 
+任务完成！处理了 1 封邮件
+[2026-01-17T02:52:48.155Z] [INFO] Gmail API 认证成功
+[2026-01-17T02:53:01.682Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-17T02:53:01.687Z] [INFO] Gmail API 认证成功
+[2026-01-17T02:53:01.688Z] [INFO] 搜索邮件: label:"AI subscription" is:unread after:2026/01/15
+[2026-01-17T02:53:04.846Z] [INFO] 找到 1 封带有标签 "AI subscription" 的未读邮件
+[2026-01-17T02:53:04.847Z] [INFO] 
+处理邮件 1/1
+[2026-01-17T02:53:05.922Z] [INFO] 获取邮件内容: ✌️ Murati's co-founders return to OpenAI
+[2026-01-17T02:53:06.018Z] [INFO] HTML 解析完成，提取 7 张有效图片
+[2026-01-17T02:53:06.058Z] [INFO] 提取到 59 个链接
+[2026-01-17T02:53:06.059Z] [INFO] 提取到 59 个链接, 7 张有效图片
+[2026-01-17T02:53:06.059Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-17T02:56:06.040Z] [SUCCESS] MiniMax 翻译完成
+[2026-01-17T02:56:10.197Z] [INFO] 保存了 7 张图片到 /Users/xuye/Documents/NoteBook/ObsidianVault/News/AI-Updates/attachments/2026-01-16-✌️-Murati's-co-founders-return-to-OpenAI
+[2026-01-17T02:56:10.198Z] [SUCCESS] 文件已保存: 2026-01-16-✌️-Murati's-co-founders-return-to-OpenAI-4.md
+[2026-01-17T02:56:11.906Z] [INFO] 邮件已标记为已读: 19bc6894a31c30b1
+[2026-01-17T02:56:11.906Z] [SUCCESS] ✓ 邮件处理完成: ✌️ Murati's co-founders return to OpenAI
+[2026-01-17T02:56:11.909Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-17T02:56:11.910Z] [INFO] 成功: 1 封
+[2026-01-17T02:56:11.911Z] [INFO] 失败: 0 封
+[2026-01-17T02:56:11.912Z] [SUCCESS] 
+任务完成！处理了 1 封邮件
+[2026-01-17T03:43:51.538Z] [INFO] Gmail API 认证成功
+[2026-01-17T03:44:04.427Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-17T03:44:04.432Z] [INFO] Gmail API 认证成功
+[2026-01-17T03:44:04.433Z] [INFO] 搜索邮件: label:"AI subscription" is:unread after:2026/01/15
+[2026-01-17T03:44:07.651Z] [INFO] 找到 1 封带有标签 "AI subscription" 的未读邮件
+[2026-01-17T03:44:07.652Z] [INFO] 
+处理邮件 1/1
+[2026-01-17T03:44:08.714Z] [INFO] 获取邮件内容: ✌️ Murati's co-founders return to OpenAI
+[2026-01-17T03:44:08.804Z] [INFO] HTML 解析完成，提取 6 张有效图片
+[2026-01-17T03:44:08.827Z] [INFO] 提取到 59 个链接
+[2026-01-17T03:44:08.828Z] [INFO] 提取到 59 个链接, 6 张有效图片
+[2026-01-17T03:44:08.828Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-17T03:47:22.561Z] [SUCCESS] MiniMax 翻译完成
+[2026-01-17T03:47:26.347Z] [INFO] 保存了 6 张图片到 /Users/xuye/Documents/NoteBook/ObsidianVault/News/AI-Updates/attachments/2026-01-16-✌️-Murati's-co-founders-return-to-OpenAI
+[2026-01-17T03:47:26.348Z] [SUCCESS] 文件已保存: 2026-01-16-✌️-Murati's-co-founders-return-to-OpenAI-5.md
+[2026-01-17T03:47:28.145Z] [INFO] 邮件已标记为已读: 19bc6894a31c30b1
+[2026-01-17T03:47:28.168Z] [SUCCESS] ✓ 邮件处理完成: ✌️ Murati's co-founders return to OpenAI
+[2026-01-17T03:47:28.318Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-17T03:47:28.319Z] [INFO] 成功: 1 封
+[2026-01-17T03:47:28.439Z] [INFO] 失败: 0 封
+[2026-01-17T03:47:28.440Z] [SUCCESS] 
+任务完成！处理了 1 封邮件
+[2026-01-17T03:56:48.958Z] [INFO] Gmail API 认证成功
+[2026-01-17T03:57:03.529Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-17T03:57:03.550Z] [INFO] Gmail API 认证成功
+[2026-01-17T03:57:03.550Z] [INFO] 搜索邮件: label:"AI subscription" is:unread after:2026/01/15
+[2026-01-17T03:57:06.820Z] [INFO] 找到 1 封带有标签 "AI subscription" 的未读邮件
+[2026-01-17T03:57:06.820Z] [INFO] 
+处理邮件 1/1
+[2026-01-17T03:57:07.931Z] [INFO] 获取邮件内容: ✌️ Murati's co-founders return to OpenAI
+[2026-01-17T03:57:08.025Z] [INFO] HTML 解析完成，提取 6 张有效图片
+[2026-01-17T03:57:08.055Z] [INFO] 提取到 59 个链接
+[2026-01-17T03:57:08.055Z] [INFO] 提取到 59 个链接, 6 张有效图片
+[2026-01-17T03:57:08.055Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-17T04:00:21.459Z] [SUCCESS] MiniMax 翻译完成
+[2026-01-17T04:00:25.140Z] [INFO] 保存了 6 张图片到 /Users/xuye/Documents/NoteBook/ObsidianVault/News/AI-Updates/attachments/2026-01-16-✌️-Murati's-co-founders-return-to-OpenAI
+[2026-01-17T04:00:25.142Z] [SUCCESS] 文件已保存: 2026-01-16-✌️-Murati's-co-founders-return-to-OpenAI-6.md
+[2026-01-17T04:00:26.861Z] [INFO] 邮件已标记为已读: 19bc6894a31c30b1
+[2026-01-17T04:00:26.861Z] [SUCCESS] ✓ 邮件处理完成: ✌️ Murati's co-founders return to OpenAI
+[2026-01-17T04:00:26.862Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-17T04:00:26.866Z] [INFO] 成功: 1 封
+[2026-01-17T04:00:26.866Z] [INFO] 失败: 0 封
+[2026-01-17T04:00:26.866Z] [SUCCESS] 
+任务完成！处理了 1 封邮件
+[2026-01-17T04:03:56.508Z] [INFO] Gmail API 认证成功
+[2026-01-17T04:04:02.240Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-17T04:04:02.246Z] [INFO] Gmail API 认证成功
+[2026-01-17T04:04:02.246Z] [INFO] 搜索邮件: label:"AI subscription" is:unread after:2026/01/15
+[2026-01-17T04:04:05.416Z] [INFO] 找到 1 封带有标签 "AI subscription" 的未读邮件
+[2026-01-17T04:04:05.416Z] [INFO] 
+处理邮件 1/1
+[2026-01-17T04:04:06.348Z] [INFO] 获取邮件内容: ✌️ Murati's co-founders return to OpenAI
+[2026-01-17T04:04:06.443Z] [INFO] HTML 解析完成，提取 7 张有效图片
+[2026-01-17T04:04:06.468Z] [INFO] 提取到 59 个链接
+[2026-01-17T04:04:06.469Z] [INFO] 提取到 59 个链接, 7 张有效图片
+[2026-01-17T04:04:06.469Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-17T04:04:08.997Z] [ERROR] MiniMax 翻译失败
+TypeError: Cannot read properties of null (reading '0')
+    at AITranslator.translateWithMiniMax (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:48:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AITranslator.translate (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:13:20)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/index.js:68:43)
+[2026-01-17T04:04:08.999Z] [ERROR] ✗ 邮件处理失败
+TypeError: Cannot read properties of null (reading '0')
+    at AITranslator.translateWithMiniMax (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:48:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AITranslator.translate (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:13:20)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/index.js:68:43)
+[2026-01-17T04:04:08.999Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-17T04:04:08.999Z] [INFO] 成功: 0 封
+[2026-01-17T04:04:08.999Z] [INFO] 失败: 1 封
+[2026-01-17T04:04:09.000Z] [SUCCESS] 
+任务完成！处理了 0 封邮件
+[2026-01-17T04:04:45.926Z] [INFO] Gmail API 认证成功
+[2026-01-17T04:04:50.692Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-17T04:04:50.698Z] [INFO] Gmail API 认证成功
+[2026-01-17T04:04:50.699Z] [INFO] 搜索邮件: label:"AI subscription" is:unread after:2026/01/15
+[2026-01-17T04:04:53.943Z] [INFO] 找到 1 封带有标签 "AI subscription" 的未读邮件
+[2026-01-17T04:04:53.943Z] [INFO] 
+处理邮件 1/1
+[2026-01-17T04:04:54.916Z] [INFO] 获取邮件内容: ✌️ Murati's co-founders return to OpenAI
+[2026-01-17T04:04:55.020Z] [INFO] HTML 解析完成，提取 7 张有效图片
+[2026-01-17T04:04:55.046Z] [INFO] 提取到 59 个链接
+[2026-01-17T04:04:55.047Z] [INFO] 提取到 59 个链接, 7 张有效图片
+[2026-01-17T04:04:55.047Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-17T04:04:55.622Z] [ERROR] MiniMax 翻译失败
+Error: API 返回空内容
+    at AITranslator.translateWithMiniMax (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:50:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AITranslator.translate (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:13:20)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/index.js:68:43)
+[2026-01-17T04:04:55.624Z] [ERROR] ✗ 邮件处理失败
+Error: API 返回空内容
+    at AITranslator.translateWithMiniMax (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:50:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AITranslator.translate (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:13:20)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/index.js:68:43)
+[2026-01-17T04:04:55.625Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-17T04:04:55.626Z] [INFO] 成功: 0 封
+[2026-01-17T04:04:55.626Z] [INFO] 失败: 1 封
+[2026-01-17T04:04:55.626Z] [SUCCESS] 
+任务完成！处理了 0 封邮件
+[2026-01-17T04:05:22.068Z] [INFO] Gmail API 认证成功
+[2026-01-17T04:05:26.532Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-17T04:05:26.537Z] [INFO] Gmail API 认证成功
+[2026-01-17T04:05:26.538Z] [INFO] 搜索邮件: label:"AI subscription" is:unread after:2026/01/15
+[2026-01-17T04:05:30.019Z] [INFO] 找到 1 封带有标签 "AI subscription" 的未读邮件
+[2026-01-17T04:05:30.019Z] [INFO] 
+处理邮件 1/1
+[2026-01-17T04:05:30.991Z] [INFO] 获取邮件内容: ✌️ Murati's co-founders return to OpenAI
+[2026-01-17T04:05:31.095Z] [INFO] HTML 解析完成，提取 7 张有效图片
+[2026-01-17T04:05:31.119Z] [INFO] 提取到 59 个链接
+[2026-01-17T04:05:31.119Z] [INFO] 提取到 59 个链接, 7 张有效图片
+[2026-01-17T04:05:31.119Z] [INFO] 使用智谱 AI 翻译邮件内容
+[2026-01-17T04:05:31.699Z] [ERROR] 智谱 AI 翻译失败
+AxiosError: Request failed with status code 401
+    at settle (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/core/settle.js:19:12)
+    at IncomingMessage.handleStreamEnd (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/adapters/http.js:793:11)
+    at IncomingMessage.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AITranslator.translateWithZhipu (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:66:30)
+    at async AITranslator.translate (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:15:20)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/index.js:68:43)
+[2026-01-17T04:05:31.725Z] [ERROR] ✗ 邮件处理失败
+AxiosError: Request failed with status code 401
+    at settle (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/core/settle.js:19:12)
+    at IncomingMessage.handleStreamEnd (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/adapters/http.js:793:11)
+    at IncomingMessage.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AITranslator.translateWithZhipu (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:66:30)
+    at async AITranslator.translate (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:15:20)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/index.js:68:43)
+[2026-01-17T04:05:31.732Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-17T04:05:31.732Z] [INFO] 成功: 0 封
+[2026-01-17T04:05:31.732Z] [INFO] 失败: 1 封
+[2026-01-17T04:05:31.732Z] [SUCCESS] 
+任务完成！处理了 0 封邮件
+[2026-01-17T04:05:57.132Z] [INFO] Gmail API 认证成功
+[2026-01-17T04:06:01.497Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-17T04:06:01.502Z] [INFO] Gmail API 认证成功
+[2026-01-17T04:06:01.503Z] [INFO] 搜索邮件: label:"AI subscription" is:unread after:2026/01/15
+[2026-01-17T04:06:05.758Z] [INFO] 找到 1 封带有标签 "AI subscription" 的未读邮件
+[2026-01-17T04:06:05.758Z] [INFO] 
+处理邮件 1/1
+[2026-01-17T04:06:06.733Z] [INFO] 获取邮件内容: ✌️ Murati's co-founders return to OpenAI
+[2026-01-17T04:06:06.826Z] [INFO] HTML 解析完成，提取 7 张有效图片
+[2026-01-17T04:06:06.848Z] [INFO] 提取到 59 个链接
+[2026-01-17T04:06:06.848Z] [INFO] 提取到 59 个链接, 7 张有效图片
+[2026-01-17T04:06:06.849Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-17T04:06:07.437Z] [ERROR] MiniMax 翻译失败
+Error: API 返回空内容
+    at AITranslator.translateWithMiniMax (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:50:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AITranslator.translate (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:13:20)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/index.js:68:43)
+[2026-01-17T04:06:07.439Z] [ERROR] ✗ 邮件处理失败
+Error: API 返回空内容
+    at AITranslator.translateWithMiniMax (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:50:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AITranslator.translate (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:13:20)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/index.js:68:43)
+[2026-01-17T04:06:07.439Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-17T04:06:07.444Z] [INFO] 成功: 0 封
+[2026-01-17T04:06:07.444Z] [INFO] 失败: 1 封
+[2026-01-17T04:06:07.444Z] [SUCCESS] 
+任务完成！处理了 0 封邮件
+[2026-01-17T04:15:05.347Z] [INFO] Gmail API 认证成功
+[2026-01-17T04:15:12.078Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-17T04:15:12.084Z] [INFO] Gmail API 认证成功
+[2026-01-17T04:15:12.085Z] [INFO] 搜索邮件: label:"AI subscription" is:unread after:2026/01/15
+[2026-01-17T04:15:15.721Z] [INFO] 找到 1 封带有标签 "AI subscription" 的未读邮件
+[2026-01-17T04:15:15.722Z] [INFO] 
+处理邮件 1/1
+[2026-01-17T04:15:16.695Z] [INFO] 获取邮件内容: ✌️ Murati's co-founders return to OpenAI
+[2026-01-17T04:15:16.792Z] [INFO] HTML 解析完成，提取 7 张有效图片
+[2026-01-17T04:15:16.827Z] [INFO] 提取到 59 个链接
+[2026-01-17T04:15:16.827Z] [INFO] 提取到 59 个链接, 7 张有效图片
+[2026-01-17T04:15:16.827Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-17T04:17:54.166Z] [SUCCESS] MiniMax 翻译完成
+[2026-01-17T04:17:58.625Z] [INFO] 保存了 7 张图片到 /Users/xuye/Documents/NoteBook/ObsidianVault/News/AI-Updates/attachments/2026-01-16-✌️-Murati's-co-founders-return-to-OpenAI
+[2026-01-17T04:17:58.627Z] [SUCCESS] 文件已保存: 2026-01-16-✌️-Murati's-co-founders-return-to-OpenAI-7.md
+[2026-01-17T04:18:00.386Z] [INFO] 邮件已标记为已读: 19bc6894a31c30b1
+[2026-01-17T04:18:00.387Z] [SUCCESS] ✓ 邮件处理完成: ✌️ Murati's co-founders return to OpenAI
+[2026-01-17T04:18:00.387Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-17T04:18:00.391Z] [INFO] 成功: 1 封
+[2026-01-17T04:18:00.391Z] [INFO] 失败: 0 封
+[2026-01-17T04:18:00.391Z] [SUCCESS] 
+任务完成！处理了 1 封邮件
+[2026-01-17T07:05:51.005Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-17T07:05:51.050Z] [INFO] Gmail API 认证成功
+[2026-01-17T07:05:51.051Z] [INFO] 搜索邮件: label:"AI subscription" is:unread after:2026/01/15
+[2026-01-17T07:05:54.623Z] [INFO] 找到 0 封带有标签 "AI subscription" 的未读邮件
+[2026-01-17T07:05:54.624Z] [INFO] 没有找到未读邮件
+[2026-01-17T07:05:54.624Z] [SUCCESS] 
+任务完成！处理了 0 封邮件
+[2026-01-17T07:06:32.731Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-17T07:06:32.736Z] [INFO] Gmail API 认证成功
+[2026-01-17T07:06:32.737Z] [INFO] [DEBUG] 搜索邮件: label:"AI subscription" after:2026/01/15
+[2026-01-17T07:06:36.287Z] [INFO] [DEBUG] 找到 1 封带有标签 "AI subscription" 的邮件
+[2026-01-17T07:06:36.288Z] [INFO] [DEBUG] 调试模式已启用，处理已读邮件
+[2026-01-17T07:06:36.288Z] [INFO] 
+处理邮件 1/1
+[2026-01-17T07:06:37.300Z] [INFO] 获取邮件内容: 🤝 Wikipedia inks deals with Amazon, Meta
+[2026-01-17T07:06:37.301Z] [INFO] 创建缓存目录: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/emails
+[2026-01-17T07:06:37.302Z] [INFO] 保存到缓存: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/emails/19bc770e5f92e4f1.json
+[2026-01-17T07:06:37.383Z] [INFO] HTML 解析完成，提取 4 张有效图片
+[2026-01-17T07:06:37.403Z] [INFO] 提取到 46 个链接
+[2026-01-17T07:06:37.404Z] [INFO] 提取到 46 个链接, 4 张有效图片
+[2026-01-17T07:06:37.404Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-17T07:09:55.414Z] [SUCCESS] MiniMax 翻译完成
+[2026-01-17T07:09:55.414Z] [INFO] 创建缓存目录: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/translated
+[2026-01-17T07:09:55.415Z] [INFO] 保存到缓存: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/translated/19bc770e5f92e4f1.md
+[2026-01-17T07:10:00.639Z] [INFO] 保存了 4 张图片到 /Users/xuye/Documents/NoteBook/ObsidianVault/News/AI-Updates/attachments/2026-01-16-🤝-Wikipedia-inks-deals-with-Amazon,-Meta
+[2026-01-17T07:10:00.640Z] [SUCCESS] 文件已保存: 2026-01-16-🤝-Wikipedia-inks-deals-with-Amazon,-Meta-1.md
+[2026-01-17T07:10:02.484Z] [INFO] 邮件已标记为已读: 19bc770e5f92e4f1
+[2026-01-17T07:10:02.484Z] [SUCCESS] ✓ 邮件处理完成: 🤝 Wikipedia inks deals with Amazon, Meta
+[2026-01-17T07:10:02.485Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-17T07:10:02.485Z] [INFO] 成功: 1 封
+[2026-01-17T07:10:02.485Z] [INFO] 失败: 0 封
+[2026-01-17T07:10:02.485Z] [SUCCESS] 
+任务完成！处理了 1 封邮件
+[2026-01-17T07:10:10.307Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-17T07:10:10.312Z] [INFO] Gmail API 认证成功
+[2026-01-17T07:10:10.313Z] [INFO] [DEBUG] 搜索邮件: label:"AI subscription" after:2026/01/15
+[2026-01-17T07:10:13.508Z] [INFO] [DEBUG] 找到 1 封带有标签 "AI subscription" 的邮件
+[2026-01-17T07:10:13.509Z] [INFO] [DEBUG] 调试模式已启用，处理已读邮件
+[2026-01-17T07:10:13.510Z] [INFO] 
+处理邮件 1/1
+[2026-01-17T07:10:13.514Z] [INFO] 从缓存加载: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/emails/19bc770e5f92e4f1.json
+[2026-01-17T07:10:13.515Z] [INFO] 使用缓存的邮件内容
+[2026-01-17T07:10:13.596Z] [INFO] HTML 解析完成，提取 4 张有效图片
+[2026-01-17T07:10:13.622Z] [INFO] 提取到 46 个链接
+[2026-01-17T07:10:13.622Z] [INFO] 提取到 46 个链接, 4 张有效图片
+[2026-01-17T07:10:13.622Z] [INFO] 从缓存加载: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/translated/19bc770e5f92e4f1.md
+[2026-01-17T07:10:13.627Z] [INFO] 使用缓存的翻译结果
+[2026-01-17T07:10:17.434Z] [INFO] 保存了 4 张图片到 /Users/xuye/Documents/NoteBook/ObsidianVault/News/AI-Updates/attachments/2026-01-16-🤝-Wikipedia-inks-deals-with-Amazon,-Meta
+[2026-01-17T07:10:17.435Z] [SUCCESS] 文件已保存: 2026-01-16-🤝-Wikipedia-inks-deals-with-Amazon,-Meta-2.md
+[2026-01-17T07:10:18.355Z] [INFO] 邮件已标记为已读: 19bc770e5f92e4f1
+[2026-01-17T07:10:18.355Z] [SUCCESS] ✓ 邮件处理完成: 🤝 Wikipedia inks deals with Amazon, Meta
+[2026-01-17T07:10:18.356Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-17T07:10:18.360Z] [INFO] 成功: 1 封
+[2026-01-17T07:10:18.360Z] [INFO] 失败: 0 封
+[2026-01-17T07:10:18.360Z] [SUCCESS] 
+任务完成！处理了 1 封邮件
+[2026-01-17T07:16:05.228Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-17T07:16:05.249Z] [INFO] Gmail API 认证成功
+[2026-01-17T07:16:05.249Z] [INFO] [DEBUG] 搜索邮件: label:"AI subscription" after:2026/01/15
+[2026-01-17T07:16:08.563Z] [INFO] [DEBUG] 找到 1 封带有标签 "AI subscription" 的邮件
+[2026-01-17T07:16:08.563Z] [INFO] [DEBUG] 调试模式已启用，处理已读邮件
+[2026-01-17T07:16:08.563Z] [INFO] 
+处理邮件 1/1
+[2026-01-17T07:16:08.567Z] [INFO] 从缓存加载: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/emails/19bc770e5f92e4f1.json
+[2026-01-17T07:16:08.570Z] [INFO] 使用缓存的邮件内容
+[2026-01-17T07:16:08.712Z] [INFO] HTML 解析完成，提取 4 张有效图片
+[2026-01-17T07:16:08.740Z] [INFO] 提取到 46 个链接
+[2026-01-17T07:16:08.740Z] [INFO] 提取到 46 个链接, 4 张有效图片
+[2026-01-17T07:16:08.740Z] [INFO] 从缓存加载: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/translated/19bc770e5f92e4f1.md
+[2026-01-17T07:16:08.741Z] [INFO] 使用缓存的翻译结果
+[2026-01-17T07:16:12.908Z] [INFO] 保存了 4 张图片到 /Users/xuye/Documents/NoteBook/ObsidianVault/News/AI-Updates/attachments/2026-01-16-🤝-Wikipedia-inks-deals-with-Amazon,-Meta
+[2026-01-17T07:16:12.909Z] [SUCCESS] 文件已保存: 2026-01-16-🤝-Wikipedia-inks-deals-with-Amazon,-Meta-3.md
+[2026-01-17T07:16:13.835Z] [INFO] 邮件已标记为已读: 19bc770e5f92e4f1
+[2026-01-17T07:16:13.835Z] [SUCCESS] ✓ 邮件处理完成: 🤝 Wikipedia inks deals with Amazon, Meta
+[2026-01-17T07:16:13.835Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-17T07:16:13.840Z] [INFO] 成功: 1 封
+[2026-01-17T07:16:13.840Z] [INFO] 失败: 0 封
+[2026-01-17T07:16:13.840Z] [SUCCESS] 
+任务完成！处理了 1 封邮件

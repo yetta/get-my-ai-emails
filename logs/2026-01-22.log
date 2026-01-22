@@ -1,0 +1,129 @@
+[2026-01-22T00:01:13.437Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-22T00:01:13.478Z] [INFO] Gmail API 认证成功
+[2026-01-22T00:01:13.479Z] [INFO] 搜索邮件: label:"AI subscription" is:unread after:2026/01/20
+[2026-01-22T00:01:16.756Z] [INFO] 找到 1 封带有标签 "AI subscription" 的未读邮件
+[2026-01-22T00:01:16.763Z] [INFO] 
+处理邮件 1/1
+[2026-01-22T00:01:17.887Z] [INFO] 获取邮件内容: 🌎 AI's top minds converge at World Economic Forum
+[2026-01-22T00:01:17.925Z] [INFO] 保存到缓存: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/emails/19be0471371301fe.json
+[2026-01-22T00:01:17.932Z] [INFO] 内容范围提取: 从 23078 到 73208，节省 49014 字符
+[2026-01-22T00:01:18.047Z] [INFO] HTML 解析完成，提取 6 张有效图片
+[2026-01-22T00:01:18.080Z] [INFO] 提取到 56 个链接
+[2026-01-22T00:01:18.117Z] [INFO] 提取到 56 个链接, 6 张有效图片
+[2026-01-22T00:01:18.124Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-22T00:02:39.027Z] [ERROR] MiniMax 翻译失败
+Error: socket hang up
+    at AxiosError.from (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/axios/lib/core/AxiosError.js:96:14)
+    at RedirectableRequest.handleRequestError (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/axios/lib/adapters/http.js:817:25)
+    at RedirectableRequest.emit (node:events:524:28)
+    at eventHandlers.<computed> (/Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/follow-redirects/index.js:49:24)
+    at ClientRequest.emit (node:events:524:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at TLSSocket.socketOnEnd (node:_http_client:528:5)
+    at TLSSocket.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AITranslator.translateWithMiniMax (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/src/ai-translator.js:27:30)
+    at async AITranslator.translate (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/src/ai-translator.js:13:20)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/index.js:132:41)
+[2026-01-22T00:02:39.120Z] [ERROR] ✗ 邮件处理失败
+Error: socket hang up
+    at AxiosError.from (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/axios/lib/core/AxiosError.js:96:14)
+    at RedirectableRequest.handleRequestError (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/axios/lib/adapters/http.js:817:25)
+    at RedirectableRequest.emit (node:events:524:28)
+    at eventHandlers.<computed> (/Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/follow-redirects/index.js:49:24)
+    at ClientRequest.emit (node:events:524:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at TLSSocket.socketOnEnd (node:_http_client:528:5)
+    at TLSSocket.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at Axios.request (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AITranslator.translateWithMiniMax (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/src/ai-translator.js:27:30)
+    at async AITranslator.translate (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/src/ai-translator.js:13:20)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/index.js:132:41)
+[2026-01-22T00:02:39.127Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-22T00:02:39.145Z] [INFO] 成功: 0 封
+[2026-01-22T00:02:39.145Z] [INFO] 失败: 1 封
+[2026-01-22T00:02:39.146Z] [SUCCESS] 
+任务完成！处理了 0 封邮件
+[2026-01-22T03:04:43.348Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-22T03:04:43.410Z] [INFO] Gmail API 认证成功
+[2026-01-22T03:04:43.411Z] [INFO] 搜索邮件: label:"AI subscription" is:unread after:2026/01/20
+[2026-01-22T03:04:47.120Z] [INFO] 找到 1 封带有标签 "AI subscription" 的未读邮件
+[2026-01-22T03:04:47.120Z] [INFO] 
+处理邮件 1/1
+[2026-01-22T03:04:47.121Z] [INFO] 从缓存加载: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/emails/19be0471371301fe.json
+[2026-01-22T03:04:47.145Z] [INFO] 使用缓存的邮件内容
+[2026-01-22T03:04:47.146Z] [INFO] 内容范围提取: 从 23078 到 73208，节省 49014 字符
+[2026-01-22T03:04:47.277Z] [INFO] HTML 解析完成，提取 6 张有效图片
+[2026-01-22T03:04:47.308Z] [INFO] 提取到 56 个链接
+[2026-01-22T03:04:47.309Z] [INFO] 提取到 56 个链接, 6 张有效图片
+[2026-01-22T03:04:47.322Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-22T03:05:47.474Z] [INFO] 请求失败: timeout of 60000ms exceeded。2 秒后重试... (剩余重试次数: 3)
+[2026-01-22T03:06:49.502Z] [INFO] 请求失败: timeout of 60000ms exceeded。4 秒后重试... (剩余重试次数: 2)
+[2026-01-22T03:07:53.513Z] [INFO] 请求失败: timeout of 60000ms exceeded。8 秒后重试... (剩余重试次数: 1)
+[2026-01-22T03:09:01.535Z] [ERROR] MiniMax 翻译失败
+AxiosError: timeout of 60000ms exceeded
+    at RedirectableRequest.handleRequestTimeout (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/axios/lib/adapters/http.js:854:15)
+    at RedirectableRequest.emit (node:events:524:28)
+    at Timeout._onTimeout (/Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/follow-redirects/index.js:221:12)
+    at listOnTimeout (node:internal/timers:581:17)
+    at process.processTimers (node:internal/timers:519:7)
+    at Axios.request (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/src/ai-translator.js:43:24
+    at async AITranslator.requestWithRetry (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/src/ai-translator.js:14:20)
+    at async AITranslator.translateWithMiniMax (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/src/ai-translator.js:42:30)
+    at async AITranslator.translate (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/src/ai-translator.js:28:20)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/index.js:132:41)
+[2026-01-22T03:09:01.677Z] [ERROR] ✗ 邮件处理失败
+AxiosError: timeout of 60000ms exceeded
+    at RedirectableRequest.handleRequestTimeout (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/axios/lib/adapters/http.js:854:15)
+    at RedirectableRequest.emit (node:events:524:28)
+    at Timeout._onTimeout (/Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/follow-redirects/index.js:221:12)
+    at listOnTimeout (node:internal/timers:581:17)
+    at process.processTimers (node:internal/timers:519:7)
+    at Axios.request (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/src/ai-translator.js:43:24
+    at async AITranslator.requestWithRetry (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/src/ai-translator.js:14:20)
+    at async AITranslator.translateWithMiniMax (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/src/ai-translator.js:42:30)
+    at async AITranslator.translate (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/src/ai-translator.js:28:20)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/index.js:132:41)
+[2026-01-22T03:09:01.775Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-22T03:09:01.776Z] [INFO] 成功: 0 封
+[2026-01-22T03:09:01.962Z] [INFO] 失败: 1 封
+[2026-01-22T03:09:02.170Z] [SUCCESS] 
+任务完成！处理了 0 封邮件
+[2026-01-22T03:09:32.094Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-22T03:09:32.110Z] [INFO] Gmail API 认证成功
+[2026-01-22T03:09:32.110Z] [INFO] 搜索邮件: label:"AI subscription" is:unread after:2026/01/20
+[2026-01-22T03:09:35.400Z] [INFO] 找到 1 封带有标签 "AI subscription" 的未读邮件
+[2026-01-22T03:09:35.400Z] [INFO] 
+处理邮件 1/1
+[2026-01-22T03:09:35.400Z] [INFO] 从缓存加载: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/emails/19be0471371301fe.json
+[2026-01-22T03:09:35.481Z] [INFO] 使用缓存的邮件内容
+[2026-01-22T03:09:35.482Z] [INFO] 内容范围提取: 从 23078 到 73208，节省 49014 字符
+[2026-01-22T03:09:35.553Z] [INFO] HTML 解析完成，提取 6 张有效图片
+[2026-01-22T03:09:35.586Z] [INFO] 提取到 56 个链接
+[2026-01-22T03:09:35.587Z] [INFO] 提取到 56 个链接, 6 张有效图片
+[2026-01-22T03:09:35.587Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-22T03:10:46.679Z] [INFO] Token 消耗: 输入 12261, 输出 1891, 总计 14152
+[2026-01-22T03:10:46.680Z] [SUCCESS] MiniMax 翻译完成
+[2026-01-22T03:10:46.681Z] [INFO] 保存到缓存: /Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/translated/19be0471371301fe.md
+[2026-01-22T03:10:50.357Z] [INFO] 保存了 6 张图片到 /Users/xuye/Documents/NoteBook/ObsidianVault/News/AI-Updates/attachments/2026-01-21-🌎-AI's-top-minds-converge-at-World-Economic-Forum
+[2026-01-22T03:10:50.358Z] [SUCCESS] 文件已保存: 2026-01-21-🌎-AI's-top-minds-converge-at-World-Economic-Forum.md
+[2026-01-22T03:10:52.051Z] [INFO] 邮件已标记为已读: 19be0471371301fe
+[2026-01-22T03:10:52.051Z] [SUCCESS] ✓ 邮件处理完成: 🌎 AI's top minds converge at World Economic Forum
+[2026-01-22T03:10:52.051Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-22T03:10:52.055Z] [INFO] 成功: 1 封
+[2026-01-22T03:10:52.055Z] [INFO] 失败: 0 封
+[2026-01-22T03:10:52.055Z] [SUCCESS] 
+任务完成！处理了 1 封邮件

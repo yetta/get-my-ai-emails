@@ -1,0 +1,176 @@
+[2026-01-16T00:02:19.775Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-16T00:02:19.824Z] [INFO] Gmail API 认证成功
+[2026-01-16T00:02:19.825Z] [INFO] 搜索邮件: label:"AI subscription" is:unread after:2026/01/14
+[2026-01-16T00:02:23.708Z] [INFO] 找到 2 封带有标签 "AI subscription" 的未读邮件
+[2026-01-16T00:02:23.709Z] [INFO] 
+处理邮件 1/2
+[2026-01-16T00:02:24.650Z] [INFO] 获取邮件内容: 🌎 1X now has a world model
+[2026-01-16T00:02:24.669Z] [INFO] HTML 解析完成
+[2026-01-16T00:02:24.673Z] [INFO] 提取到 0 个链接
+[2026-01-16T00:02:24.674Z] [INFO] 提取到 0 个链接
+[2026-01-16T00:02:24.674Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-16T00:03:50.814Z] [SUCCESS] MiniMax 翻译完成
+[2026-01-16T00:03:50.830Z] [SUCCESS] 文件已保存: 2026-01-15-🌎-1X-now-has-a-world-model.md
+[2026-01-16T00:03:52.605Z] [INFO] 邮件已标记为已读: 19bc24a2eaf7dea4
+[2026-01-16T00:03:52.605Z] [SUCCESS] ✓ 邮件处理完成: 🌎 1X now has a world model
+[2026-01-16T00:03:52.606Z] [INFO] 
+处理邮件 2/2
+[2026-01-16T00:03:53.712Z] [INFO] 获取邮件内容: 🧠 Gemini's new ‘Personal Intelligence’ upgrade
+[2026-01-16T00:03:53.723Z] [INFO] HTML 解析完成
+[2026-01-16T00:03:53.728Z] [INFO] 提取到 0 个链接
+[2026-01-16T00:03:53.742Z] [INFO] 提取到 0 个链接
+[2026-01-16T00:03:53.748Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-16T00:22:16.401Z] [ERROR] MiniMax 翻译失败
+Error: read ECONNRESET
+    at AxiosError.from (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/core/AxiosError.js:96:14)
+    at RedirectableRequest.handleRequestError (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/adapters/http.js:817:25)
+    at RedirectableRequest.emit (node:events:524:28)
+    at eventHandlers.<computed> (/Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/follow-redirects/index.js:49:24)
+    at ClientRequest.emit (node:events:524:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at TLSSocket.socketErrorListener (node:_http_client:504:5)
+    at TLSSocket.emit (node:events:524:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at Axios.request (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AITranslator.translateWithMiniMax (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:27:30)
+    at async AITranslator.translate (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:13:20)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/index.js:68:43)
+[2026-01-16T00:22:16.437Z] [ERROR] ✗ 邮件处理失败
+Error: read ECONNRESET
+    at AxiosError.from (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/core/AxiosError.js:96:14)
+    at RedirectableRequest.handleRequestError (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/adapters/http.js:817:25)
+    at RedirectableRequest.emit (node:events:524:28)
+    at eventHandlers.<computed> (/Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/follow-redirects/index.js:49:24)
+    at ClientRequest.emit (node:events:524:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at TLSSocket.socketErrorListener (node:_http_client:504:5)
+    at TLSSocket.emit (node:events:524:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at Axios.request (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AITranslator.translateWithMiniMax (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:27:30)
+    at async AITranslator.translate (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/src/ai-translator.js:13:20)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/get-my-ai-emails/index.js:68:43)
+[2026-01-16T00:22:16.439Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-16T00:22:16.463Z] [INFO] 成功: 1 封
+[2026-01-16T00:22:16.464Z] [INFO] 失败: 1 封
+[2026-01-16T00:22:16.464Z] [SUCCESS] 
+任务完成！处理了 1 封邮件
+[2026-01-16T13:15:48.235Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-16T13:15:48.266Z] [INFO] 创建附件目录: /Users/xuye/Documents/NoteBook/ObsidianVault/News/AI-Updates/attachments
+[2026-01-16T13:15:48.290Z] [INFO] Gmail API 认证成功
+[2026-01-16T13:15:48.290Z] [INFO] 搜索邮件: label:"AI subscription" is:unread after:2026/01/14
+[2026-01-16T13:15:51.853Z] [INFO] 找到 2 封带有标签 "AI subscription" 的未读邮件
+[2026-01-16T13:15:51.853Z] [INFO] 
+处理邮件 1/2
+[2026-01-16T13:15:52.936Z] [INFO] 获取邮件内容: ✌️ Murati's co-founders return to OpenAI
+[2026-01-16T13:15:53.787Z] [INFO] 提取到 0 张内嵌/附件图片
+[2026-01-16T13:15:53.917Z] [INFO] HTML 解析完成
+[2026-01-16T13:15:53.923Z] [INFO] 提取到 0 个链接
+[2026-01-16T13:15:53.927Z] [INFO] 提取到 0 个图片引用
+[2026-01-16T13:15:53.927Z] [INFO] 提取到 0 个链接, 0 个图片引用
+[2026-01-16T13:15:53.927Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-16T13:17:23.868Z] [SUCCESS] MiniMax 翻译完成
+[2026-01-16T13:17:23.882Z] [INFO] 保存了 0 张图片到 /Users/xuye/Documents/NoteBook/ObsidianVault/News/AI-Updates/attachments/2026-01-16-✌️-Murati's-co-founders-return-to-OpenAI
+[2026-01-16T13:17:23.883Z] [SUCCESS] 文件已保存: 2026-01-16-✌️-Murati's-co-founders-return-to-OpenAI.md
+[2026-01-16T13:17:25.767Z] [INFO] 邮件已标记为已读: 19bc6894a31c30b1
+[2026-01-16T13:17:25.768Z] [SUCCESS] ✓ 邮件处理完成: ✌️ Murati's co-founders return to OpenAI
+[2026-01-16T13:17:25.768Z] [INFO] 
+处理邮件 2/2
+[2026-01-16T13:17:27.024Z] [INFO] 获取邮件内容: 🧠 Gemini's new ‘Personal Intelligence’ upgrade
+[2026-01-16T13:17:27.994Z] [INFO] 提取到 0 张内嵌/附件图片
+[2026-01-16T13:17:28.006Z] [INFO] HTML 解析完成
+[2026-01-16T13:17:28.012Z] [INFO] 提取到 0 个链接
+[2026-01-16T13:17:28.015Z] [INFO] 提取到 0 个图片引用
+[2026-01-16T13:17:28.016Z] [INFO] 提取到 0 个链接, 0 个图片引用
+[2026-01-16T13:17:28.016Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-16T13:18:38.608Z] [SUCCESS] MiniMax 翻译完成
+[2026-01-16T13:18:38.629Z] [INFO] 保存了 0 张图片到 /Users/xuye/Documents/NoteBook/ObsidianVault/News/AI-Updates/attachments/2026-01-15-🧠-Gemini's-new-‘Personal-Intelligence’-upgrade
+[2026-01-16T13:18:38.630Z] [SUCCESS] 文件已保存: 2026-01-15-🧠-Gemini's-new-‘Personal-Intelligence’-upgrade.md
+[2026-01-16T13:18:40.490Z] [INFO] 邮件已标记为已读: 19bc161cabab5587
+[2026-01-16T13:18:40.490Z] [SUCCESS] ✓ 邮件处理完成: 🧠 Gemini's new ‘Personal Intelligence’ upgrade
+[2026-01-16T13:18:40.491Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-16T13:18:40.495Z] [INFO] 成功: 2 封
+[2026-01-16T13:18:40.495Z] [INFO] 失败: 0 封
+[2026-01-16T13:18:40.495Z] [SUCCESS] 
+任务完成！处理了 2 封邮件
+[2026-01-16T13:19:18.763Z] [INFO] Gmail API 认证成功
+[2026-01-16T13:20:23.145Z] [INFO] Gmail API 认证成功
+[2026-01-16T13:20:27.998Z] [INFO] 提取到 13 个图片引用
+[2026-01-16T13:21:09.519Z] [INFO] Gmail API 认证成功
+[2026-01-16T13:21:30.987Z] [INFO] Gmail API 认证成功
+[2026-01-16T13:21:41.216Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-16T13:21:41.221Z] [INFO] Gmail API 认证成功
+[2026-01-16T13:21:41.222Z] [INFO] 搜索邮件: label:"AI subscription" is:unread after:2026/01/14
+[2026-01-16T13:21:45.087Z] [INFO] 找到 1 封带有标签 "AI subscription" 的未读邮件
+[2026-01-16T13:21:45.087Z] [INFO] 
+处理邮件 1/1
+[2026-01-16T13:21:46.137Z] [INFO] 获取邮件内容: ✌️ Murati's co-founders return to OpenAI
+[2026-01-16T13:21:46.998Z] [INFO] 提取到 0 张内嵌/附件图片
+[2026-01-16T13:21:47.099Z] [INFO] HTML 解析完成
+[2026-01-16T13:21:47.211Z] [INFO] 提取到 59 个链接
+[2026-01-16T13:21:47.225Z] [INFO] 提取到 13 个图片引用
+[2026-01-16T13:21:47.226Z] [INFO] 提取到 59 个链接, 13 个图片引用
+[2026-01-16T13:21:47.226Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-16T13:24:22.259Z] [SUCCESS] MiniMax 翻译完成
+[2026-01-16T13:24:30.252Z] [INFO] 保存了 13 张图片到 /Users/xuye/Documents/NoteBook/ObsidianVault/News/AI-Updates/attachments/2026-01-16-✌️-Murati's-co-founders-return-to-OpenAI
+[2026-01-16T13:24:30.253Z] [SUCCESS] 文件已保存: 2026-01-16-✌️-Murati's-co-founders-return-to-OpenAI-1.md
+[2026-01-16T13:24:32.382Z] [INFO] 邮件已标记为已读: 19bc6894a31c30b1
+[2026-01-16T13:24:32.383Z] [SUCCESS] ✓ 邮件处理完成: ✌️ Murati's co-founders return to OpenAI
+[2026-01-16T13:24:32.383Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-16T13:24:32.384Z] [INFO] 成功: 1 封
+[2026-01-16T13:24:32.384Z] [INFO] 失败: 0 封
+[2026-01-16T13:24:32.384Z] [SUCCESS] 
+任务完成！处理了 1 封邮件
+[2026-01-16T13:31:07.350Z] [INFO] Gmail API 认证成功
+[2026-01-16T13:35:58.339Z] [INFO] Gmail API 认证成功
+[2026-01-16T13:36:21.442Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-16T13:36:21.466Z] [INFO] Gmail API 认证成功
+[2026-01-16T13:36:21.467Z] [INFO] 搜索邮件: label:"AI subscription" is:unread after:2026/01/14
+[2026-01-16T13:36:24.980Z] [INFO] 找到 1 封带有标签 "AI subscription" 的未读邮件
+[2026-01-16T13:36:24.981Z] [INFO] 
+处理邮件 1/1
+[2026-01-16T13:36:26.031Z] [INFO] 获取邮件内容: ✌️ Murati's co-founders return to OpenAI
+[2026-01-16T13:36:26.129Z] [INFO] HTML 解析完成，提取 0 张有效图片
+[2026-01-16T13:36:26.155Z] [INFO] 提取到 59 个链接
+[2026-01-16T13:36:26.155Z] [INFO] 提取到 59 个链接, 0 张有效图片
+[2026-01-16T13:36:26.156Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-16T13:37:27.867Z] [INFO] Gmail API 认证成功
+[2026-01-16T13:37:40.486Z] [INFO] ========== 开始处理邮件 ==========
+[2026-01-16T13:37:40.492Z] [INFO] Gmail API 认证成功
+[2026-01-16T13:37:40.492Z] [INFO] 搜索邮件: label:"AI subscription" is:unread after:2026/01/14
+[2026-01-16T13:37:43.916Z] [INFO] 找到 1 封带有标签 "AI subscription" 的未读邮件
+[2026-01-16T13:37:43.916Z] [INFO] 
+处理邮件 1/1
+[2026-01-16T13:37:45.054Z] [INFO] 获取邮件内容: ✌️ Murati's co-founders return to OpenAI
+[2026-01-16T13:37:45.145Z] [INFO] HTML 解析完成，提取 8 张有效图片
+[2026-01-16T13:37:45.169Z] [INFO] 提取到 59 个链接
+[2026-01-16T13:37:45.169Z] [INFO] 提取到 59 个链接, 8 张有效图片
+[2026-01-16T13:37:45.169Z] [INFO] 使用 MiniMax 翻译邮件内容
+[2026-01-16T13:39:10.581Z] [SUCCESS] MiniMax 翻译完成
+[2026-01-16T13:39:10.582Z] [SUCCESS] 文件已保存: 2026-01-16-✌️-Murati's-co-founders-return-to-OpenAI-2.md
+[2026-01-16T13:39:12.407Z] [INFO] 邮件已标记为已读: 19bc6894a31c30b1
+[2026-01-16T13:39:12.407Z] [SUCCESS] ✓ 邮件处理完成: ✌️ Murati's co-founders return to OpenAI
+[2026-01-16T13:39:12.408Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-16T13:39:12.409Z] [INFO] 成功: 1 封
+[2026-01-16T13:39:12.409Z] [INFO] 失败: 0 封
+[2026-01-16T13:39:12.409Z] [SUCCESS] 
+任务完成！处理了 1 封邮件
+[2026-01-16T13:40:03.063Z] [SUCCESS] MiniMax 翻译完成
+[2026-01-16T13:40:08.254Z] [INFO] 保存了 8 张图片到 /Users/xuye/Documents/NoteBook/ObsidianVault/News/AI-Updates/attachments/2026-01-16-✌️-Murati's-co-founders-return-to-OpenAI
+[2026-01-16T13:40:08.255Z] [SUCCESS] 文件已保存: 2026-01-16-✌️-Murati's-co-founders-return-to-OpenAI-3.md
+[2026-01-16T13:40:10.295Z] [INFO] 邮件已标记为已读: 19bc6894a31c30b1
+[2026-01-16T13:40:10.295Z] [SUCCESS] ✓ 邮件处理完成: ✌️ Murati's co-founders return to OpenAI
+[2026-01-16T13:40:10.296Z] [INFO] 
+========== 处理完成 ==========
+[2026-01-16T13:40:10.300Z] [INFO] 成功: 1 封
+[2026-01-16T13:40:10.301Z] [INFO] 失败: 0 封
+[2026-01-16T13:40:10.302Z] [SUCCESS] 
+任务完成！处理了 1 封邮件
