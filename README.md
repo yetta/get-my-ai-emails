@@ -70,6 +70,20 @@ npm start
 node index.js
 ```
 
+### 调试模式
+
+调试模式会处理已读邮件（仅1封），并使用本地缓存，方便调试 AI prompt 等逻辑：
+
+```bash
+npm run debug
+```
+
+**缓存机制说明**：
+- `emails/` - 邮件内容缓存（`{message.id}.json`）
+- `translated/` - 翻译结果缓存（`{message.id}.md`）
+
+程序会自动检查本地缓存，如已存在则跳过 API 调用。删除对应缓存文件可强制重新获取。
+
 ### 启动定时任务
 
 每日 8:00 自动执行：

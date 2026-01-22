@@ -1,0 +1,1124 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://excalidraw.com",
+  "elements": [
+    {
+      "id": "gonup2cpn",
+      "type": "ellipse",
+      "x": 300,
+      "y": 60,
+      "width": 200,
+      "height": 80,
+      "angle": 0,
+      "strokeColor": "#fbc02d",
+      "backgroundColor": "#fff9c4",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "uyslp9us6"
+      ],
+      "roundness": null,
+      "seed": 94280,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769055644820,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "ftwt8ysdw",
+      "type": "text",
+      "x": 400,
+      "y": 73,
+      "width": 107.99999999999999,
+      "height": 54,
+      "angle": 0,
+      "strokeColor": "#f57f17",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "uyslp9us6"
+      ],
+      "roundness": null,
+      "seed": 74896,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769055644820,
+      "link": null,
+      "locked": false,
+      "text": "⏰ 定时任务\n(Schedule)",
+      "fontSize": 18,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "verticalAlign": "top",
+      "baseline": 18
+    },
+    {
+      "id": "2igoqqjn2",
+      "type": "rectangle",
+      "x": 250,
+      "y": 190,
+      "width": 300,
+      "height": 120,
+      "angle": 0,
+      "strokeColor": "#1565c0",
+      "backgroundColor": "#e3f2fd",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "4swq4q3re"
+      ],
+      "roundness": {
+        "type": 3
+      },
+      "seed": 95505,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769055644820,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "uh76ut1s3",
+      "type": "text",
+      "x": 265,
+      "y": 205,
+      "width": 268.8,
+      "height": 105,
+      "angle": 0,
+      "strokeColor": "#0d47a1",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "4swq4q3re"
+      ],
+      "roundness": null,
+      "seed": 94014,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769055644820,
+      "link": null,
+      "locked": false,
+      "text": "1. 初始化 & 认证\n\n• 加载 .env 配置 (API Keys)\n• Gmail API 认证 (OAuth2Client)\n• 实例化 AI Translator / HTMLParser",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18
+    },
+    {
+      "id": "glznz1msh",
+      "type": "arrow",
+      "x": 400,
+      "y": 140,
+      "width": 1,
+      "height": 50,
+      "angle": 0,
+      "strokeColor": "#fbc02d",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 13160,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          50
+        ]
+      ],
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "imxpqd50k",
+      "type": "rectangle",
+      "x": 0,
+      "y": 355,
+      "width": 300,
+      "height": 150,
+      "angle": 0,
+      "strokeColor": "#1565c0",
+      "backgroundColor": "#e3f2fd",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "n1bffejst"
+      ],
+      "roundness": {
+        "type": 3
+      },
+      "seed": 47261,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769055644820,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "y5kjpk1ge",
+      "type": "text",
+      "x": 15,
+      "y": 370,
+      "width": 268.8,
+      "height": 126,
+      "angle": 0,
+      "strokeColor": "#0d47a1",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "n1bffejst"
+      ],
+      "roundness": null,
+      "seed": 42685,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769055644820,
+      "link": null,
+      "locked": false,
+      "text": "2. 搜索邮件 \n(Gmail API)\n\n• Query: label:\"AI subscription\"\n• Filter: is:unread, after:2d\n• Return: Message IDs List",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18
+    },
+    {
+      "id": "30k0bd87r",
+      "type": "rectangle",
+      "x": 500,
+      "y": 355,
+      "width": 300,
+      "height": 150,
+      "angle": 0,
+      "strokeColor": "#7b1fa2",
+      "backgroundColor": "#f3e5f5",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "c7ng0aiup"
+      ],
+      "roundness": {
+        "type": 3
+      },
+      "seed": 72289,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769055644820,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "55xda4u3u",
+      "type": "text",
+      "x": 515,
+      "y": 370,
+      "width": 218.4,
+      "height": 147,
+      "angle": 0,
+      "strokeColor": "#4a148c",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "c7ng0aiup"
+      ],
+      "roundness": null,
+      "seed": 4226,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769055644820,
+      "link": null,
+      "locked": false,
+      "text": "3. 缓存检查 & 获取\n(Caching)\n\n• 检查 emails/{id}.json\n• Hit: 读取本地 JSON\n• Miss: users.messages.get\n  -> 保存原始 Body 到本地",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18
+    },
+    {
+      "id": "hn94160am",
+      "type": "arrow",
+      "x": 400,
+      "y": 310,
+      "width": 250,
+      "height": 45,
+      "angle": 0,
+      "strokeColor": "#1565c0",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 97110,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          22.5
+        ],
+        [
+          -250,
+          22.5
+        ],
+        [
+          -250,
+          45
+        ]
+      ],
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "60htldk6h",
+      "type": "arrow",
+      "x": 150,
+      "y": 505,
+      "width": 500,
+      "height": 150,
+      "angle": 0,
+      "strokeColor": "#1565c0",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 13719,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          -75
+        ],
+        [
+          500,
+          -75
+        ],
+        [
+          500,
+          -150
+        ]
+      ],
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "w4xv8epxb",
+      "type": "rectangle",
+      "x": 225,
+      "y": 580,
+      "width": 350,
+      "height": 140,
+      "angle": 0,
+      "strokeColor": "#2e7d32",
+      "backgroundColor": "#e8f5e9",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "9zs1cz77g"
+      ],
+      "roundness": {
+        "type": 3
+      },
+      "seed": 96099,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769055644820,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "y172a296y",
+      "type": "text",
+      "x": 240,
+      "y": 595,
+      "width": 243.60000000000002,
+      "height": 126,
+      "angle": 0,
+      "strokeColor": "#1b5e20",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "9zs1cz77g"
+      ],
+      "roundness": null,
+      "seed": 46140,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769055644820,
+      "link": null,
+      "locked": false,
+      "text": "4. 解析与清洗 (HTML Parser)\n\n核心逻辑:\n• HTML -> Markdown (Turndown)\n• 正则提取链接 -> Map(L1, L2...)\n• 识别配图 -> 替换为 {{IMG:n}}",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18
+    },
+    {
+      "id": "k07wz28ff",
+      "type": "arrow",
+      "x": 650,
+      "y": 505,
+      "width": 250,
+      "height": 75,
+      "angle": 0,
+      "strokeColor": "#7b1fa2",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 17599,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          37.5
+        ],
+        [
+          -250,
+          37.5
+        ],
+        [
+          -250,
+          75
+        ]
+      ],
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "z7nco5h7n",
+      "type": "rectangle",
+      "x": 225,
+      "y": 780,
+      "width": 350,
+      "height": 140,
+      "angle": 0,
+      "strokeColor": "#c62828",
+      "backgroundColor": "#ffebee",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "9zxiwejbr"
+      ],
+      "roundness": {
+        "type": 3
+      },
+      "seed": 18588,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769055644820,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "1gwzq2fsg",
+      "type": "text",
+      "x": 240,
+      "y": 795,
+      "width": 210,
+      "height": 189,
+      "angle": 0,
+      "strokeColor": "#b71c1c",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "9zxiwejbr"
+      ],
+      "roundness": null,
+      "seed": 72612,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769055644820,
+      "link": null,
+      "locked": false,
+      "text": "5. 构建 Prompt (Prompt Eng)\n\n输入:\n• 清洗后的 Markdown 文本\n• 编号化的链接列表 (节省Token)\n要求:\n• 翻译摘要 + 核心要点\n• 必须包含原文链接\n• 严格的 MD 格式输出",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18
+    },
+    {
+      "id": "v7qfa33m5",
+      "type": "arrow",
+      "x": 400,
+      "y": 720,
+      "width": 1,
+      "height": 60,
+      "angle": 0,
+      "strokeColor": "#2e7d32",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 86331,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          60
+        ]
+      ],
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "vfsm444pr",
+      "type": "rectangle",
+      "x": 225,
+      "y": 950,
+      "width": 350,
+      "height": 200,
+      "angle": 0,
+      "strokeColor": "#c62828",
+      "backgroundColor": "#ffebee",
+      "fillStyle": "hachure",
+      "strokeWidth": 3,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "p4uls8m4z"
+      ],
+      "roundness": {
+        "type": 3
+      },
+      "seed": 29990,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769055644820,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "xy8bna9g5",
+      "type": "text",
+      "x": 240,
+      "y": 965,
+      "width": 252,
+      "height": 252,
+      "angle": 0,
+      "strokeColor": "#b71c1c",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "p4uls8m4z"
+      ],
+      "roundness": null,
+      "seed": 70451,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769055644820,
+      "link": null,
+      "locked": false,
+      "text": "6. AI 请求与重试 (Core)\n(MiniMax / Zhipu API)\n\nParameters:\n• model: abab6.5 / glm-4\n• temperature: 0.3\n• timeout: 120s\n\n⚠️ Retry Mechanism:\n• Catch: Network/Timeout Error\n• Backoff: 2s -> 4s -> 8s\n• Max Retries: 3",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18
+    },
+    {
+      "id": "8qa6aihpm",
+      "type": "arrow",
+      "x": 400,
+      "y": 920,
+      "width": 1,
+      "height": 30,
+      "angle": 0,
+      "strokeColor": "#c62828",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 42230,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          30
+        ]
+      ],
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "huynoh7ki",
+      "type": "rectangle",
+      "x": 225,
+      "y": 1250,
+      "width": 350,
+      "height": 100,
+      "angle": 0,
+      "strokeColor": "#1565c0",
+      "backgroundColor": "#e3f2fd",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "53fp0xla7"
+      ],
+      "roundness": {
+        "type": 3
+      },
+      "seed": 40275,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769055644820,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "jo0d8fcgo",
+      "type": "text",
+      "x": 240,
+      "y": 1265,
+      "width": 235.20000000000002,
+      "height": 84,
+      "angle": 0,
+      "strokeColor": "#0d47a1",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "53fp0xla7"
+      ],
+      "roundness": null,
+      "seed": 59685,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769055644820,
+      "link": null,
+      "locked": false,
+      "text": "7. 后处理 (Post-process)\n\n• 还原链接: L1 -> URL\n• 缓存翻译结果: translated/{id}.md",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18
+    },
+    {
+      "id": "05z0qtc9l",
+      "type": "arrow",
+      "x": 400,
+      "y": 1150,
+      "width": 1,
+      "height": 100,
+      "angle": 0,
+      "strokeColor": "#c62828",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 2170,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          100
+        ]
+      ],
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "i0ez27m0r",
+      "type": "rectangle",
+      "x": 225,
+      "y": 1380,
+      "width": 350,
+      "height": 140,
+      "angle": 0,
+      "strokeColor": "#00695c",
+      "backgroundColor": "#e0f2f1",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "ra3opymyq"
+      ],
+      "roundness": {
+        "type": 3
+      },
+      "seed": 66051,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769055644820,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "xr7pokubd",
+      "type": "text",
+      "x": 240,
+      "y": 1395,
+      "width": 260.40000000000003,
+      "height": 126,
+      "angle": 0,
+      "strokeColor": "#004d40",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "ra3opymyq"
+      ],
+      "roundness": null,
+      "seed": 38696,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769055644820,
+      "link": null,
+      "locked": false,
+      "text": "8. 写入 Obsidian\n(Obsidian Writer)\n\n• 下载图片 -> attachments/\n• 替换占位符 -> ![[image.jpg]]\n• 写入最终 .md -> /News/AI-Updates/",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18
+    },
+    {
+      "id": "voz5abqdt",
+      "type": "arrow",
+      "x": 400,
+      "y": 1350,
+      "width": 1,
+      "height": 30,
+      "angle": 0,
+      "strokeColor": "#1565c0",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 80197,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          30
+        ]
+      ],
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "sh3hw421a",
+      "type": "ellipse",
+      "x": 300,
+      "y": 1590,
+      "width": 200,
+      "height": 80,
+      "angle": 0,
+      "strokeColor": "#fbc02d",
+      "backgroundColor": "#fff9c4",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "dytqnnw07"
+      ],
+      "roundness": null,
+      "seed": 12262,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769055644820,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "pvcqw56mo",
+      "type": "text",
+      "x": 400,
+      "y": 1606,
+      "width": 163.2,
+      "height": 48,
+      "angle": 0,
+      "strokeColor": "#f57f17",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "dytqnnw07"
+      ],
+      "roundness": null,
+      "seed": 79310,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769055644821,
+      "link": null,
+      "locked": false,
+      "text": "✅ 任务完成\n(Mark Read & Log)",
+      "fontSize": 16,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "verticalAlign": "top",
+      "baseline": 18
+    },
+    {
+      "id": "uff7xt5s6",
+      "type": "arrow",
+      "x": 400,
+      "y": 1520,
+      "width": 1,
+      "height": 70,
+      "angle": 0,
+      "strokeColor": "#00695c",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 29986,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          70
+        ]
+      ],
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "kna7rbv1k",
+      "type": "rectangle",
+      "x": 660,
+      "y": 200,
+      "width": 280,
+      "height": 200,
+      "angle": 0,
+      "strokeColor": "#ff9800",
+      "backgroundColor": "#fff3e0",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "dashed",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "py9vaf9sr"
+      ],
+      "roundness": {
+        "type": 3
+      },
+      "seed": 8372,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769055644821,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "dawmlmer6",
+      "type": "text",
+      "x": 675,
+      "y": 215,
+      "width": 184.8,
+      "height": 126,
+      "angle": 0,
+      "strokeColor": "#e65100",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "py9vaf9sr"
+      ],
+      "roundness": null,
+      "seed": 31800,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769055644821,
+      "link": null,
+      "locked": false,
+      "text": "🔥 新增特性: 智能重试\n\n针对 2026-01-22 任务失败优化:\n• 解决 Socket Hang up 问题\n• 60s -> 120s 超时延长\n• 自动指数退避重试",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18
+    },
+    {
+      "id": "sc29s0z3e",
+      "type": "rectangle",
+      "x": 660,
+      "y": 500,
+      "width": 280,
+      "height": 200,
+      "angle": 0,
+      "strokeColor": "#ab47bc",
+      "backgroundColor": "#f3e5f5",
+      "fillStyle": "hachure",
+      "strokeWidth": 2,
+      "strokeStyle": "dashed",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "0tcf3op2z"
+      ],
+      "roundness": {
+        "type": 3
+      },
+      "seed": 17072,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769055644821,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "zx490do6l",
+      "type": "text",
+      "x": 675,
+      "y": 515,
+      "width": 184.8,
+      "height": 189,
+      "angle": 0,
+      "strokeColor": "#7b1fa2",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "0tcf3op2z"
+      ],
+      "roundness": null,
+      "seed": 15263,
+      "version": 1,
+      "versionNonce": 0,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1769055644821,
+      "link": null,
+      "locked": false,
+      "text": "📂 项目文件结构\n\n/emails (JSON Cache)\n/translated (MD Cache)\n/logs (Daily Logs)\nsrc/\n  gmail.js\n  ai-translator.js\n  html-parser.js",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#ffffff",
+    "currentItemFontFamily": 3
+  },
+  "files": {}
+}
