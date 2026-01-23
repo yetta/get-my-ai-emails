@@ -13,6 +13,11 @@ token.json
 logs/
 *.log
 
+# 缓存目录
+emails/
+parsed/
+translated/
+
 # macOS
 .DS_Store
 

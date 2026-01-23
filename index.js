@@ -17,6 +17,7 @@ const __dirname = path.dirname(__filename);
 
 // 缓存目录
 const EMAILS_CACHE_DIR = path.join(__dirname, 'emails');
+const PARSED_CACHE_DIR = path.join(__dirname, 'parsed');
 const TRANSLATED_CACHE_DIR = path.join(__dirname, 'translated');
 
 // 确保缓存目录存在
@@ -51,14 +52,16 @@ async function processEmails() {
 
         // 读取配置
         const aiService = process.env.AI_SERVICE || 'minimax';
-        const apiKey = aiService === 'minimax'
-            ? process.env.MINIMAX_API_KEY
-            : process.env.ZHIPU_API_KEY;
+        const minimaxApiKey = process.env.MINIMAX_API_KEY;
+        const zhipuApiKey = process.env.ZHIPU_API_KEY;
         const groupId = process.env.MINIMAX_GROUP_ID;
         const obsidianPath = process.env.OBSIDIAN_PATH;
         const labelName = process.env.GMAIL_LABEL || 'AI subscription';
         const daysToCheck = parseInt(process.env.DAYS_TO_CHECK || '2');
         const debugMode = process.env.DEBUG_MODE === 'true';
+
+        // 主服务 API Key
+        const apiKey = aiService === 'minimax' ? minimaxApiKey : zhipuApiKey;
 
         // 验证配置
         if (!apiKey) {
@@ -66,6 +69,15 @@ async function processEmails() {
         }
         if (!obsidianPath) {
             throw new Error('请在 .env 文件中配置 OBSIDIAN_PATH');
+        }
+
+        // 检查备用服务状态
+        const backupService = aiService === 'minimax' ? 'zhipu' : 'minimax';
+        const backupApiKey = aiService === 'minimax' ? zhipuApiKey : minimaxApiKey;
+        if (backupApiKey) {
+            logger.info(`✓ 已配置备用服务: ${backupService.toUpperCase()},支持自动降级`);
+        } else {
+            logger.warn(`⚠️  未配置备用服务 ${backupService.toUpperCase()},降级功能不可用`);
         }
 
         // 初始化服务
@@ -77,13 +89,13 @@ async function processEmails() {
         // 认证 Gmail
         await gmailService.authenticate();
 
-        // 搜索邮件（DEBUG_MODE 时处理已读邮件）
+        // 搜索邮件(DEBUG_MODE 时处理已读邮件)
         const messages = debugMode
             ? await gmailService.searchEmailsByLabel(labelName, daysToCheck)
             : await gmailService.searchUnreadEmailsByLabel(labelName, daysToCheck);
 
         if (debugMode) {
-            logger.info('[DEBUG] 调试模式已启用，处理已读邮件');
+            logger.info('[DEBUG] 调试模式已启用,处理已读邮件');
         }
 
         if (messages.length === 0) {
@@ -97,49 +109,75 @@ async function processEmails() {
         // 处理每封邮件
         for (const message of messages) {
             try {
-                logger.info(`\n处理邮件 ${processed + 1}/${messages.length}`);
+                logger.info(`\n处理邮件 ${processed + failed + 1}/${messages.length}`);
 
-                // 获取邮件内容（优先使用缓存）
+                // === 步骤 1: 获取邮件内容 ===
                 let email;
                 const emailCacheFile = `${message.id}.json`;
                 const cachedEmail = loadFromCache(EMAILS_CACHE_DIR, emailCacheFile);
 
                 if (cachedEmail) {
                     email = JSON.parse(cachedEmail);
-                    logger.info('使用缓存的邮件内容');
+                    logger.info('✓ 使用缓存的邮件内容');
                 } else {
                     email = await gmailService.getEmailContent(message.id);
-                    // 保存完整邮件对象到缓存（JSON 格式，包含 subject、date、body）
                     saveToCache(EMAILS_CACHE_DIR, emailCacheFile, JSON.stringify(email, null, 2));
+                    logger.info('✓ 邮件内容已获取并缓存');
                 }
 
-                // 解析 HTML：提取链接，并将图片替换为占位符
-                const parsed = htmlParser.parseHTML(email.body);
-                const { links, linkMap } = htmlParser.extractLinks(email.body);
+                // === 步骤 2: 解析 HTML ===
+                let parsed, links, linkMap;
+                const parsedCacheFile = `${message.id}.json`;
+                const cachedParsed = loadFromCache(PARSED_CACHE_DIR, parsedCacheFile);
 
-                logger.info(`提取到 ${links.length} 个链接, ${parsed.imageMap.size} 张有效图片`);
+                if (cachedParsed) {
+                    const parsedData = JSON.parse(cachedParsed);
+                    parsed = {
+                        markdown: parsedData.markdown,
+                        imageMap: new Map(parsedData.imageMap)
+                    };
+                    links = parsedData.links;
+                    linkMap = new Map(parsedData.linkMap);
+                    logger.info('✓ 使用缓存的解析结果');
+                } else {
+                    parsed = htmlParser.parseHTML(email.body);
+                    const linkData = htmlParser.extractLinks(email.body);
+                    links = linkData.links;
+                    linkMap = linkData.linkMap;
 
-                // 使用 AI 翻译和整理（优先使用缓存）
+                    const parsedData = {
+                        markdown: parsed.markdown,
+                        imageMap: Array.from(parsed.imageMap.entries()),
+                        links: links,
+                        linkMap: Array.from(linkMap.entries())
+                    };
+                    saveToCache(PARSED_CACHE_DIR, parsedCacheFile, JSON.stringify(parsedData, null, 2));
+                    logger.info(`✓ 提取到 ${links.length} 个链接, ${parsed.imageMap.size} 张有效图片`);
+                }
+
+                // === 步骤 3: AI 翻译 ===
                 let translatedContent;
                 const translatedCacheFile = `${message.id}.md`;
                 const cachedTranslated = loadFromCache(TRANSLATED_CACHE_DIR, translatedCacheFile);
 
                 if (cachedTranslated) {
                     translatedContent = cachedTranslated;
-                    logger.info('使用缓存的翻译结果');
+                    logger.info('✓ 使用缓存的翻译结果');
                 } else {
                     // 使用简化链接 ID 进行翻译
                     let rawTranslated = await aiTranslator.translate(parsed.markdown, links);
                     // 将链接 ID 替换回完整 URL
                     translatedContent = AITranslator.restoreLinks(rawTranslated, linkMap);
-                    // 保存翻译结果到缓存（已恢复完整链接）
+                    // 保存翻译结果到缓存(已恢复完整链接)
                     saveToCache(TRANSLATED_CACHE_DIR, translatedCacheFile, translatedContent);
+                    logger.info('✓ 翻译完成并已缓存');
                 }
 
+                // === 步骤 4: 保存和标记 ===
                 // 生成文件名
                 const fileName = obsidianWriter.generateFileName(email.subject, email.date);
 
-                // 保存到 Obsidian（下载图片并替换占位符）
+                // 保存到 Obsidian(下载图片并替换占位符)
                 await obsidianWriter.saveWithImages(fileName, translatedContent, parsed.imageMap);
 
                 // 标记为已读

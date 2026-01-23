@@ -9,14 +9,15 @@ class AITranslator {
     }
 
 
-    async requestWithRetry(fn, retries = 3, delay = 2000) {
+    async requestWithRetry(fn, retries = 4, delay = 3000) {
         try {
             return await fn();
         } catch (error) {
             if (retries > 0) {
+                const nextDelay = Math.min(delay * 2, 30000); // 最大延迟 30 秒
                 logger.info(`请求失败: ${error.message}。${delay / 1000} 秒后重试... (剩余重试次数: ${retries})`);
                 await new Promise(resolve => setTimeout(resolve, delay));
-                return this.requestWithRetry(fn, retries - 1, delay * 2);
+                return this.requestWithRetry(fn, retries - 1, nextDelay);
             } else {
                 throw error;
             }
@@ -24,12 +25,39 @@ class AITranslator {
     }
 
     async translate(emailContent, links = []) {
-        if (this.service === 'minimax') {
-            return await this.translateWithMiniMax(emailContent, links);
-        } else if (this.service === 'zhipu') {
-            return await this.translateWithZhipu(emailContent, links);
-        } else {
-            throw new Error(`不支持的 AI 服务: ${this.service}`);
+        // 优先使用配置的服务
+        try {
+            if (this.service === 'minimax') {
+                return await this.translateWithMiniMax(emailContent, links);
+            } else if (this.service === 'zhipu') {
+                return await this.translateWithZhipu(emailContent, links);
+            } else {
+                throw new Error(`不支持的 AI 服务: ${this.service}`);
+            }
+        } catch (error) {
+            // 如果主服务失败,尝试降级到备用服务
+            logger.warn(`${this.service.toUpperCase()} 翻译失败,尝试降级到备用服务`);
+
+            if (this.service === 'minimax' && process.env.ZHIPU_API_KEY) {
+                logger.info('🔄 降级到智谱 AI');
+                try {
+                    return await this.translateWithZhipu(emailContent, links);
+                } catch (fallbackError) {
+                    logger.error('备用服务(智谱 AI)也失败了', fallbackError);
+                    throw error; // 抛出原始错误
+                }
+            } else if (this.service === 'zhipu' && process.env.MINIMAX_API_KEY) {
+                logger.info('🔄 降级到 MiniMax');
+                try {
+                    return await this.translateWithMiniMax(emailContent, links);
+                } catch (fallbackError) {
+                    logger.error('备用服务(MiniMax)也失败了', fallbackError);
+                    throw error; // 抛出原始错误
+                }
+            } else {
+                logger.warn('⚠️  未配置备用服务,无法降级');
+                throw error;
+            }
         }
     }
 
@@ -58,7 +86,7 @@ class AITranslator {
                             'Authorization': `Bearer ${this.apiKey}`,
                             'Content-Type': 'application/json',
                         },
-                        timeout: 120000, // 120秒超时
+                        timeout: 180000, // 180秒超时
                     }
                 );
             });
@@ -107,7 +135,7 @@ class AITranslator {
                             'Authorization': `Bearer ${this.apiKey}`,
                             'Content-Type': 'application/json',
                         },
-                        timeout: 120000, // 120秒超时
+                        timeout: 180000, // 180秒超时
                     }
                 );
             });
