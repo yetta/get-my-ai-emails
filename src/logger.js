@@ -18,7 +18,21 @@ class Logger {
     }
 
     getTimestamp() {
-        return new Date().toISOString();
+        // 使用北京时间 (UTC+8)
+        const date = new Date();
+        const offset = 8 * 60; // 北京时间偏移量（分钟）
+        const beijingTime = new Date(date.getTime() + offset * 60 * 1000);
+        
+        // 格式化为 ISO 8601 格式，但使用北京时区
+        const year = beijingTime.getUTCFullYear();
+        const month = String(beijingTime.getUTCMonth() + 1).padStart(2, '0');
+        const day = String(beijingTime.getUTCDate()).padStart(2, '0');
+        const hours = String(beijingTime.getUTCHours()).padStart(2, '0');
+        const minutes = String(beijingTime.getUTCMinutes()).padStart(2, '0');
+        const seconds = String(beijingTime.getUTCSeconds()).padStart(2, '0');
+        const ms = String(beijingTime.getUTCMilliseconds()).padStart(3, '0');
+        
+        return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}.${ms}+08:00`;
     }
 
     formatMessage(level, message) {

@@ -14,7 +14,7 @@ class HTMLParser {
         try {
             // 提取核心内容区域，减少输入 token
             let processedHtml = html;
-            const startMarker = 'Good morning';
+            const startMarker = 'In today';  // 匹配 "In today's AI rundown"、"In today's robotics rundown" 等
             const endMarker = '<b>COMMUNITY</b>';
 
             const startIndex = html.indexOf(startMarker);
@@ -24,6 +24,10 @@ class HTMLParser {
                 // 只保留核心内容区域
                 processedHtml = html.substring(startIndex, endIndex);
                 logger.info(`内容范围提取: 从 ${startIndex} 到 ${endIndex}，节省 ${html.length - processedHtml.length} 字符`);
+            } else if (endIndex > 0) {
+                // 如果没找到起点标记，但找到了终点，从头开始提取
+                processedHtml = html.substring(0, endIndex);
+                logger.info(`内容范围提取: 从开始到 ${endIndex}，节省 ${html.length - processedHtml.length} 字符`);
             }
 
             // 使用 cheerio 解析 HTML
@@ -32,8 +36,8 @@ class HTMLParser {
             // 移除脚本和样式标签
             $('script, style, meta, link').remove();
 
-            // 移除广告和推广内容
-            const adKeywords = ['Subscribe', 'Sign up', 'Advertise', 'Sponsor', 'AI University', 'Get in touch', 'contact', 'referral'];
+            // 移除广告和推广内容（但保留正文中的赞助内容）
+            const adKeywords = ['Subscribe', 'Sign up', 'Advertise', 'AI University', 'Get in touch', 'contact', 'referral'];
             $('a').each((i, elem) => {
                 const text = $(elem).text().trim().toLowerCase();
                 const href = $(elem).attr('href') || '';

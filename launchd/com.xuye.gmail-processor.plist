@@ -10,14 +10,14 @@
     <key>ProgramArguments</key>
     <array>
         <string>/Users/xuye/.nvm/versions/node/v20.19.6/bin/node</string>
-        <string>/Users/xuye/Documents/AI-CODE/get-my-ai-emails/index.js</string>
+        <string>/Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/index.js</string>
     </array>
     
     <!-- 工作目录 -->
     <key>WorkingDirectory</key>
-    <string>/Users/xuye/Documents/AI-CODE/get-my-ai-emails</string>
+    <string>/Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails</string>
     
-    <!-- 定时执行：每天早上 8:00 -->
+    <!-- 定时执行：每天早上 6:00 -->
     <key>StartCalendarInterval</key>
     <dict>
         <key>Hour</key>
@@ -28,11 +28,11 @@
     
     <!-- 标准输出日志 -->
     <key>StandardOutPath</key>
-    <string>/Users/xuye/Documents/AI-CODE/get-my-ai-emails/logs/launchd-stdout.log</string>
+    <string>/Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/logs/launchd-stdout.log</string>
     
     <!-- 错误输出日志 -->
     <key>StandardErrorPath</key>
-    <string>/Users/xuye/Documents/AI-CODE/get-my-ai-emails/logs/launchd-stderr.log</string>
+    <string>/Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/logs/launchd-stderr.log</string>
     
     <!-- 失败后自动重启 -->
     <key>KeepAlive</key>
