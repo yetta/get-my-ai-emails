@@ -1066,3 +1066,162 @@ AxiosError: socket hang up
     code: 'ECONNRESET'
   }
 }
+[2026-02-13T06:01:14.650+08:00] [ERROR] 搜索邮件失败
+GaxiosError: request to https://gmail.googleapis.com/gmail/v1/users/me/messages?q=label%3A%22AI%20subscription%22%20is%3Aunread%20after%3A2026%2F02%2F10 failed, reason: read ECONNRESET
+    at Gaxios._request (/Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/gaxios/build/src/gaxios.js:149:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.requestAsync (/Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/google-auth-library/build/src/auth/oauth2client.js:429:18)
+    at async GmailService.searchUnreadEmailsByLabel (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/src/gmail.js:59:30)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/index.js:95:15) {
+  config: {
+    url: 'https://gmail.googleapis.com/gmail/v1/users/me/messages?q=label%3A%22AI%20subscription%22%20is%3Aunread%20after%3A2026%2F02%2F10',
+    method: 'GET',
+    apiVersion: '',
+    userAgentDirectives: [ [Object] ],
+    paramsSerializer: [Function (anonymous)],
+    headers: {
+      'x-goog-api-client': 'gdcl/7.2.0 gl-node/20.19.6',
+      'Accept-Encoding': 'gzip',
+      'User-Agent': 'google-api-nodejs-client/7.2.0 (gzip)',
+      Authorization: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.'
+    },
+    params: { q: 'label:"AI subscription" is:unread after:2026/02/10' },
+    validateStatus: [Function (anonymous)],
+    retry: true,
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor],
+    retryConfig: {
+      currentRetryAttempt: 2,
+      retry: 3,
+      httpMethodsToRetry: [Array],
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1770933674042,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    }
+  },
+  response: undefined,
+  error: FetchError: request to https://gmail.googleapis.com/gmail/v1/users/me/messages?q=label%3A%22AI%20subscription%22%20is%3Aunread%20after%3A2026%2F02%2F10 failed, reason: read ECONNRESET
+      at ClientRequest.<anonymous> (/Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/node-fetch/lib/index.js:1501:11)
+      at ClientRequest.emit (node:events:524:28)
+      at emitErrorEvent (node:_http_client:101:11)
+      at TLSSocket.socketErrorListener (node:_http_client:504:5)
+      at TLSSocket.emit (node:events:524:28)
+      at emitErrorNT (node:internal/streams/destroy:169:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    type: 'system',
+    errno: 'ECONNRESET',
+    code: 'ECONNRESET'
+  },
+  code: 'ECONNRESET',
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+[2026-02-13T06:01:16.891+08:00] [ERROR] 处理邮件时发生错误
+GaxiosError: request to https://gmail.googleapis.com/gmail/v1/users/me/messages?q=label%3A%22AI%20subscription%22%20is%3Aunread%20after%3A2026%2F02%2F10 failed, reason: read ECONNRESET
+    at Gaxios._request (/Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/gaxios/build/src/gaxios.js:149:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.requestAsync (/Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/google-auth-library/build/src/auth/oauth2client.js:429:18)
+    at async GmailService.searchUnreadEmailsByLabel (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/src/gmail.js:59:30)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/index.js:95:15) {
+  config: {
+    url: 'https://gmail.googleapis.com/gmail/v1/users/me/messages?q=label%3A%22AI%20subscription%22%20is%3Aunread%20after%3A2026%2F02%2F10',
+    method: 'GET',
+    apiVersion: '',
+    userAgentDirectives: [ [Object] ],
+    paramsSerializer: [Function (anonymous)],
+    headers: {
+      'x-goog-api-client': 'gdcl/7.2.0 gl-node/20.19.6',
+      'Accept-Encoding': 'gzip',
+      'User-Agent': 'google-api-nodejs-client/7.2.0 (gzip)',
+      Authorization: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.'
+    },
+    params: { q: 'label:"AI subscription" is:unread after:2026/02/10' },
+    validateStatus: [Function (anonymous)],
+    retry: true,
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor],
+    retryConfig: {
+      currentRetryAttempt: 2,
+      retry: 3,
+      httpMethodsToRetry: [Array],
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1770933674042,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    }
+  },
+  response: undefined,
+  error: FetchError: request to https://gmail.googleapis.com/gmail/v1/users/me/messages?q=label%3A%22AI%20subscription%22%20is%3Aunread%20after%3A2026%2F02%2F10 failed, reason: read ECONNRESET
+      at ClientRequest.<anonymous> (/Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/node-fetch/lib/index.js:1501:11)
+      at ClientRequest.emit (node:events:524:28)
+      at emitErrorEvent (node:_http_client:101:11)
+      at TLSSocket.socketErrorListener (node:_http_client:504:5)
+      at TLSSocket.emit (node:events:524:28)
+      at emitErrorNT (node:internal/streams/destroy:169:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    type: 'system',
+    errno: 'ECONNRESET',
+    code: 'ECONNRESET'
+  },
+  code: 'ECONNRESET',
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+[2026-02-13T06:01:17.092+08:00] [ERROR] 任务失败
+GaxiosError: request to https://gmail.googleapis.com/gmail/v1/users/me/messages?q=label%3A%22AI%20subscription%22%20is%3Aunread%20after%3A2026%2F02%2F10 failed, reason: read ECONNRESET
+    at Gaxios._request (/Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/gaxios/build/src/gaxios.js:149:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.requestAsync (/Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/google-auth-library/build/src/auth/oauth2client.js:429:18)
+    at async GmailService.searchUnreadEmailsByLabel (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/src/gmail.js:59:30)
+    at async processEmails (file:///Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/index.js:95:15) {
+  config: {
+    url: 'https://gmail.googleapis.com/gmail/v1/users/me/messages?q=label%3A%22AI%20subscription%22%20is%3Aunread%20after%3A2026%2F02%2F10',
+    method: 'GET',
+    apiVersion: '',
+    userAgentDirectives: [ [Object] ],
+    paramsSerializer: [Function (anonymous)],
+    headers: {
+      'x-goog-api-client': 'gdcl/7.2.0 gl-node/20.19.6',
+      'Accept-Encoding': 'gzip',
+      'User-Agent': 'google-api-nodejs-client/7.2.0 (gzip)',
+      Authorization: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.'
+    },
+    params: { q: 'label:"AI subscription" is:unread after:2026/02/10' },
+    validateStatus: [Function (anonymous)],
+    retry: true,
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor],
+    retryConfig: {
+      currentRetryAttempt: 2,
+      retry: 3,
+      httpMethodsToRetry: [Array],
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1770933674042,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    }
+  },
+  response: undefined,
+  error: FetchError: request to https://gmail.googleapis.com/gmail/v1/users/me/messages?q=label%3A%22AI%20subscription%22%20is%3Aunread%20after%3A2026%2F02%2F10 failed, reason: read ECONNRESET
+      at ClientRequest.<anonymous> (/Users/xuye/Documents/AI-CODE/obsidian-workspace/get-my-ai-emails/node_modules/node-fetch/lib/index.js:1501:11)
+      at ClientRequest.emit (node:events:524:28)
+      at emitErrorEvent (node:_http_client:101:11)
+      at TLSSocket.socketErrorListener (node:_http_client:504:5)
+      at TLSSocket.emit (node:events:524:28)
+      at emitErrorNT (node:internal/streams/destroy:169:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+    type: 'system',
+    errno: 'ECONNRESET',
+    code: 'ECONNRESET'
+  },
+  code: 'ECONNRESET',
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
